@@ -1,0 +1,16 @@
+.loginLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FAF9FD;
+}
+
+/* .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    background-color: #FFF;
+    border-radius: 32px;
+    box-shadow: 0px 20px 25px -5px rgba(15, 23, 42, 0.10), 0px 10px 10px 0px rgba(15, 23, 42, 0.05);
+} */

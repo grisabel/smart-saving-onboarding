@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-//import styles from "@/styles/Login.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import LoginLayout from "../components/Login/LoginLayout";
+import styles from "@/styles/Login.module.css";
 
 export default function Home() {
   return (
@@ -13,7 +11,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" />
       </Head>
-      <main>
+      <main className={styles.loginLayout}>
+        {/* <LoginLayout>
+          <div>Login</div>
+          <div>foto</div>
+        </LoginLayout> */}
       </main>
     </>
   );
