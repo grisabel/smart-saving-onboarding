@@ -1,11 +1,3 @@
-.loginLayout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #FAF9FD;
-}
-
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;

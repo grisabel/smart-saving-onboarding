@@ -1,0 +1,9 @@
+@import './variables.css';
+
+.loginLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FAF9FD;
+}

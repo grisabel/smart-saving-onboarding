@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styles from "@/styles/Login.module.css";
+import styles from "@/styles/components/LoginLayout.module.css";
 
 interface LoginLayoutProps {
   children: ReactNode;
