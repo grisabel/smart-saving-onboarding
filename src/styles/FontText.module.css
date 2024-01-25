@@ -1,0 +1,6 @@
+.boldText {
+    font-family: 'Montserrat';
+    color: var(--color-text-bold);
+    font-weight: 600;
+    line-height: 24px;
+}

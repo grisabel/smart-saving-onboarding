@@ -3,6 +3,7 @@ import LoginLayout from "../components/Login/LoginLayout";
 import styles from "@/styles/LoginPage.module.css";
 import BlueButton from "@/components/BlueButton";
 import FullLogo from "@/components/FullLogo";
+import BoldText from "@/components/BoldText";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <LoginLayout>
           <BlueButton label="loginButtonLabel" />
           <FullLogo></FullLogo>
+          <BoldText text="login now"></BoldText>
         </LoginLayout>
       </main>
     </>

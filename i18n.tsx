@@ -6,11 +6,13 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         "loginButtonLabel": "Log In",
+        "login now": "Log in now"
       },
     },
     es: {
       translation: {
         "loginButtonLabel": "Iniciar Sesión",
+        "login now": "Inicia sesión ahora."
       },
     },
   },
