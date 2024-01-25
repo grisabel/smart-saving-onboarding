@@ -6,4 +6,6 @@
     background-color: var(--blue-main);
     color: #FFF;
     border: none;
+    font-family: 'Montserrat';
+    font-size: 16px;
 }
