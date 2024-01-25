@@ -1,6 +1,15 @@
 .boldText {
     font-family: 'Montserrat';
-    color: var(--color-text-bold);
+    color: var(--color-bold-text);
     font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.thinText {
+    font-family: 'Montserrat';
+    color: var(--color-thin-text);
+    font-weight: 300;
+    font-size: 16px;
     line-height: 24px;
 }
