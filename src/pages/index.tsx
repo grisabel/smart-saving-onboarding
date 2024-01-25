@@ -2,6 +2,7 @@ import Head from "next/head";
 import LoginLayout from "../components/Login/LoginLayout";
 import styles from "@/styles/LoginPage.module.css";
 import BlueButton from "@/components/BlueButton";
+import FullLogo from "@/components/FullLogo";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className={styles.loginLayout}>
         <LoginLayout>
           <BlueButton label="loginButtonLabel" />
+          <FullLogo></FullLogo>
         </LoginLayout>
       </main>
     </>
