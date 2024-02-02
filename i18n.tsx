@@ -8,7 +8,8 @@ i18n.use(initReactI18next).init({
         "loginButtonLabel": "Log In",
         "registerButtonLabel": "I want to sign up!",
         "login now": "Log in now",
-        "better financial control": "Take a step towards better financial control!"
+        "better financial control": "Take a step towards better financial control!",
+        "forgotPassword": "Forgot your password?"
       },
     },
     es: {
@@ -16,7 +17,8 @@ i18n.use(initReactI18next).init({
         "loginButtonLabel": "Iniciar Sesión",
         "registerButtonLabel": "¡Quiero darme de alta!",
         "login now": "Inicia sesión ahora.",
-        "better financial control": "¡Da un paso hacia un mejor control financiero!"
+        "better financial control": "¡Da un paso hacia un mejor control financiero!",
+        "forgotPassword": "¿Olvidaste la contraseña?" 
       },
     },
   },
