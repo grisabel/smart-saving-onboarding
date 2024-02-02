@@ -8,6 +8,7 @@
 body {
   min-height: 100dvh;
   --blue-main: #1760A5;
+  --grey-main: #545F70;
   --color-bold-text: #475569;
   --color-thin-text: #73777F;
 }
