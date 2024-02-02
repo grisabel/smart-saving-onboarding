@@ -1,0 +1,10 @@
+.button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--grey-main);
+    color: #FFF;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
