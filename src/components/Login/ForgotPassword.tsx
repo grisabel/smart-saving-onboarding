@@ -9,7 +9,11 @@ interface ForgetPasswordProps {
 const ForgotPassword: React.FC<ForgetPasswordProps> = ({ label }) => {
   const { t } = useTranslation();
 
-  return <a className={styles.forgotPassword}>{t(label)}</a>;
+  return (
+    <a href="/forgotPassword" className={styles.forgotPassword}>
+      {t(label)}
+    </a>
+  );
 };
 
 export default ForgotPassword;

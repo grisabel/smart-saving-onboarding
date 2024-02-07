@@ -4,6 +4,7 @@ import BlueButton from "@/components/BlueButton";
 import FullLogo from "@/components/FullLogo";
 import BoldText from "@/components/BoldText";
 import ThinText from "@/components/ThinText";
+import ForgotPassword from "./ForgotPassword";
 
 const LoginContainer: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const LoginContainer: React.FC = () => {
       <div>
         <BoldText text="login now"></BoldText>
         <ThinText text="better financial control"></ThinText>
+        <ForgotPassword label="forgotPassword" />
         <BlueButton label="loginButtonLabel" />
       </div>
     </div>
