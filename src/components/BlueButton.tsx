@@ -9,7 +9,11 @@ interface BlueButtonProps {
 const BlueButton: React.FC<BlueButtonProps> = ({ label }) => {
   const { t } = useTranslation();
 
-  return <button className={styles.button}>{t(label)}</button>;
+  return (
+    <button type="submit" className={styles.button}>
+      {t(label)}
+    </button>
+  );
 };
 
 export default BlueButton;

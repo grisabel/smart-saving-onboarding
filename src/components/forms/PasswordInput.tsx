@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/components/Inputs.module.css";
+import styles from "@/styles/components/forms/Inputs.module.css";
 import { useTranslation } from "react-i18next";
 
 interface PasswordInputProps {
