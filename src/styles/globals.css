@@ -12,6 +12,7 @@ body {
   --color-bold-text: #475569;
   --color-thin-text: #73777F;
   --color-blue-text: #3474B0;
+  --color-grey-input: #73777F;
 }
 
 h1, h2, h3, h4 {
