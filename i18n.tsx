@@ -11,7 +11,9 @@ i18n.use(initReactI18next).init({
         "better financial control": "Take a step towards better financial control!",
         "forgotPassword": "Forgot your password?",
         "input-email-label" : "Email",
-        "input-email-placeholder" : "Enter your email"
+        "input-email-placeholder" : "Enter your email",
+        "input-password-label" : "Password",
+        "input-password-placeholder" : "Enter your password"
       },
     },
     es: {
@@ -22,7 +24,9 @@ i18n.use(initReactI18next).init({
         "better financial control": "¡Da un paso hacia un mejor control financiero!",
         "forgotPassword": "¿Olvidaste la contraseña?",
         "input-email-label" : "Email",
-        "input-email-placeholder" : "Introduzca su email"
+        "input-email-placeholder" : "Introduzca su email",
+        "input-password-label" : "Contraseña",
+        "input-password-placeholder" : "Introduzca su contraseña"
       },
     },
   },
