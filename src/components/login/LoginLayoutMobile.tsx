@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import styles from "@/styles/components/login/LoginLayout.module.css";
-import FullLogo from "../FullLogo";
+import Logo from "../stories/Logo";
 import BoldText from "../BoldText";
 import ThinText from "../ThinText";
 
@@ -12,7 +12,7 @@ const LoginLayoutMobile: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.container}>
-      <FullLogo></FullLogo>
+      <Logo></Logo>
       <div>
         <BoldText text="login now"></BoldText>
         <ThinText text="better financial control"></ThinText>
