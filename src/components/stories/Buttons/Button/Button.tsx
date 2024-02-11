@@ -3,6 +3,7 @@ import styles from "./Button.module.scss";
 
 interface BlueButtonProps {
   //TODO ADD ONCLICK
+  //todo type
   label: string;
   color?: "primary" | "secondary";
 }
