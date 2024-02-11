@@ -1,18 +1,18 @@
 import React from "react";
-import styles from "@/styles/components/login/LoginContainer.module.css";
-import Logo from "@/components/stories/Logo";
-import BoldText from "@/components/BoldText";
-import ThinText from "@/components/ThinText";
+import { t } from "i18next";
 
+import Logo from "@/components/stories/Logo";
 import FormLogin from "./FormLogin/FormLogin";
+
+import styles from "./LoginContainerDesktop.module.scss";
 
 const LoginContainer: React.FC = () => {
   return (
     <div className={styles.container}>
       <Logo></Logo>
       <div>
-        <BoldText text="login now" />
-        <ThinText text="better financial control" />
+        <p className={styles.title}>{t("login now")}</p>
+        <p className={styles.subtitle}>{t("better financial control")}</p>
         <FormLogin />
       </div>
     </div>

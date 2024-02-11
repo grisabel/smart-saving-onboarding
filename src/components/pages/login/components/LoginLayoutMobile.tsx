@@ -1,10 +1,9 @@
 import React, { ReactNode } from "react";
-import styles from "@/styles/components/login/LoginLayout.module.css";
 import Logo from "../../../stories/Logo";
-import BoldText from "../../../BoldText";
-import ThinText from "../../../ThinText";
 
 import Button from "@/components/stories/Buttons/Button";
+
+import styles from "./LoginContainerDesktop.module.scss";
 
 import { useTranslation } from "react-i18next";
 
@@ -14,8 +13,8 @@ const LoginLayoutMobile: React.FC = () => {
     <div className={styles.container}>
       <Logo></Logo>
       <div>
-        <BoldText text="login now"></BoldText>
-        <ThinText text="better financial control"></ThinText>
+        <p className={styles.title}>{t("login now")}</p>
+        <p className={styles.subtitle}>{t("better financial control")}</p>
         <Button label={t("loginButtonLabel")} />
         <Button label={t("registerButtonLabel")} color="secondary" />
       </div>
