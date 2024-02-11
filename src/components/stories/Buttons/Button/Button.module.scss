@@ -1,3 +1,4 @@
+@import  "../../../../../src/styles/variables/fonts.scss";
 
 .button {
     width: 100%;
@@ -6,8 +7,7 @@
     color: #FFF;
     border: none;
 
-    font-family: 'Montserrat';
-    font-size: 16px;
+    @include f--b1-regular;
 }
 
 .button--primary {

@@ -23,12 +23,12 @@
     font-weight: bold;
 }
 
-.f--b1-regular{
+@mixin f--b1-regular{
     @extend ._f--b1;
     font-weight: normal;
 }
 
-.f--b1-light{
+@mixin f--b1-light{
     @extend ._f--b1;
     font-weight: lighter;
 }
