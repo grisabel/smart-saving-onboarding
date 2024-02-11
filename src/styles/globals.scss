@@ -1,3 +1,5 @@
+@use "./variables/fonts.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +25,4 @@ p {
   text-wrap: pretty;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
