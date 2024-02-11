@@ -11,11 +11,4 @@
     font-weight: 300;
     font-size: 16px;
 }
-
-.forgotPassword {
-    font-family: 'Montserrat';
-    color: var(--color-blue-text);
-    text-decoration: none;
-} 
-
 /* // todo cambiar estas clases */

@@ -1,6 +1,5 @@
 import React from "react";
 
-import ForgotPassword from "../ForgotPassword";
 import InputTextEmail from "@/components/stories/Inputs/InputTextEmail";
 import InputTextPassword from "@/components/stories/Inputs/InputTextPassword";
 import Button from "@/components/stories/Buttons/Button";
@@ -23,7 +22,9 @@ const FormLogin: React.FC = () => {
         label={t("input-password-label")}
         placeholder={t("input-password-placeholder")}
       />
-      <ForgotPassword label="forgotPassword" />
+      <a href="/forgotPassword" className={styles.forgotPassword}>
+        {t("forgotPassword")}
+      </a>
       <Button label={t("loginButtonLabel")} />
     </form>
   );

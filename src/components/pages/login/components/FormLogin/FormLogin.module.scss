@@ -1,3 +1,5 @@
+@import  "@/styles/variables/fonts.scss";
+
 .emailForm {
     display: flex;
     flex-direction: column;
@@ -8,10 +10,15 @@
 .emailInput {
     margin-bottom: 16px;
 }
-.emailForm a {
-    margin-top: 8px;
-}
 
 .emailForm button {
     margin-top: 64px;
 }
+
+.emailForm .forgotPassword {
+    margin-top: 8px;
+    text-decoration: none;
+
+    color: var(--color-blue-text);
+    @include f--b1-regular;
+} 
