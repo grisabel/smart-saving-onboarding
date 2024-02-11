@@ -2,9 +2,9 @@ import React from "react";
 import { t } from "i18next";
 
 import Logo from "@/components/stories/Logo";
-import FormLogin from "./FormLogin/FormLogin";
+import FormLogin from "./components/FormLogin/FormLogin";
 
-import styles from "./LoginContainerDesktop.module.scss";
+import styles from "./LoginContainer.module.scss";
 
 const LoginContainer: React.FC = () => {
   return (

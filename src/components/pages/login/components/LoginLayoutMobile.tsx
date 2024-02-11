@@ -1,23 +1,18 @@
-import React, { ReactNode } from "react";
-import Logo from "../../../stories/Logo";
+import styles from "./LoginLayoutMobile.module.scss";
 
-import Button from "@/components/stories/Buttons/Button";
-
-import styles from "./LoginContainerDesktop.module.scss";
-
+import React from "react";
 import { useTranslation } from "react-i18next";
+
+import LoginContainer from "./LoginContainer";
+import Button from "@/components/stories/Buttons/Button";
 
 const LoginLayoutMobile: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className={styles.container}>
-      <Logo></Logo>
-      <div>
-        <p className={styles.title}>{t("login now")}</p>
-        <p className={styles.subtitle}>{t("better financial control")}</p>
-        <Button label={t("loginButtonLabel")} />
-        <Button label={t("registerButtonLabel")} color="secondary" />
-      </div>
+    <div className={styles.loginLayoutMobile}>
+      <LoginContainer />
+      <hr />
+      <Button label={t("registerButtonLabel")} color="secondary" />
     </div>
   );
 };

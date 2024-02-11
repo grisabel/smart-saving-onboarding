@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 
-import styles from "./LoginPage.module.css";
+import styles from "./LoginPage.module.scss";
 import LoginLayoutMobile from "./components/LoginLayoutMobile";
 import LoginLayoutDesktop from "./components/LoginLayoutDesktop";
 
