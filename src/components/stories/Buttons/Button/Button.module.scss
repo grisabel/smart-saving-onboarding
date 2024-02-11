@@ -1,3 +1,4 @@
+@import  "@/styles/variables/fonts.scss";
 
 .button {
     width: 100%;
@@ -5,8 +6,8 @@
     border-radius: 8px;
     color: #FFF;
     border: none;
-    font-family: 'Montserrat';
-    font-size: 16px;
+
+    @include f--b1-regular;
 }
 
 .button--primary {
