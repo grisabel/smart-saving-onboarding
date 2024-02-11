@@ -1,22 +1,23 @@
 import React from "react";
-import styles from "@/styles/components/forms/Inputs.module.css";
-import { useTranslation } from "react-i18next";
 
-interface EmailInputProps {
+import { useTranslation } from "react-i18next";
+import styles from "../Inputs.module.scss";
+
+interface InputTextEmailProps {
   label: string;
   placeholder: string;
-  extraClassName: string;
+  className?: string;
 }
 
-const EmailInput: React.FC<EmailInputProps> = ({
-  extraClassName,
+const InputTextEmail: React.FC<InputTextEmailProps> = ({
+  className,
   label,
   placeholder,
 }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={`${styles.email} ${extraClassName}`}>
+    <div className={`${styles.email} ${className}`}>
       <label className={styles.label}>{t(label)}</label>
       <input
         className={styles.input}
@@ -27,4 +28,4 @@ const EmailInput: React.FC<EmailInputProps> = ({
   );
 };
 
-export default EmailInput;
+export default InputTextEmail;
