@@ -3,7 +3,9 @@ import styles from "@/styles/components/forms/Form.module.css";
 import ForgotPassword from "../login/ForgotPassword";
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
-import BlueButton from "@/components/stories/Button/BlueButton";
+
+import Button from "@/components/stories/Buttons/Button";
+
 import { useTranslation } from "react-i18next";
 
 const FormLogin: React.FC = () => {
@@ -21,7 +23,7 @@ const FormLogin: React.FC = () => {
         placeholder="input-password-placeholder"
       />
       <ForgotPassword label="forgotPassword" />
-      <BlueButton label={t("loginButtonLabel")} />
+      <Button label={t("loginButtonLabel")} />
     </form>
   );
 };
