@@ -1,0 +1,20 @@
+@import  "@/styles/variables/fonts.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    /* padding: 76px 108px; */
+
+    .title{
+        color: var(--color-bold-text);
+        @include f--b1-bold;
+    }
+
+    .subtitle{
+        color: var(--color-thin-text);
+        @include f--b1-regular;
+    }
+}

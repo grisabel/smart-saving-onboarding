@@ -1,27 +1,25 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/components/forms/Inputs.module.css";
-import { useTranslation } from "react-i18next";
 
-interface PasswordInputProps {
+import styles from "../Inputs.module.scss";
+
+interface InputTextPasswordProps {
   label: string;
   placeholder: string;
 }
 
-const PasswordInput: React.FC<PasswordInputProps> = ({
+const InputTextPassword: React.FC<InputTextPasswordProps> = ({
   label,
   placeholder,
 }) => {
-  const { t } = useTranslation();
-
   return (
     <div className={styles.password}>
-      <label className={styles.label}>{t(label)}</label>
+      <label className={styles.label}>{label}</label>
       <div className={styles.inputIcon}>
         <input
           className={styles.input}
           type="password"
-          placeholder={t(placeholder)}
+          placeholder={placeholder}
         />
         <Image
           src="/images/eye-close-icon.png"
@@ -34,4 +32,4 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   );
 };
 
-export default PasswordInput;
+export default InputTextPassword;

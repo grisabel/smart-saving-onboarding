@@ -2,15 +2,22 @@ import React from "react";
 import styles from "./Button.module.scss";
 
 interface BlueButtonProps {
-  //TODO ADD ONCLICK
   label: string;
   color?: "primary" | "secondary";
+  type?: "button" | "submit";
+  onClick?: () => void;
 }
 
-const Button: React.FC<BlueButtonProps> = ({ label, color = "primary" }) => {
+const Button: React.FC<BlueButtonProps> = ({
+  label,
+  onClick = () => null,
+  color = "primary",
+  type = "button",
+}) => {
   return (
     <button
-      type="submit"
+      type={type}
+      onClick={onClick}
       className={`${styles.button} ${styles[`button--${color}`]}`}
     >
       {label}
