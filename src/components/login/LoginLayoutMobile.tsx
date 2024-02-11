@@ -4,7 +4,7 @@ import FullLogo from "../FullLogo";
 import BoldText from "../BoldText";
 import ThinText from "../ThinText";
 import BlueButton from "@/components/stories/Button/BlueButton";
-import GreyButton from "../GreyButton";
+import GreyButton from "@/components/stories/Button/GreyButton/GreyButton";
 import { useTranslation } from "react-i18next";
 
 const LoginLayoutMobile: React.FC = () => {
@@ -16,7 +16,7 @@ const LoginLayoutMobile: React.FC = () => {
         <BoldText text="login now"></BoldText>
         <ThinText text="better financial control"></ThinText>
         <BlueButton label={t("loginButtonLabel")} />
-        <GreyButton label="registerButtonLabel" />
+        <GreyButton label={t("registerButtonLabel")} />
       </div>
     </div>
   );

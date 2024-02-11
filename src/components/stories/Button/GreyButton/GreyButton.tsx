@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/components/GreyButton.module.css";
+import styles from "./GreyButton.module.css";
 import { useTranslation } from "react-i18next";
 
 interface GreyButtonProps {
