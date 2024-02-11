@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./LoginLayoutDesktop.module.scss";
 
-import LoginContainer from "./LoginContainer";
-import SignupContainer from "./SignupContainer";
+import LoginContainer from "../../components/LoginContainer";
+import SignupContainer from "../../components/SignupContainer";
 
 const LoginLayoutDesktop: React.FC = () => {
   return (

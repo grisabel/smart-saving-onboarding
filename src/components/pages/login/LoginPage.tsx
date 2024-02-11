@@ -1,8 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 
 import styles from "./LoginPage.module.scss";
-import LoginLayoutMobile from "./components/LoginLayoutMobile";
-import LoginLayoutDesktop from "./components/LoginLayoutDesktop";
+import LoginLayoutMobile from "./layouts/LoginLayoutMobile/LoginLayoutMobile";
+import LoginLayoutDesktop from "./layouts/LoginLayoutDesktop/LoginLayoutDesktop";
 
 const LoginPage: React.FC = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
