@@ -25,7 +25,7 @@ const FormLogin: React.FC = () => {
       <a href="/forgotPassword" className={styles.forgotPassword}>
         {t("forgotPassword")}
       </a>
-      <Button label={t("loginButtonLabel")} />
+      <Button label={t("loginButtonLabel")} type="submit" />
     </form>
   );
 };
