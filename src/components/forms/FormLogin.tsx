@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/components/forms/Form.module.css";
-import ForgotPassword from "../login/ForgotPassword";
+import ForgotPassword from "../pages/login/components/ForgotPassword";
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
 

@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import styles from "@/styles/components/login/LoginLayout.module.css";
-import Logo from "../stories/Logo";
-import BoldText from "../BoldText";
-import ThinText from "../ThinText";
+import Logo from "../../../stories/Logo";
+import BoldText from "../../../BoldText";
+import ThinText from "../../../ThinText";
 
 import Button from "@/components/stories/Buttons/Button";
 
