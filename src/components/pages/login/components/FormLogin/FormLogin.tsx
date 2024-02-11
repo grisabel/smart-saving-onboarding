@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "@/styles/components/forms/Form.module.css";
 
-import ForgotPassword from "../pages/login/components/ForgotPassword";
+import ForgotPassword from "../ForgotPassword";
 import InputTextEmail from "@/components/stories/Inputs/InputTextEmail";
 import InputTextPassword from "@/components/stories/Inputs/InputTextPassword";
-
 import Button from "@/components/stories/Buttons/Button";
+
+import styles from "./FormLogin.module.scss";
 
 import { useTranslation } from "react-i18next";
 

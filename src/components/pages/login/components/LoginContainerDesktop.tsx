@@ -3,7 +3,8 @@ import styles from "@/styles/components/login/LoginContainer.module.css";
 import Logo from "@/components/stories/Logo";
 import BoldText from "@/components/BoldText";
 import ThinText from "@/components/ThinText";
-import FormLogin from "../../../forms/FormLogin";
+
+import FormLogin from "./FormLogin/FormLogin";
 
 const LoginContainer: React.FC = () => {
   return (
