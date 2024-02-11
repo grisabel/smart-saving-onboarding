@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/components/FullLogo.module.css";
+import styles from "./Logo.module.css";
 
-const FullLogo: React.FC = () => {
+const Logo: React.FC = () => {
   return (
     <div className={styles.logo}>
       <Image src="/logo.ico" width={150} height={80} alt="Logo Icon" />
@@ -14,4 +14,4 @@ const FullLogo: React.FC = () => {
   );
 };
 
-export default FullLogo;
+export default Logo;
