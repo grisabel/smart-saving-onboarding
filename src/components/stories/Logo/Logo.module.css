@@ -11,6 +11,7 @@
 
 .titleBold {
     color:#393E46;
+    
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 17px;
@@ -18,6 +19,7 @@
 
 .titleThin {
     color:#75787E;
+    
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 17px;
