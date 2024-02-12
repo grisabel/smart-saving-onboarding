@@ -8,10 +8,10 @@
         flex-direction: column;
         align-items: center;
 
-        &__icon{
+        .icon{
             border: 2px solid var(--blue-main);
         }
-        &__col{ 
+        .col{ 
             background-repeat: repeat-y;
             background-position: bottom;
             width: 3px;
@@ -25,6 +25,20 @@
                 background-size: 3px 8px;
             }
     
+        }
+
+        &--error{
+            .icon{
+                border-color: red;
+            }
+
+            .col{
+                background-image: linear-gradient(to right, red 100%, red 100%);
+
+                &--dash{
+                    background-image: linear-gradient(to bottom, red 40%, rgba(255, 255, 255, 0) 0%);
+                }
+            }
         }
     }
 }
