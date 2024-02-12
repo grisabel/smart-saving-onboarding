@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import styles from "@/styles/components/forms/Form.module.css";
+import styles from "./FormLogin.module.scss";
 import ForgotPassword from "../login/ForgotPassword";
 import InputTextEmail from "../stories/Inputs/InputTextEmail";
 import InputTextPassword from "../stories/Inputs/InputTextPassword/InputTextPassword";
@@ -11,9 +11,9 @@ const FormLogin: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <form className={styles.emailForm}>
+    <form className={styles.form}>
       <InputTextEmail
-        extraClassName={styles.emailInput}
+        extraClassName={styles.form_email}
         label={t("input-email-label")}
         placeholder={t("input-email-placeholder")}
       />

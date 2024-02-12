@@ -1,17 +1,17 @@
-.emailForm {
+.form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     align-items: flex-end;
 }
 
-.emailInput {
+.form_email {
     margin-bottom: 16px;
 }
-.emailForm a {
+.form a {
     margin-top: 8px;
 }
 
-.emailForm button {
+.form button {
     margin-top: 64px;
 }
