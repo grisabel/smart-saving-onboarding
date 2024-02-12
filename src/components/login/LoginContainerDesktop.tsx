@@ -1,17 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import styles from "@/styles/components/login/LoginContainer.module.css";
 import Logo from "@/components/stories/Logo";
-import BoldText from "@/components/BoldText";
-import ThinText from "@/components/ThinText";
 import FormLogin from "../forms/FormLogin";
+import Text from "../stories/Text";
 
 const LoginContainer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <Logo></Logo>
       <div>
-        <BoldText text="login now" />
-        <ThinText text="better financial control" />
+        <Text text={t("login now")} weight="bold" />
+        <Text text={t("better financial control")} weight="thin" />
         <FormLogin />
       </div>
     </div>

@@ -1,0 +1,16 @@
+@import  "@/styles/variables/fonts.scss";
+
+.text--bold {
+    @include f--b1-bold;
+    color: var(--color-bold-text);
+}
+
+.text--regular {
+    @include f--b1-regular;
+    color:#000;
+}
+
+.text--thin {
+    @include f--b1-light;
+    color: var(--color-thin-text);
+}

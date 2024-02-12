@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
 import styles from "@/styles/components/login/LoginLayout.module.css";
 import Logo from "../stories/Logo";
-import BoldText from "../BoldText";
-import ThinText from "../ThinText";
+import Text from "../stories/Text";
 
 import Button from "@/components/stories/Buttons/Button";
 
@@ -14,8 +13,8 @@ const LoginLayoutMobile: React.FC = () => {
     <div className={styles.container}>
       <Logo></Logo>
       <div>
-        <BoldText text="login now"></BoldText>
-        <ThinText text="better financial control"></ThinText>
+        <Text text={t("login now")} weight="bold" />
+        <Text text={t("better financial control")} weight="thin" />
         <Button label={t("loginButtonLabel")} />
         <Button label={t("registerButtonLabel")} color="secondary" />
       </div>
