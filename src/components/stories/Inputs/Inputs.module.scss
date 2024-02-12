@@ -1,4 +1,6 @@
-//TODO
+@import  "@/styles/variables/fonts.scss";
+@import  "@/styles/variables/breakpoints.scss";
+
 .email, .password {
     width: 100%;
     border: 1px solid var(--color-grey-input);
@@ -11,8 +13,8 @@
 
 .label {
     color: var(--color-blue-text);
-    font-family: 'Montserrat';
-    font-size: 12px;
+    
+    @include f--b2-light;
 }
 
 .inputIcon {
@@ -25,8 +27,13 @@
     width: 100%;
     border:none;
     color: var(--color-grey-input);
-    font-family: 'Montserrat';
-    font-size: 14px;
+    background-color: #FAF9FD;
+    
+    @include f--b1-light;
+
+    @media (min-width: $bpMdMin) {
+        background-color: #FFF;
+    }
 }
 
 .input:focus {
