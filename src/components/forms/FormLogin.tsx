@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "@/styles/components/forms/Form.module.css";
 import ForgotPassword from "../login/ForgotPassword";
-import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
+import InputTextEmail from "../stories/Inputs/InputTextEmail";
 
 import Button from "@/components/stories/Buttons/Button";
 
@@ -13,16 +13,16 @@ const FormLogin: React.FC = () => {
 
   return (
     <form className={styles.emailForm}>
-      <EmailInput
+      <InputTextEmail
         extraClassName={styles.emailInput}
-        label="input-email-label"
-        placeholder="input-email-placeholder"
+        label={t("input-email-label")}
+        placeholder={t("input-email-placeholder")}
       />
       <PasswordInput
-        label="input-password-label"
-        placeholder="input-password-placeholder"
+        label={t("input-password-label")}
+        placeholder={t("input-password-placeholder")}
       />
-      <ForgotPassword label="forgotPassword" />
+      <ForgotPassword label={t("forgotPassword")} />
       <Button label={t("loginButtonLabel")} />
     </form>
   );
