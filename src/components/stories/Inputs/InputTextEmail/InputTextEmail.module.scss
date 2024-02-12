@@ -1,3 +1,5 @@
+@import  "@/styles/variables/fonts.scss";
+
 .email {
     width: 100%;
     border: 1px solid var(--color-grey-input);
@@ -10,16 +12,16 @@
 
 .label {
     color: var(--color-blue-text);
-    font-family: 'Montserrat';
-    font-size: 12px;
+
+    @include f--b2-light;
 }
 
 .input {
     width: 100%;
     border:none;
     color: var(--color-grey-input);
-    font-family: 'Montserrat';
-    font-size: 14px;
+
+    @include f--b1-light;
 }
 
 .input:focus {

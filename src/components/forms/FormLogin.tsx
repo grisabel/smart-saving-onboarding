@@ -1,12 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import styles from "@/styles/components/forms/Form.module.css";
 import ForgotPassword from "../login/ForgotPassword";
-import PasswordInput from "./PasswordInput";
 import InputTextEmail from "../stories/Inputs/InputTextEmail";
-
+import InputTextPassword from "../stories/Inputs/InputTextPassword/InputTextPassword";
 import Button from "@/components/stories/Buttons/Button";
-
-import { useTranslation } from "react-i18next";
 
 const FormLogin: React.FC = () => {
   const { t } = useTranslation();
@@ -18,7 +17,7 @@ const FormLogin: React.FC = () => {
         label={t("input-email-label")}
         placeholder={t("input-email-placeholder")}
       />
-      <PasswordInput
+      <InputTextPassword
         label={t("input-password-label")}
         placeholder={t("input-password-placeholder")}
       />
