@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "@/styles/FontText.module.css";
 import { useTranslation } from "react-i18next";
+
+import styles from "./ForgotPassword.module.scss";
 
 interface ForgetPasswordProps {
   label: string;
@@ -10,7 +11,7 @@ const ForgotPassword: React.FC<ForgetPasswordProps> = ({ label }) => {
   const { t } = useTranslation();
 
   return (
-    <a href="/forgotPassword" className={styles.forgotPassword}>
+    <a href="/forgotPassword" className={styles.text}>
       {t(label)}
     </a>
   );
