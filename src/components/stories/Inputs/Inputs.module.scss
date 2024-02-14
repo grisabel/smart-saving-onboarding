@@ -31,7 +31,7 @@
     
     @include f--b1-light;
 
-    @media (min-width: $bpMdMin) {
+    @media (min-width: $bpDtMin) {
         background-color: #FFF;
     }
 }

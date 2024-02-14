@@ -13,7 +13,10 @@ i18n.use(initReactI18next).init({
         "input-email-label" : "Email",
         "input-email-placeholder" : "Enter your email",
         "input-password-label" : "Password",
-        "input-password-placeholder" : "Enter your password"
+        "input-password-placeholder" : "Enter your password",
+        "achieve-goals" : "We help you to achieve your goals!",
+        "create-account" : "Create an account"
+
       },
     },
     es: {
@@ -26,7 +29,9 @@ i18n.use(initReactI18next).init({
         "input-email-label" : "Email",
         "input-email-placeholder" : "Introduzca su email",
         "input-password-label" : "Contraseña",
-        "input-password-placeholder" : "Introduzca su contraseña"
+        "input-password-placeholder" : "Introduzca su contraseña",
+        "achieve-goals" : "¡Te ayudamos a conseguir tus metas!",
+        "create-account" : "Créate una cuenta"
       },
     },
   },
