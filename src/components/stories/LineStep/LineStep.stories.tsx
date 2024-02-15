@@ -24,6 +24,10 @@ export const LineStepExample: Story = {
     );
   },
   args: {
-    label: "LineStep",
+    steps: [
+      { hasError: false, icon: <span>Step 1</span> },
+      { completed: true, hasError: false, icon: <span>Step 2</span> },
+      { completed: false, hasError: true, icon: <span>Step 3</span> },
+    ],
   },
 };

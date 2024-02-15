@@ -1,28 +1,34 @@
 import styles from "./LineStep.module.scss";
 
-const LineStep: React.FC = () => {
+import { LineStepProps } from "./LineStep.types";
+
+const LineStep: React.FC<LineStepProps> = ({ steps }) => {
   return (
-    <div className={`${styles.LineStepWp} ${styles[`LineStepWp--${4}`]}`}>
-      <div className={styles.step}>
-        <div className={styles.icon}>icon</div>
-      </div>
+    steps && (
+      <div
+        className={`${styles.LineStepWp} ${
+          styles[`LineStepWp--${steps.length}`]
+        }`}
+      >
+        {steps.map((step, i) => {
+          return (
+            <div
+              className={`${styles.step} ${
+                step.hasError ? styles["step--error"] : ""
+              }`}
+            >
+              <div
+                className={`${styles.col} ${
+                  step.completed ? "" : styles["col--dash"]
+                }`}
+              ></div>
 
-      <div className={styles.step}>
-        <div className={styles.col}></div>
-
-        <div className={styles.icon}>icon</div>
+              <div className={styles.icon}>{step.icon}</div>
+            </div>
+          );
+        })}
       </div>
-
-      <div className={styles.step}>
-        <div className={`${styles.col} ${styles["col--dash"]}`}></div>
-        <div className={styles.icon}>icon</div>
-      </div>
-
-      <div className={`${styles.step} ${styles["step--error"]}`}>
-        <div className={`${styles.col} ${styles["col--dash"]}`}></div>
-        <div className={styles.icon}>icon</div>
-      </div>
-    </div>
+    )
   );
 };
 
