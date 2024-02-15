@@ -1,29 +1,20 @@
-@import  "@/styles/variables/fonts.scss";
-@import  "@/styles/variables/breakpoints.scss";
+@import "@/styles/variables/fonts.scss";
+@import "@/styles/variables/breakpoints.scss";
 
 .container {
-    border-radius: 8px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 16px;
-    min-width: 288px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px;
+  min-width: 288px;
 
-    @media (min-width: $bpSmMin) {
-        gap: 16px;
-    }
-}
+  @media (min-width: $bpSmMin) {
+    gap: 16px;
+  }
 
-.container--warning {
-    background-color: var(--alert-warning);
-}
-
-.container--danger {
-    background-color: var(--alert-danger);
-}
-
-.container__icon {
+  .icon {
     width: 32px;
     height: 32px;
     min-width: 32px;
@@ -31,26 +22,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.container__icon--danger {
-  background-color: var(--icon-danger);
-}
+  .content {
+    &__title {
+      @include f--b2-bold;
+    }
 
-.container__icon--warning {
-    background-color: var(--icon-warging);
-}
+    &__description {
+      color: var(--color-thin-text);
 
-.container__content__title {
-    @include f--b2-bold;
-}
+      @include f--b2-regular;
+    }
+  }
 
-.container__content__description {
-    color: var(--color-thin-text);
-
-    @include f--b2-regular;
-}
-
-.container__close {
+  .close {
     min-width: 24px;
+  }
+
+  &--warning {
+    background-color: var(--alert-warning);
+
+    .icon {
+      background-color: var(--icon-warging);
+    }
+  }
+
+  &--danger {
+    background-color: var(--alert-danger);
+
+    .icon {
+      background-color: var(--icon-danger);
+    }
+  }
 }

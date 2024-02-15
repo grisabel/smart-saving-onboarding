@@ -25,21 +25,17 @@ const Alert: React.FC<AlertProps> = ({ title, description, type }) => {
 
   return (
     <div className={`${styles.container} ${styles[`container--${type}`]}`}>
-      <div
-        className={`${styles.container__icon} ${
-          styles[`container__icon--${type}`]
-        }`}
-      >
+      <div className={`${styles.icon}`}>
         {imageSrc && altImage && (
           <Image src={imageSrc} alt={altImage} width={16} height={16}></Image>
         )}
       </div>
-      <div className={styles.container__content}>
-        <p className={styles.container__content__title}>{title}</p>
-        <p className={styles.container__content__description}>{description}</p>
+      <div className={styles.content}>
+        <p className={styles.content__title}>{title}</p>
+        <p className={styles.content__description}>{description}</p>
       </div>
       <Image
-        className={styles.container__close}
+        className={styles.close}
         src="/images/icons/close.svg"
         alt="close"
         width={24}
