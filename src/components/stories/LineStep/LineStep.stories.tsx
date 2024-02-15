@@ -26,8 +26,8 @@ export const LineStepExample: Story = {
   args: {
     steps: [
       { hasError: false, icon: <span>Step 1</span> },
-      { completed: true, hasError: false, icon: <span>Step 2</span> },
-      { completed: false, hasError: true, icon: <span>Step 3</span> },
+      { isWaiting: false, hasError: false, icon: <span>Step 2</span> },
+      { isWaiting: true, hasError: true, icon: <span>Step 3</span> },
     ],
   },
 };

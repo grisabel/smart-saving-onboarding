@@ -1,5 +1,5 @@
 interface StepProps {
-  completed?: boolean;
+  isWaiting?: boolean;
   hasError?: boolean;
   icon: JSX.Element;
 }
