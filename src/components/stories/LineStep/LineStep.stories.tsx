@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import LineStep from "./LineStep";
@@ -15,6 +16,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LineStepExample: Story = {
+  render: (args) => {
+    return (
+      <div style={{ height: "350px" }}>
+        <LineStep {...args} />
+      </div>
+    );
+  },
   args: {
     label: "LineStep",
   },

@@ -2,7 +2,7 @@ import styles from "./LineStep.module.scss";
 
 const LineStep: React.FC = () => {
   return (
-    <div className={styles.LineStepWp}>
+    <div className={`${styles.LineStepWp} ${styles[`LineStepWp--${4}`]}`}>
       <div className={styles.step}>
         <div className={styles.icon}>icon</div>
       </div>
