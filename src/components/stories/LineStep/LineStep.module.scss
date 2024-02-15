@@ -9,26 +9,34 @@
         align-items: center;
 
         .icon{
+            display: flex;
+            align-items: center;
+
+            border-radius: 16px;
+            padding: 10px;
             border: 2px solid var(--blue-main);
+            background-color: rgb(211,227,255,.4);
+            height: 48px;
         }
         .col{ 
             background-repeat: repeat-y;
             background-position: bottom;
-            width: 3px;
+            width: 2px;
             height: 92px;
             
             background-image: linear-gradient(to right, var(--blue-main) 100%, var(--blue-main) 100%);
-            background-size: 3px 92px;
+            background-size: 2px 92px;
     
             &--dash{
-                background-image: linear-gradient(to bottom, var(--blue-main) 40%, rgba(255, 255, 255, 0) 0%);
-                background-size: 3px 8px;
+                background-image: linear-gradient(to bottom, var(--blue-main) 60%, rgba(255, 255, 255, 0) 0%);
+                background-size: 2px 8px;
             }
     
         }
 
         &--error{
             .icon{
+                background-color: rgb(249,241,241, 0.8);
                 border-color: red;
             }
 
@@ -36,7 +44,7 @@
                 background-image: linear-gradient(to right, red 100%, red 100%);
 
                 &--dash{
-                    background-image: linear-gradient(to bottom, red 40%, rgba(255, 255, 255, 0) 0%);
+                    background-image: linear-gradient(to bottom, red 60%, rgba(255, 255, 255, 0) 0%);
                 }
             }
         }
