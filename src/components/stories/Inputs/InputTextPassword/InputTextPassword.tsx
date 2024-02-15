@@ -22,7 +22,7 @@ const InputTextPassword: React.FC<InputTextPasswordProps> = ({
           placeholder={placeholder}
         />
         <Image
-          src="/images/eye-close-icon.svg"
+          src="/images/icons/eye-close-icon.svg"
           alt="eye-icon"
           width={20}
           height={20}

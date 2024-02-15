@@ -9,7 +9,7 @@ const SignupContainer: React.FC = () => {
   return (
     <div className={styles.container}>
       <Image
-        src="/images/login_1.svg"
+        src="/images/login/login_1.svg"
         alt="login"
         width={100}
         height={100}
