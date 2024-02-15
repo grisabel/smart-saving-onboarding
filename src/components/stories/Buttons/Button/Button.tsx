@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-interface BlueButtonProps {
+interface ButtonProps {
   label: string;
   color?: "primary" | "secondary";
   type?: "button" | "submit";
   onClick?: () => void;
 }
 
-const Button: React.FC<BlueButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   label,
   onClick = () => null,
   color = "primary",

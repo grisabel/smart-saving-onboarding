@@ -5,7 +5,7 @@ import LoginLayoutMobile from "./layouts/LoginLayoutMobile/LoginLayoutMobile";
 import LoginLayoutDesktop from "./layouts/LoginLayoutDesktop/LoginLayoutDesktop";
 
 const LoginPage: React.FC = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 1023 });
 
   return (
     <main className={styles.loginPage}>
