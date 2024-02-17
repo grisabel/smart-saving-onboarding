@@ -1,0 +1,10 @@
+{
+    "srcFiles": ["./src/styles/assets/svg/**/*.svg"],
+    "outputDirectory": "./src/components/Icon",
+    "interfaceName": "SmartSavingsIcon",
+    "typeName": "smartSavingsIcon",
+    "prefix": "ssIcon",
+    "fileName": "smartsavings-icon.model",
+    "additionalModelOutputPath": "./src/components/Icon/lib",
+    "compileSources": true
+}
