@@ -9,7 +9,7 @@ import styles from "./LoginContainer.module.scss";
 const LoginContainer: React.FC = () => {
   return (
     <div className={styles.container}>
-      <Logo></Logo>
+      <Logo width={150} height={80}></Logo>
       <div>
         <p className={styles.title}>{t("login now")}</p>
         <p className={styles.subtitle}>{t("better financial control")}</p>

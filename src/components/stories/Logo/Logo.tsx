@@ -2,7 +2,12 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Logo.module.css";
 
-const Logo: React.FC = () => {
+interface LogoProps {
+  width: number;
+  height: number;
+}
+
+const Logo: React.FC<LogoProps> = ({ width, height }) => {
   return (
     <div className={styles.logo}>
       <Image src="/logo.ico" width={150} height={80} alt="Logo Icon" />
