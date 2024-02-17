@@ -22,7 +22,7 @@ const FormLogin: React.FC = () => {
         label={t("input-password-label")}
         placeholder={t("input-password-placeholder")}
       />
-      <a href="/forgotPassword" className={styles.forgotPassword}>
+      <a href="/retrievePassword" className={styles.forgotPassword}>
         {t("forgotPassword")}
       </a>
       <Button label={t("loginButtonLabel")} type="submit" />
