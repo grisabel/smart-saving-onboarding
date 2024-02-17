@@ -1,10 +1,11 @@
 {
     "srcFiles": ["./src/styles/assets/svg/**/*.svg"],
-    "outputDirectory": "./src/components/Icon/SmartSavingsIcon",
+    "outputDirectory": "./src/components/stories/Icon/SmartSavingsIcon",
     "interfaceName": "SmartSavingsIcon",
     "typeName": "SmartSavingsIconName",
     "prefix": "",
+    "delimiter": "KEBAB",
     "fileName": "smartsavings-icon.model",
-    "additionalModelOutputPath": "./src/components/Icon/SmartSavingsIcon/lib",
+    "additionalModelOutputPath": "./src/components/stories/Icon/SmartSavingsIcon/lib",
     "compileSources": true
 }

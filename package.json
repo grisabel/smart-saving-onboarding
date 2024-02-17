@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "npm run build-icon && next dev",
-    "build": "build-icon && next build",
-    "start": "build-icon && next start",
+    "build": "npm run build-icon && next build",
+    "start": "npm run build-icon && next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "npm run build-icon && storybook dev -p 6006",
+    "build-storybook": "npm run build-icon && storybook build",
     "build-icon": "npx -p svg-to-ts svg-to-ts-files --config ./.svg-to-tsrc.json"
   },
   "dependencies": {

@@ -1,0 +1,16 @@
+import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks';
+
+import  Icon  from './Icon';
+import * as icons from "./SmartSavingsIcon/index.mjs"
+
+<Meta title="Iconography" />
+
+# Iconography
+
+<IconGallery>
+    {Object.values(icons).map((icon) => {
+        return  <IconItem key={icon.name} name={icon.name}>
+        <Icon name={icon.name} />
+    </IconItem>
+    })}
+</IconGallery>
