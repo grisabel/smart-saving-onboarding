@@ -3,7 +3,7 @@
     "outputDirectory": "./src/components/Icon/SmartSavingsIcon",
     "interfaceName": "SmartSavingsIcon",
     "typeName": "SmartSavingsIconName",
-    "prefix": "ssIcon",
+    "prefix": "",
     "fileName": "smartsavings-icon.model",
     "additionalModelOutputPath": "./src/components/Icon/SmartSavingsIcon/lib",
     "compileSources": true
