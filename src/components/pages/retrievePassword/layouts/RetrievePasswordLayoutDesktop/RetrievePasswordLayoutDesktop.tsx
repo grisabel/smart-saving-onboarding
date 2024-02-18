@@ -1,10 +1,10 @@
 import React from "react";
 
-import RetrievePasswordContainer from "../../components/retrievePasswordContainer/retrievePasswordContainer";
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
+
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
-import styles from "./RetrievePasswordLayoutDesktop.module.scss";
+import RetrievePasswordForm from "../../components/retrievePasswordForm";
 
 const RetrievePasswordLayoutDesktop: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const RetrievePasswordLayoutDesktop: React.FC = () => {
           ]}
         ></LineStep>
       }
-      form={<RetrievePasswordContainer />}
+      form={<RetrievePasswordForm />}
     />
   );
 };

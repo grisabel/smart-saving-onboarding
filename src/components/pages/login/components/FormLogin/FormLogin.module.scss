@@ -1,0 +1,55 @@
+@import "@/styles/variables/fonts.scss";
+@import "@/styles/variables/breakpoints.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: $bpMdMin) {
+    padding: 0 64px;
+  }
+
+  .title {
+    color: var(--color-bold-text);
+    @include f--b1-bold;
+  }
+
+  .subtitle {
+    color: var(--color-thin-text);
+    @include f--b1-regular;
+  }
+
+  .emailInput {
+    margin-bottom: 16px;
+  }
+
+  .emailForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: space-between;
+    height: 100%;
+
+    .inputs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    button {
+      margin-top: 64px;
+    }
+
+    .forgotPassword {
+      margin-top: 8px;
+      text-decoration: none;
+
+      color: var(--color-blue-text);
+      @include f--b1-regular;
+    }
+  }
+}

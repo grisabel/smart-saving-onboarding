@@ -3,9 +3,7 @@ import Image from "next/image";
 
 import styles from "./LayoutStepDesktop.module.scss";
 import Logo from "@/components/stories/atoms/Logo";
-// import RetrievePasswordContainer from "../../components/retrievePasswordContainer/retrievePasswordContainer";
-import LineStep from "@/components/stories/atoms/Steps/LineStep";
-import Icon from "@/components/stories/atoms/Icon";
+
 import { LayoutStepDesktopProps } from "./LayoutStepDesktop.type";
 
 const LayoutStepDesktop: React.FC<LayoutStepDesktopProps> = (props) => {
