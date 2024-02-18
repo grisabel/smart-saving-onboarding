@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { SmartSavingsIconName } from "./SmartSavingsIcon";
 
+import styles from "./Icon.module.scss";
+
 function svgElementFromString(svgContent: string): SVGElement {
   const div = document.createElement("DIV");
   div.innerHTML = svgContent;
@@ -12,9 +14,10 @@ function svgElementFromString(svgContent: string): SVGElement {
 
 interface IconProps {
   name: SmartSavingsIconName;
+  color?: "success" | "error";
 }
 
-const Icon: React.FC<IconProps> = ({ name }) => {
+const Icon: React.FC<IconProps> = ({ name, color }) => {
   const [_, rerender] = useState<number>(0);
   const svgElRef = useRef<SVGElement | null>();
 
@@ -50,7 +53,12 @@ const Icon: React.FC<IconProps> = ({ name }) => {
     }
   }
 
-  return <span ref={spanElRef} />;
+  return (
+    <span
+      ref={spanElRef}
+      className={`${styles.IconWp} ${color ? styles[`IconWp--${color}`] : ""}`}
+    />
+  );
 };
 
 export default Icon;
