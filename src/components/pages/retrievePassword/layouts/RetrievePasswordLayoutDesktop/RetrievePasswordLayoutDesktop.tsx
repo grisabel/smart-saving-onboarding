@@ -15,12 +15,9 @@ const RetrievePasswordLayoutDesktop: React.FC = () => {
         <div className={styles.stepts}>
           <LineStep
             steps={[
-              { icon: <Icon name="question" /> },
-              { icon: <Icon name="email-send" /> },
-              {
-                isTransited: false,
-                icon: <Icon name="lock" />,
-              },
+              { icon: <Icon name="question" />, isCompleted: true },
+              { isTransited: false, icon: <Icon name="email-send" /> },
+              { isTransited: false, icon: <Icon name="lock" /> },
             ]}
           ></LineStep>
         </div>

@@ -23,10 +23,10 @@
 
       border-radius: 16px;
       padding: 10px;
-      border: 2px solid var(--blue-main);
-      background-color: var(--blue-container);
+      border: 2px solid var(--grey-main);
+      background-color: var(--grey-container);
       svg {
-        color: var(--blue-main);
+        color: var(--grey-main);
       }
     }
     .col {
@@ -37,15 +37,15 @@
 
       background-image: linear-gradient(
         to right,
-        var(--blue-main) 100%,
-        var(--blue-main) 100%
+        var(--grey-main) 100%,
+        var(--grey-main) 100%
       );
       background-size: 2px 92px;
 
       &--dash {
         background-image: linear-gradient(
           to bottom,
-          var(--blue-main) 60%,
+          var(--grey-main) 60%,
           rgba(255, 255, 255, 0) 0%
         );
         background-size: 2px 8px;
@@ -72,6 +72,32 @@
           background-image: linear-gradient(
             to bottom,
             var(--red-main) 60%,
+            rgba(255, 255, 255, 0) 0%
+          );
+        }
+      }
+    }
+
+    &--completed {
+      .icon {
+        background-color: var(--blue-container);
+        border-color: var(--blue-main);
+        svg {
+          color: var(--blue-main);
+        }
+      }
+
+      .col {
+        background-image: linear-gradient(
+          to right,
+          var(--blue-main) 100%,
+          var(--blue-main) ed 100%
+        );
+
+        &--dash {
+          background-image: linear-gradient(
+            to bottom,
+            var(--blue-main) 60%,
             rgba(255, 255, 255, 0) 0%
           );
         }
