@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./Logo.module.css";
+import styles from "./Logo.module.scss";
 
 const Logo: React.FC = () => {
   return (
