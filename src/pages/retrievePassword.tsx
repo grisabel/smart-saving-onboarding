@@ -1,6 +1,7 @@
 import Head from "next/head";
-
-import RetrievePasswordPage from "@/components/pages/retrievePassword/RetrievePasswordPage";
+import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
+import RetrievePasswordLayoutDesktop from "@/components/pages/retrievePassword/layouts/RetrievePasswordLayoutDesktop";
+import RetrievePasswordLayoutMobile from "@/components/pages/retrievePassword/layouts/RetrievePasswordLayoutMobile";
 
 export default function Home() {
   return (
@@ -11,7 +12,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" />
       </Head>
-      <RetrievePasswordPage />
+      <MainLayout
+        desktop={<RetrievePasswordLayoutDesktop />}
+        mobile={<RetrievePasswordLayoutMobile />}
+      />
     </>
   );
 }
