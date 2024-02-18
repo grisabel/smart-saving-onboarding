@@ -1,11 +1,17 @@
 .IconWp {
   svg {
-    * {
-      //   fill: var(--red-icon-fill);
-      //   stroke: var(--red-icon-stroke);
+    color: var(--grey-main);
+  }
 
-      //   fill: var(--blue-icon-fill);
-      //   stroke: var(--blue-icon-stroke);
+  &--success {
+    svg {
+      color: var(--blue-main);
+    }
+  }
+
+  &--error {
+    svg {
+      color: var(--red-main);
     }
   }
 }

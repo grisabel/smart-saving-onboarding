@@ -11,16 +11,12 @@ body {
   min-height: 100dvh;
   --blue-main: #1760a5;
   --blue-container: #f1f5f9;
-  --blue-icon-fill: #d3e3ff;
-  --blue-icon-stroke: var(--blue-main);
 
   --red-main: #eb5757;
   --red-container: #f9f1f1;
-  --red-icon-fill: #fee2e2;
-  --red-icon-stroke: var(--red-main);
 
-  --warning-icon-fill: #d97706;
-  --warning-icon-stroke: #d97706;
+  --warning-main: #d97706;
+  --warning-container: #fef3c7;
 
   --grey-main: #545f70;
   --color-bold-text: #475569;
