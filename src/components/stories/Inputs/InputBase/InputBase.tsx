@@ -9,7 +9,7 @@ const InputBase: React.FC<InputBaseProps> = ({
   className,
 }) => {
   return (
-    <div className={styles.inputWp}>
+    <div className={`${styles.inputWp} ${className}`}>
       <label className={styles.label}>{label}</label>
       <div className={styles.inputContainer}>
         <input className={styles.input} placeholder={placeholder} type={type} />
