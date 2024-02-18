@@ -1,34 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { InputTextPasswordProps } from "./InputTextPassword.types";
+import InputBase from "../InputBase";
+import Icon from "../../Icon";
 
-import styles from "../Inputs.module.scss";
+const InputTextPassword: React.FC<InputTextPasswordProps> = (props) => {
+  const [hide, setHide] = useState<boolean>(true);
 
-interface InputTextPasswordProps {
-  label: string;
-  placeholder: string;
-}
+  const handleHide = () => {
+    setHide((preState) => !preState);
+  };
 
-const InputTextPassword: React.FC<InputTextPasswordProps> = ({
-  label,
-  placeholder,
-}) => {
   return (
-    <div className={styles.password}>
-      <label className={styles.label}>{label}</label>
-      <div className={styles.inputIcon}>
-        <input
-          className={styles.input}
-          type="password"
-          placeholder={placeholder}
-        />
-        <Image
-          src="/images/icons/eye-close-icon.svg"
-          alt="eye-icon"
-          width={20}
-          height={20}
-        />
-      </div>
-    </div>
+    <InputBase
+      {...props}
+      type={hide ? "password" : "text"}
+      icon={
+        <span onClick={handleHide}>
+          {hide ? <Icon name="eye-open" /> : <Icon name="eye-close" />}
+        </span>
+      }
+    />
   );
 };
 

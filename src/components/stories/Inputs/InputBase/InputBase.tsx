@@ -6,6 +6,7 @@ const InputBase: React.FC<InputBaseProps> = ({
   label,
   placeholder,
   type,
+  icon,
   className,
 }) => {
   return (
@@ -13,6 +14,7 @@ const InputBase: React.FC<InputBaseProps> = ({
       <label className={styles.label}>{label}</label>
       <div className={styles.inputContainer}>
         <input className={styles.input} placeholder={placeholder} type={type} />
+        {icon && icon}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import InputTextPassword from "./InputTextPassword";
 
 const meta = {
-  title: "SmartSavings/InputTextPassword",
+  title: "SmartSavings/Inputs/InputTextPassword",
   component: InputTextPassword,
   parameters: {
     layout: "centered",

@@ -4,4 +4,5 @@ export interface InputBaseProps {
   label: string;
   placeholder: string;
   type: "email" | "password" | "text" | "number";
+  icon?: JSX.Element;
 }
