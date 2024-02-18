@@ -4,13 +4,26 @@ import Image from "next/image";
 import styles from "./RetrievePasswordLayoutDesktop.module.scss";
 import Logo from "@/components/stories/Logo";
 import RetrievePasswordContainer from "../../components/retrievePasswordContainer/retrievePasswordContainer";
+import LineStep from "@/components/stories/Steps/LineStep";
+import Icon from "@/components/stories/Icon";
 
 const RetrievePasswordLayoutDesktop: React.FC = () => {
   return (
     <div className={styles.container}>
       <Logo />
       <div className={styles.retrievePassword}>
-        <div className={styles.stepts}></div>
+        <div className={styles.stepts}>
+          <LineStep
+            steps={[
+              { icon: <Icon name="question" /> },
+              { icon: <Icon name="email-send" /> },
+              {
+                isTransited: false,
+                icon: <Icon name="lock" />,
+              },
+            ]}
+          ></LineStep>
+        </div>
         <RetrievePasswordContainer />
         <div className={styles.image}>
           <Image
