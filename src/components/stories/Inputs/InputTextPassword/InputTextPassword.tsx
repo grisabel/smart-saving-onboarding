@@ -17,7 +17,7 @@ const InputTextPassword: React.FC<InputTextPasswordProps> = (props) => {
       type={hide ? "password" : "text"}
       icon={
         <span onClick={handleHide}>
-          {hide ? <Icon name="eye-open" /> : <Icon name="eye-close" />}
+          <Icon name={hide ? "eye-open" : "eye-close"} />
         </span>
       }
     />
