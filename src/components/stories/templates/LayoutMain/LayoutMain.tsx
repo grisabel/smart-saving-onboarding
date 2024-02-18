@@ -8,7 +8,7 @@ interface LayoutMainProps {
 }
 
 const LayoutMain: React.FC<LayoutMainProps> = ({ desktop, mobile }) => {
-  const isMobile = useMediaQuery({ maxWidth: 1023 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
     <main className={styles.LayoutMain}>{isMobile ? mobile : desktop}</main>
