@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import RetrievePasswordEmailSentDesktop from "@/components/pages/retrievePasswordEmailSent/layouts/desktop";
+import RetrievePasswordEmailSentMobile from "@/components/pages/retrievePasswordEmailSent/layouts/mobile/RetrievePasswordEmailSentMobile";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       </Head>
       <MainLayout
         desktop={<RetrievePasswordEmailSentDesktop />}
-        mobile={<RetrievePasswordEmailSentDesktop />}
+        mobile={<RetrievePasswordEmailSentMobile />}
       />
     </>
   );
