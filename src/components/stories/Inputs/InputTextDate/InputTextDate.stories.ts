@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 
 import InputTextDate from "./InputTextDate";
 
@@ -17,5 +18,6 @@ type Story = StoryObj<typeof meta>;
 export const InputTextEmailExample: Story = {
   args: {
     label: "label",
+    onChange: action("onChange"),
   },
 };

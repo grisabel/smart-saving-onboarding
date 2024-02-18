@@ -1,6 +1,7 @@
 export interface InputBaseProps {
   className?: string;
 
+  id?: string;
   label?: string;
   placeholder?: string;
   type: "email" | "password" | "text" | "number";
@@ -8,5 +9,6 @@ export interface InputBaseProps {
 
   value?: string | null;
   onChange?: (value: React.ChangeEvent<HTMLInputElement>) => void;
-  formatValue?: (value: string) => string;
+
+  inputRef?: React.RefCallback<HTMLInputElement>;
 }

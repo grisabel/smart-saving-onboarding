@@ -3,23 +3,19 @@ import { InputBaseProps } from "./InputBase.types";
 import styles from "./InputBase.module.scss";
 
 const InputBase: React.FC<InputBaseProps> = ({
+  id,
   label,
   placeholder,
   type,
   icon,
   value: defaultValue,
   onChange,
-  formatValue,
+  inputRef,
   className,
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    const formatedVal = formatValue ? formatValue(value) : value;
-
     if (typeof onChange === "function") {
-      event.target.value = formatedVal;
-      event.currentTarget.value = formatedVal;
-
+      console.log({ event });
       onChange(event);
     }
   };
@@ -29,11 +25,13 @@ const InputBase: React.FC<InputBaseProps> = ({
       <label className={styles.label}>{label}</label>
       <div className={styles.inputContainer}>
         <input
+          id={id}
           className={styles.input}
           placeholder={placeholder}
           type={type}
           defaultValue={defaultValue ?? ""}
-          onChange={handleChange}
+          onInput={handleChange}
+          ref={inputRef}
         />
         {icon && icon}
       </div>
