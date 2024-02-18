@@ -1,5 +1,4 @@
 .container {
-  height: 100%;
   background-color: #fff;
   box-shadow: 0px 20px 25px -5px rgba(15, 23, 42, 0.1),
     0px 10px 10px 0px rgba(15, 23, 42, 0.05);
@@ -15,12 +14,12 @@
 
     .stepts {
       width: 200px;
-      height: 100%;
     }
 
     .forms {
       min-width: 300px;
       max-width: 464px;
+      min-height: 300px;
       margin-top: 16px;
     }
 
