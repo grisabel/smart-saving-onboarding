@@ -1,0 +1,16 @@
+.layoutMobileWp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  margin: 32px 16px 0 16px;
+
+  .logoContainer {
+    margin-right: 64px;
+  }
+
+  .formContainer {
+    height: calc(100% - 80px);
+  }
+}
