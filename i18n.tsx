@@ -29,7 +29,10 @@ i18n.use(initReactI18next).init({
         "welcome": "Welcome!",
         "about-yourself": "Tell us about youself.",
         "forgot-your-password" : "Forgot your password?",
-        "give-your-data" : "Provide us with the following details and we will send you a link to reset your password."
+        "give-your-data" : "Provide us with the following details and we will send you a link to reset your password.",
+        "sent-email" : "An email has been sent to",
+        "sent-email-success" : "You have successfully completed the registration process.",
+        "take-control" : "Start taking control of your income and expenses today"
 
       },
     },
@@ -59,7 +62,10 @@ i18n.use(initReactI18next).init({
         "welcome" : "¡Bienvenido!",
         "about-yourself" : "Cuéntanos un poco sobre ti.",
         "forgot-your-password" : "¿Olvidaste tu contraseña?",
-        "give-your-data" : "Facilítanos los siguientes datos y te enviaremos un enlace para restablecer tu contraseña."
+        "give-your-data" : "Facilítanos los siguientes datos y te enviaremos un enlace para restablecer tu contraseña.",
+        "sent-email" : "Se ha enviado un email a",
+        "sent-email-success" : "Has completado con éxito el proceso de registro.",
+        "take-control": "Comienza a tomar el control de tus ingresos y gastos hoy mismo."
       },
     },
   },
