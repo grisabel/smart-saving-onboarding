@@ -2,7 +2,7 @@ import React from "react";
 import { t } from "i18next";
 import Image from "next/image";
 
-import Button from "@/components/stories/Buttons/Button";
+import Button from "@/components/stories/atoms/Buttons/Button";
 import styles from "./SignupContainer.module.scss";
 
 const SignupContainer: React.FC = () => {

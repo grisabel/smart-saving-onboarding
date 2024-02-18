@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 import styles from "./RetrievePasswordLayoutDesktop.module.scss";
-import Logo from "@/components/stories/Logo";
+import Logo from "@/components/stories/atoms/Logo";
 import RetrievePasswordContainer from "../../components/retrievePasswordContainer/retrievePasswordContainer";
-import LineStep from "@/components/stories/Steps/LineStep";
-import Icon from "@/components/stories/Icon";
+import LineStep from "@/components/stories/atoms/Steps/LineStep";
+import Icon from "@/components/stories/atoms/Icon";
 
 const RetrievePasswordLayoutDesktop: React.FC = () => {
   return (

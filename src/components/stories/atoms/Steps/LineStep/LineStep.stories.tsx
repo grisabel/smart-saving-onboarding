@@ -2,7 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import LineStep from "./LineStep";
-import Icon from "@/components/stories/Icon";
+import Icon from "@/components/stories/atoms/Icon";
 
 const meta = {
   title: "SmartSavings/Steps/LineStep",

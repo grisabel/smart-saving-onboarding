@@ -1,9 +1,9 @@
 import React from "react";
 
 import styles from "./RetrievePasswordLayoutMobile.module.scss";
-import Logo from "@/components/stories/Logo";
+import Logo from "@/components/stories/atoms/Logo";
 import RetrievePasswordForm from "../../components/retrievePasswordContainer/components/retrievePasswordForm";
-import DotStep from "@/components/stories/Steps/DotStep";
+import DotStep from "@/components/stories/atoms/Steps/DotStep";
 
 const RetrievePasswordLayoutMobile: React.FC = () => {
   return (

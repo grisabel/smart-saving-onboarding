@@ -1,12 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
-import InputTextEmail from "@/components/stories/Inputs/InputTextEmail";
-import InputTextPassword from "@/components/stories/Inputs/InputTextPassword";
-import Button from "@/components/stories/Buttons/Button";
+import InputTextEmail from "@/components/stories/atoms/Inputs/InputTextEmail";
+import InputTextPassword from "@/components/stories/atoms/Inputs/InputTextPassword";
+import Button from "@/components/stories/atoms/Buttons/Button";
 
 import styles from "./FormLogin.module.scss";
-
-import { useTranslation } from "react-i18next";
 
 const FormLogin: React.FC = () => {
   const { t } = useTranslation();
@@ -22,9 +22,9 @@ const FormLogin: React.FC = () => {
         label={t("input-password-label")}
         placeholder={t("input-password-placeholder")}
       />
-      <a href="/retrievePassword" className={styles.forgotPassword}>
+      <Link href="/retrievePassword" className={styles.forgotPassword}>
         {t("forgotPassword")}
-      </a>
+      </Link>
       <Button label={t("loginButtonLabel")} type="submit" />
     </form>
   );

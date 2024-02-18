@@ -1,7 +1,7 @@
 import React from "react";
 import { t } from "i18next";
 
-import Logo from "@/components/stories/Logo";
+import Logo from "@/components/stories/atoms/Logo";
 import FormLogin from "./components/FormLogin";
 
 import styles from "./LoginContainer.module.scss";

@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import Button from "@/components/stories/Buttons/Button";
-import InputTextEmail from "@/components/stories/Inputs/InputTextEmail";
-import InputTextDate from "@/components/stories/Inputs/InputTextDate";
+import Button from "@/components/stories/atoms/Buttons/Button";
+import InputTextEmail from "@/components/stories/atoms/Inputs/InputTextEmail";
+import InputTextDate from "@/components/stories/atoms/Inputs/InputTextDate";
 
 import styles from "./RetrievePasswordForm.module.scss";
 
