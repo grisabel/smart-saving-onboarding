@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 
 import Button from "@/components/stories/Buttons/Button";
 import InputTextEmail from "@/components/stories/Inputs/InputTextEmail";
+import InputTextDate from "@/components/stories/Inputs/InputTextDate";
 
 import styles from "./RetrievePasswordForm.module.scss";
-import InputText from "@/components/stories/Inputs/InputText";
 
 const RetrievePasswordForm: React.FC = () => {
   const { t } = useTranslation();
@@ -16,10 +16,10 @@ const RetrievePasswordForm: React.FC = () => {
         label={t("input-email-label")}
         placeholder={t("input-email-placeholder")}
       />
-      <InputText
+      <InputTextDate
         label={t("input-text-birthday-label")}
         placeholder={t("input-text-birthday-placeholder")}
-      ></InputText>
+      ></InputTextDate>
       <div className={styles.form__button}>
         <Button label={t("btn-back")} type="button" color="secondary" />
         <Button label={t("btn-next")} type="button" />
