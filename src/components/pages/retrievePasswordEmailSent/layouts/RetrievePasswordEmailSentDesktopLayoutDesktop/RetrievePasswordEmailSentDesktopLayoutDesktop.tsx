@@ -1,11 +1,10 @@
 import React from "react";
-import { t } from "i18next";
 
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
 
-import styles from "./RetrievePasswordEmailSentDesktopLayoutDesktop.module.scss";
+import EmailSendtSucess from "../../components/EmailSentSuccess/EmailSendtSucess";
 
 const RetrievePasswordEmailSentDesktop: React.FC = () => {
   return (
@@ -23,15 +22,7 @@ const RetrievePasswordEmailSentDesktop: React.FC = () => {
           ]}
         ></LineStep>
       }
-      form={
-        <div className={styles.text}>
-          <div>
-            <p className={styles.text__bold}>{`${t("sent-email")} XXXXXX`}</p>
-            <p className={styles.text__thin}>{t("sent-email-success")}</p>
-          </div>
-          <p className={styles.text__bold}>{t("take-control")}</p>
-        </div>
-      }
+      form={<EmailSendtSucess />}
     />
   );
 };
