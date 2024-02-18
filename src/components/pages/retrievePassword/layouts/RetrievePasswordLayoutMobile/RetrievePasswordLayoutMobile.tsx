@@ -1,14 +1,22 @@
 import React from "react";
-import styles from "./RetrievePasswordLayoutMobile.module.scss";
 
-import LoginContainer from "../../../login/components/LoginContainer";
-import SignupContainer from "../../../login/components/SignupContainer";
+import styles from "./RetrievePasswordLayoutMobile.module.scss";
+import Logo from "@/components/stories/Logo";
+import RetrievePasswordForm from "../../components/retrievePasswordContainer/components/retrievePasswordForm";
+import DotStep from "@/components/stories/Steps/DotStep";
 
 const RetrievePasswordLayoutMobile: React.FC = () => {
   return (
     <div className={styles.retrievePasswordMobile}>
-      <LoginContainer />
-      <SignupContainer />
+      <Logo />
+      <RetrievePasswordForm />
+      <DotStep
+        steps={[
+          { isTransited: true },
+          { isTransited: false },
+          { isTransited: false },
+        ]}
+      ></DotStep>
     </div>
   );
 };
