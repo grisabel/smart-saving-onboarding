@@ -17,11 +17,16 @@
       display: flex;
       align-items: center;
 
+      height: 48px;
+      width: 48px;
+
       border-radius: 16px;
       padding: 10px;
       border: 2px solid var(--blue-main);
       background-color: rgb(211, 227, 255, 0.4);
-      min-height: 48px;
+      svg {
+        color: var(--blue-main);
+      }
     }
     .col {
       background-repeat: repeat-y;
@@ -50,6 +55,9 @@
       .icon {
         background-color: rgb(249, 241, 241, 0.8);
         border-color: var(--red-main);
+        svg {
+          color: var(--red-main);
+        }
       }
 
       .col {

@@ -2,6 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import LineStep from "./LineStep";
+import Icon from "@/components/stories/Icon";
 
 const meta = {
   title: "SmartSavings/LineStep",
@@ -25,9 +26,9 @@ export const LineStepExample: Story = {
   },
   args: {
     steps: [
-      { hasError: false, icon: <span>Step 1</span> },
-      { isWaiting: false, hasError: false, icon: <span>Step 2</span> },
-      { isWaiting: true, hasError: true, icon: <span>Step 3</span> },
+      { hasError: false, icon: <Icon name="question" /> },
+      { isWaiting: false, hasError: false, icon: <Icon name="email-send" /> },
+      { isWaiting: true, hasError: true, icon: <Icon name="lock" /> },
     ],
   },
 };

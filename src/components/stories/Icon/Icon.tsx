@@ -14,7 +14,7 @@ function svgElementFromString(svgContent: string): SVGElement {
 
 interface IconProps {
   name: SmartSavingsIconName;
-  color: "success" | "error";
+  color?: "success" | "error";
 }
 
 const Icon: React.FC<IconProps> = ({ name, color }) => {
