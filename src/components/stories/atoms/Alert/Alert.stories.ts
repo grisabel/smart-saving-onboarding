@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Alert from "./Alert";
 
 const meta = {
-  title: "SmartSavings/Alert",
+  title: "SmartSavings/atoms/Alert",
   component: Alert,
   parameters: {
     layout: "centered",

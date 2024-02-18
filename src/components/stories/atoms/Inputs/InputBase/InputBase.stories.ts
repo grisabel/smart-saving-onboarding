@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import InputBase from "./InputBase";
 
 const meta = {
-  title: "SmartSavings/Inputs/InputBase",
+  title: "SmartSavings/atoms/Inputs/InputBase",
   component: InputBase,
   parameters: {
     layout: "centered",

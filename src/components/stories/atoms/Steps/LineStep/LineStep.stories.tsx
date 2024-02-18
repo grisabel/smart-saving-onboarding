@@ -5,7 +5,7 @@ import LineStep from "./LineStep";
 import Icon from "@/components/stories/atoms/Icon";
 
 const meta = {
-  title: "SmartSavings/Steps/LineStep",
+  title: "SmartSavings/atoms/Steps/LineStep",
   component: LineStep,
   parameters: {
     layout: "centered",

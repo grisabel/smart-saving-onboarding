@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import InputTextDate from "./InputTextDate";
 
 const meta = {
-  title: "SmartSavings/Inputs/InputTextDate",
+  title: "SmartSavings/atoms/Inputs/InputTextDate",
   component: InputTextDate,
   parameters: {
     layout: "centered",
