@@ -1,6 +1,8 @@
 import Head from "next/head";
 
-import LoginPage from "@/components/pages/login/LoginPage";
+import LoginLayoutDesktop from "@/components/pages/login/layouts/LoginLayoutDesktop";
+import LoginLayoutMobile from "@/components/pages/login/layouts/LoginLayoutMobile";
+import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 
 export default function Home() {
   return (
@@ -11,7 +13,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" />
       </Head>
-      <LoginPage />
+      <MainLayout
+        desktop={<LoginLayoutDesktop />}
+        mobile={<LoginLayoutMobile />}
+      />
     </>
   );
 }
