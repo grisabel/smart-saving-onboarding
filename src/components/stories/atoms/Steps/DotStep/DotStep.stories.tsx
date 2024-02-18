@@ -2,10 +2,10 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import DotStep from "./DotStep";
-import Icon from "@/components/stories/Icon";
+import Icon from "@/components/stories/atoms/Icon";
 
 const meta = {
-  title: "SmartSavings/Steps/DotStep",
+  title: "SmartSavings/atoms/Steps/DotStep",
   component: DotStep,
   parameters: {
     layout: "centered",

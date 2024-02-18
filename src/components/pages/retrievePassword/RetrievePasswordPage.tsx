@@ -4,7 +4,7 @@ import styles from "./RetrievePasswordPage.module.scss";
 import RetrievePasswordLayoutMobile from "./layouts/RetrievePasswordLayoutMobile";
 import RetrievePasswordLayoutDesktop from "./layouts/RetrievePasswordLayoutDesktop";
 
-const retrivePasswordPage: React.FC = () => {
+const RetrivePasswordPage: React.FC = () => {
   const isMobile = useMediaQuery({ maxWidth: 1023 });
 
   return (
@@ -18,4 +18,4 @@ const retrivePasswordPage: React.FC = () => {
   );
 };
 
-export default retrivePasswordPage;
+export default RetrivePasswordPage;

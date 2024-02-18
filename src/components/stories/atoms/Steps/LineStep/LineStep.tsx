@@ -13,6 +13,7 @@ const LineStep: React.FC<LineStepProps> = ({ steps }) => {
         {steps.map((step, i) => {
           return (
             <div
+              key={`step-${i}`}
               className={`${styles.step} 
               ${step.hasError ? styles["step--error"] : ""}
               ${step.isCompleted ? styles["step--completed"] : ""}

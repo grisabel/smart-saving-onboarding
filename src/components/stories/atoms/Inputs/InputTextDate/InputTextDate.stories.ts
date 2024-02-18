@@ -1,15 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 
-import InputTextEmail from "./InputTextEmail";
+import InputTextDate from "./InputTextDate";
 
 const meta = {
-  title: "SmartSavings/Inputs/InputTextEmail",
-  component: InputTextEmail,
+  title: "SmartSavings/atoms/Inputs/InputTextDate",
+  component: InputTextDate,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof InputTextEmail>;
+} satisfies Meta<typeof InputTextDate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -17,6 +18,6 @@ type Story = StoryObj<typeof meta>;
 export const InputTextEmailExample: Story = {
   args: {
     label: "label",
-    placeholder: "placeholder",
+    onChange: action("onChange"),
   },
 };
