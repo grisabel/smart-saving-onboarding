@@ -19,7 +19,7 @@ const LineStep: React.FC<LineStepProps> = ({ steps }) => {
             >
               <div
                 className={`${styles.col} ${
-                  step.isWaiting ? styles["col--dash"] : ""
+                  step.isTransited === false ? styles["col--dash"] : ""
                 }`}
               ></div>
 

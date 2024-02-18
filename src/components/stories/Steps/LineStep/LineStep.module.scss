@@ -16,6 +16,7 @@
     .icon {
       display: flex;
       align-items: center;
+      justify-content: center;
 
       height: 48px;
       width: 48px;
@@ -23,7 +24,7 @@
       border-radius: 16px;
       padding: 10px;
       border: 2px solid var(--blue-main);
-      background-color: rgb(211, 227, 255, 0.4);
+      background-color: var(--blue-container);
       svg {
         color: var(--blue-main);
       }
@@ -53,7 +54,7 @@
 
     &--error {
       .icon {
-        background-color: rgb(249, 241, 241, 0.8);
+        background-color: var(--red-container);
         border-color: var(--red-main);
         svg {
           color: var(--red-main);

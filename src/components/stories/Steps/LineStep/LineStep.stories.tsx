@@ -5,7 +5,7 @@ import LineStep from "./LineStep";
 import Icon from "@/components/stories/Icon";
 
 const meta = {
-  title: "SmartSavings/LineStep",
+  title: "SmartSavings/Steps/LineStep",
   component: LineStep,
   parameters: {
     layout: "centered",
@@ -26,9 +26,9 @@ export const LineStepExample: Story = {
   },
   args: {
     steps: [
-      { hasError: false, icon: <Icon name="question" /> },
-      { isWaiting: false, hasError: false, icon: <Icon name="email-send" /> },
-      { isWaiting: true, hasError: true, icon: <Icon name="lock" /> },
+      { icon: <Icon name="question" /> },
+      { icon: <Icon name="email-send" /> },
+      { isTransited: false, hasError: true, icon: <Icon name="lock" /> },
     ],
   },
 };
