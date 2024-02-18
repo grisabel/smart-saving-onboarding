@@ -3,4 +3,5 @@ export interface LayoutStepDesktopProps {
     src: string;
     alt: string;
   };
+  step: JSX.Element;
 }

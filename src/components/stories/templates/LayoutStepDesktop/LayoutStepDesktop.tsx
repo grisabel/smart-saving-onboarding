@@ -13,15 +13,7 @@ const LayoutStepDesktop: React.FC<LayoutStepDesktopProps> = (props) => {
     <div className={styles.container}>
       <Logo />
       <div className={styles.retrievePassword}>
-        <div className={styles.stepts}>
-          <LineStep
-            steps={[
-              { icon: <Icon name="question" />, isCompleted: true },
-              { isTransited: false, icon: <Icon name="email-send" /> },
-              { isTransited: false, icon: <Icon name="lock" /> },
-            ]}
-          ></LineStep>
-        </div>
+        <div className={styles.stepts}>{props.step}</div>
         <h1>ghdfoñjgx</h1>
         {/* <RetrievePasswordContainer /> */}
         <div className={styles.image}>
