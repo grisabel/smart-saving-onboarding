@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "npm run build-icon && next dev",
+    "build": "npm run build-icon && next build",
+    "start": "npm run build-icon && next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "npm run build-icon && storybook dev -p 6006",
+    "build-storybook": "npm run build-icon && storybook build",
+    "build-icon": "npx -p svg-to-ts svg-to-ts-files --config ./.svg-to-tsrc.json"
   },
   "dependencies": {
     "i18next": "^23.7.18",
@@ -37,6 +38,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "sass": "^1.70.0",
     "storybook": "^7.6.14",
+    "svg-to-ts": "^11.0.1",
     "typescript": "^5"
   }
 }
