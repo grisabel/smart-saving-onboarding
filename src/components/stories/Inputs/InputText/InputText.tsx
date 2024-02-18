@@ -1,19 +1,10 @@
 import React from "react";
 
-import styles from "../Inputs.module.scss";
+import { InputTextProps } from "./InputText.types";
+import InputBase from "../InputBase";
 
-interface InputTextProps {
-  label: string;
-  placeholder: string;
-}
-
-const InputText: React.FC<InputTextProps> = ({ label, placeholder }) => {
-  return (
-    <div className={styles.text}>
-      <label className={styles.label}>{label}</label>
-      <input className={styles.input} type="text" placeholder={placeholder} />
-    </div>
-  );
+const InputText: React.FC<InputTextProps> = (props) => {
+  return <InputBase {...props} type="text" />;
 };
 
 export default InputText;

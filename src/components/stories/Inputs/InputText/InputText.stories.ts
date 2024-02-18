@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import InputText from "./InputText";
 
 const meta = {
-  title: "SmartSavings/InputText",
+  title: "SmartSavings/Inputs/InputText",
   component: InputText,
   parameters: {
     layout: "centered",

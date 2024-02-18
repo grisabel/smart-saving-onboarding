@@ -12,6 +12,9 @@
     "build-icon": "npx -p svg-to-ts svg-to-ts-files --config ./.svg-to-tsrc.json"
   },
   "dependencies": {
+    "@maskito/core": "^2.0.2",
+    "@maskito/kit": "^2.0.2",
+    "@maskito/react": "^2.0.2",
     "i18next": "^23.7.18",
     "next": "14.1.0",
     "react": "^18",

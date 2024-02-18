@@ -26,12 +26,10 @@ const Icon: React.FC<IconProps> = ({ name, color }) => {
   useEffect(() => {
     import(`./SmartSavingsIcon/build/smartsaving-${name}.icon`)
       .then((module) => {
-        console.log({ module });
         const { data } = Object.values(module)[0] as {
           name: string;
           data: string;
         };
-        console.log({ data });
         if (data) {
           if (svgElRef.current && spanElRef.current) {
             spanElRef.current.removeChild(svgElRef.current);
@@ -45,7 +43,7 @@ const Icon: React.FC<IconProps> = ({ name, color }) => {
           `data: we could not find the Icon with the name ${name}, did you add it to assets folder?`
         )
       );
-  }, []);
+  }, [name]);
 
   if (spanElRef.current) {
     if (svgElRef.current && spanElRef.current) {

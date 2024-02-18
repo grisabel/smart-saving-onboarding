@@ -1,22 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import InputTextPassword from "./InputTextPassword";
+import InputBase from "./InputBase";
 
 const meta = {
-  title: "SmartSavings/Inputs/InputTextPassword",
-  component: InputTextPassword,
+  title: "SmartSavings/Inputs/InputBase",
+  component: InputBase,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof InputTextPassword>;
+} satisfies Meta<typeof InputBase>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const InputTextPasswordExample: Story = {
+export const InputBaseExample: Story = {
   args: {
     label: "label",
     placeholder: "placeholder",
+    type: "text",
   },
 };
