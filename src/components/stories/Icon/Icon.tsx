@@ -21,7 +21,7 @@ const Icon: React.FC<IconProps> = ({ name }) => {
   const spanElRef = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
-    import(`./SmartSavingsIcon/build/-${name}.icon`)
+    import(`./SmartSavingsIcon/build/smartsaving-${name}.icon`)
       .then((module) => {
         console.log({ module });
         const { data } = Object.values(module)[0] as {

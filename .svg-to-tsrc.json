@@ -3,7 +3,7 @@
     "outputDirectory": "./src/components/stories/Icon/SmartSavingsIcon",
     "interfaceName": "SmartSavingsIcon",
     "typeName": "SmartSavingsIconName",
-    "prefix": "",
+    "prefix": "smartsaving",
     "delimiter": "KEBAB",
     "fileName": "smartsavings-icon.model",
     "additionalModelOutputPath": "./src/components/stories/Icon/SmartSavingsIcon/lib",
