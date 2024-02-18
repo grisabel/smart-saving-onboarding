@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./LoginLayoutDesktop.module.scss";
 
-import LoginContainer from "../../components/LoginContainer";
 import SignupContainer from "../../components/SignupContainer";
+import FormLogin from "../../components/FormLogin";
 import Logo from "@/components/stories/atoms/Logo";
 
 const LoginLayoutDesktop: React.FC = () => {
@@ -10,7 +10,7 @@ const LoginLayoutDesktop: React.FC = () => {
     <div className={styles.loginLayout}>
       <div className={styles.main}>
         <Logo />
-        <LoginContainer />
+        <FormLogin />
       </div>
       <SignupContainer />
     </div>
