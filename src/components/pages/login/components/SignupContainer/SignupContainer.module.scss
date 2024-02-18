@@ -1,31 +1,35 @@
-@import  "@/styles/variables/fonts.scss";
+@import "@/styles/variables/fonts.scss";
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
- 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  img {
+    max-height: 357px;
+  }
 }
 
 .container img {
-    z-index: 1;
-    width: 100%;
-    height: auto;
-    padding: 16px;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  padding: 16px;
 }
 
 .container p {
-    width: 80%;
-    z-index: 1;
-    text-align: center;
-    color: var(--grey-main);
+  width: 80%;
+  z-index: 1;
+  text-align: center;
+  color: var(--grey-main);
 
-    @include f--b1-regular;
+  @include f--b1-regular;
 }
 
 .container button {
-    width: 80%;
-    z-index: 1;
-    margin-top: 16px;;
+  width: 80%;
+  z-index: 1;
+  margin-top: 16px;
 }
