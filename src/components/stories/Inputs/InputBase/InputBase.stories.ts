@@ -18,5 +18,6 @@ export const InputBaseExample: Story = {
   args: {
     label: "label",
     placeholder: "placeholder",
+    type: "text",
   },
 };
