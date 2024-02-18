@@ -14,8 +14,7 @@ const LayoutStepDesktop: React.FC<LayoutStepDesktopProps> = (props) => {
       <Logo />
       <div className={styles.retrievePassword}>
         <div className={styles.stepts}>{props.step}</div>
-        <h1>ghdfoñjgx</h1>
-        {/* <RetrievePasswordContainer /> */}
+        <div className={styles.forms}>{props.form}</div>
         <div className={styles.image}>
           <Image
             src={props.image.src}

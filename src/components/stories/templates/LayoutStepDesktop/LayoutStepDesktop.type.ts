@@ -4,4 +4,5 @@ export interface LayoutStepDesktopProps {
     alt: string;
   };
   step: JSX.Element;
+  form: JSX.Element;
 }

@@ -38,5 +38,10 @@ export const LayoutStepDesktopExample: Story = {
         ]}
       ></LineStep>
     ),
+    form: (
+      <>
+        <h1>TITLE</h1>
+      </>
+    ),
   },
 };
