@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { SmartSavingsIconName } from "./SmartSavingsIcon";
 
+import styles from "./Icon.module.scss";
+
 function svgElementFromString(svgContent: string): SVGElement {
   const div = document.createElement("DIV");
   div.innerHTML = svgContent;
@@ -50,7 +52,7 @@ const Icon: React.FC<IconProps> = ({ name }) => {
     }
   }
 
-  return <span ref={spanElRef} />;
+  return <span ref={spanElRef} className={styles.IconWp} />;
 };
 
 export default Icon;

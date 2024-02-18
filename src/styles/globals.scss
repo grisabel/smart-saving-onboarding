@@ -9,26 +9,38 @@
 
 body {
   min-height: 100dvh;
-  --blue-main: #1760A5;
-  --red-main: #EB5757;
-  --grey-main: #545F70;
+  --blue-main: #1760a5;
+  --blue-container: #f1f5f9;
+  --blue-icon-fill: #d3e3ff;
+  --blue-icon-stroke: var(--blue-main);
+
+  --red-main: #eb5757;
+  --red-container: #f9f1f1;
+  --red-icon-fill: #fee2e2;
+  --red-icon-stroke: var(--red-main);
+
+  --warning-icon-fill: #d97706;
+  --warning-icon-stroke: #d97706;
+
+  --grey-main: #545f70;
   --color-bold-text: #475569;
-  --color-thin-text: #73777F;
-  --color-blue-text: #3474B0;
-  --color-grey-input: #73777F;
-  --color-background-image-login: #D3E3FF;
-  --alert-danger:#FEF2F2;
-  --alert-warning: #FFFBEB;
-  --icon-danger: #FEE2E2;
-  --icon-warging: #FEF3C7;
+  --color-thin-text: #73777f;
+  --color-blue-text: #3474b0;
+  --color-grey-input: #73777f;
+  --color-background-image-login: #d3e3ff;
+  --alert-danger: #fef2f2;
+  --alert-warning: #fffbeb;
+  --icon-danger: #fee2e2;
+  --icon-warging: #fef3c7;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
 }
 
 p {
   text-wrap: pretty;
 }
-
-
