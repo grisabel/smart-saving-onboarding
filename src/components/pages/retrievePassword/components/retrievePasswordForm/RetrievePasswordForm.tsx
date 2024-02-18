@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 
 import Button from "@/components/stories/atoms/Buttons/Button";
@@ -9,6 +10,11 @@ import styles from "./RetrievePasswordForm.module.scss";
 
 const RetrievePasswordForm: React.FC = () => {
   const { t } = useTranslation();
+  const router = useRouter();
+
+  const handleNext = () => {
+    router.push("/retrieve-password/email-sent");
+  };
 
   return (
     <div className={styles.container}>
@@ -27,7 +33,7 @@ const RetrievePasswordForm: React.FC = () => {
         </div>
         <div className={styles.form__button}>
           <Button label={t("btn-back")} type="button" color="secondary" />
-          <Button label={t("btn-next")} type="button" />
+          <Button label={t("btn-next")} type="button" onClick={handleNext} />
         </div>
       </form>
     </div>
