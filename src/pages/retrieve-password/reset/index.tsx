@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import ResetPasswordDesktop from "@/components/pages/resetPassword/layouts/ResetPasswordDesktop";
-// import ResetPasswordMobile from "@/components/pages/ResetPassword/layouts/ResetPasswordMobile";
+import ResetPasswordMobile from "@/components/pages/resetPassword/layouts/ResetPasswordMobile";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <MainLayout
         desktop={<ResetPasswordDesktop />}
-        mobile={<ResetPasswordDesktop />}
+        mobile={<ResetPasswordMobile />}
       />
     </>
   );
