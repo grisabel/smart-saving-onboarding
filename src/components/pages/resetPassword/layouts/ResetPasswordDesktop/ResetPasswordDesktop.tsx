@@ -1,15 +1,16 @@
 import React from "react";
 
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
+
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
-import EmailSendtSucess from "./components/EmailSentSuccess/EmailSentSucess";
+import ResetPasswordForm from "../../components/ResetPasswordForm";
 
-const RetrievePasswordEmailSentDesktop: React.FC = () => {
+const ResetPasswordDesktop: React.FC = () => {
   return (
     <LayoutStepDesktop
       image={{
-        src: "/images/retrievePassword/retrivePasswordEmailSentPage.svg",
+        src: "/images/retrievePassword/reset.svg",
         alt: "retrievePassword",
       }}
       step={
@@ -17,13 +18,13 @@ const RetrievePasswordEmailSentDesktop: React.FC = () => {
           steps={[
             { icon: <Icon name="question" />, isCompleted: true },
             { icon: <Icon name="email-send" />, isCompleted: true },
-            { isTransited: false, icon: <Icon name="lock" /> },
+            { icon: <Icon name="lock" />, isCompleted: true },
           ]}
         ></LineStep>
       }
-      form={<EmailSendtSucess />}
+      form={<ResetPasswordForm />}
     />
   );
 };
 
-export default RetrievePasswordEmailSentDesktop;
+export default ResetPasswordDesktop;

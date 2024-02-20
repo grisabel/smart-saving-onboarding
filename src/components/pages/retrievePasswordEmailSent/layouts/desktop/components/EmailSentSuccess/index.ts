@@ -1,1 +1,1 @@
-export { default } from "./EmailSendtSucess";
+export { default } from "./EmailSentSucess";
