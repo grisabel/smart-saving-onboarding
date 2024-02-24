@@ -9,6 +9,7 @@ i18n.use(initReactI18next).init({
         "registerButtonLabel": "I want to sign up!",
         "btn-back" : "Back",
         "btn-next" : "Continue",
+        "btn-return" : "Return",
 
         "input-email-label" : "Email",
         "input-email-placeholder" : "Enter your email",
@@ -36,7 +37,10 @@ i18n.use(initReactI18next).init({
         "sent-email-success" : "You have successfully completed the registration process.",
         "take-control" : "Start taking control of your income and expenses today",
         "choose-password" : "Choose a secure password",
-        "not-forget-password" : "And most importantly, don't forget it or you'll have to do this all over again!"
+        "not-forget-password" : "And most importantly, don't forget it or you'll have to do this all over again!",
+        "error-password" : "Oops, we seem to have encountered a problem during the process of changing the password",
+        "team-working" : "Our team is already investigating and working to fix it",
+        "try-again-later" : "Please try again later. We are sorry for the inconvenience and thank you for your understanding"
 
       },
     },
@@ -46,6 +50,7 @@ i18n.use(initReactI18next).init({
         "registerButtonLabel": "¡Quiero darme de alta!",
         "btn-back" : "Atrás",
         "btn-next" : "Continuar",
+        "btn-return" : "Volver",
 
         "input-email-label" : "Email",
         "input-email-placeholder" : "Introduzca su email",
@@ -73,7 +78,10 @@ i18n.use(initReactI18next).init({
         "sent-email-success" : "Has completado con éxito el proceso de registro.",
         "take-control": "Comienza a tomar el control de tus ingresos y gastos hoy mismo.",
         "choose-password" : "Elige una contraseña segura.",
-        "not-forget-password" : "¡Y lo más importante, no la olvides o tendrás que hacer todo esto de nuevo!"
+        "not-forget-password" : "¡Y lo más importante, no la olvides o tendrás que hacer todo esto de nuevo!",
+        "error-password" : "Ups, parece que hemos encontrado un problema durante el proceso de cambiar la contraseña.",
+        "team-working" : "Nuestro equipo ya está investigando y trabajando para solucionarlo",
+        "try-again-later" : "Por favor, inténtalo de nuevo más tarde. Lamentamos la molestia y agradecemos tu compresión."
       },
     },
   },
