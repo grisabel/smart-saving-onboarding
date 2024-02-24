@@ -1,6 +1,8 @@
 import { SessionInterfaceRepository } from "./SessionInterfaceRepository";
 import { SessionHttpRepository } from "./SessionHttpRepository";
 import { SessionMockRepository } from "./SessionMockRepository";
+import { HttpFactory } from "@/utils/Http/HttpFactory";
+import { HttpMockAdapterFactory } from "@/utils/Http/HttpMockAdapterFactory";
 
 export class SessionFactoryRepository {
   private static instance: SessionInterfaceRepository | null = null;
@@ -8,9 +10,11 @@ export class SessionFactoryRepository {
   static getInstance(): SessionInterfaceRepository {
     if (!SessionFactoryRepository.instance) {
       if (process.env.NODE_ENV === "production") {
-        SessionFactoryRepository.instance = new SessionHttpRepository();
+        const http = HttpFactory.getInstance();
+        SessionFactoryRepository.instance = new SessionHttpRepository(http);
       } else {
-        SessionFactoryRepository.instance = new SessionMockRepository();
+        const httpMock = HttpMockAdapterFactory.getInstance();
+        SessionFactoryRepository.instance = new SessionMockRepository(httpMock);
       }
     }
     return SessionFactoryRepository.instance;
