@@ -10,7 +10,7 @@ export class SessionHttpRepository implements SessionInterfaceRepository {
     return new Promise((resolve, reject) => {
       return this.http
         .post<LoginRequestModel>({
-          endpoint: process.env.BACKEND_BASE_URL + "/login",
+          endpoint: process.env.NEXT_PUBLIC_BACKEND_BASE_URL + "/login",
           body: {
             email: requestModel.email,
             password: requestModel.password,

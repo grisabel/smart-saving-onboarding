@@ -3,7 +3,7 @@ import { SessionHttpRepository } from "./SessionHttpRepository";
 
 const mockHttp = HttpMockAdapterFactory.getInstance();
 
-mockHttp.onPost(process.env.BACKEND_BASE_URL + "/login", () => {
+mockHttp.onPost(process.env.NEXT_PUBLIC_BACKEND_BASE_URL + "/login", () => {
   return Promise.resolve({
     response: {
       accessToken:
