@@ -1,4 +1,4 @@
-import styles from "./EmailSendtSucess.module.scss";
+import styles from "./EmailSentSucess.module.scss";
 import { t } from "i18next";
 
 const EmailSentSuccess: React.FC = () => {
