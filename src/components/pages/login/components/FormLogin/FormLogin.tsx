@@ -7,9 +7,18 @@ import InputTextPassword from "@/components/stories/atoms/Inputs/InputTextPasswo
 import Button from "@/components/stories/atoms/Buttons/Button";
 
 import styles from "./FormLogin.module.scss";
+import { SessionFactoryRepository } from "@/repository/SessionRepository/SessionFactoryRepository";
+
+const sessionRepository = SessionFactoryRepository.getInstance();
 
 const FormLogin: React.FC = () => {
   const { t } = useTranslation();
+
+  React.useEffect(() => {
+    sessionRepository
+      .login({ email: "a", password: "b" })
+      .then((resul) => console.log(resul));
+  }, []);
 
   return (
     <div className={styles.container}>
