@@ -20,6 +20,7 @@ const FormLogin: React.FC = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    //TODO add metadata
     sessionRepository
       .login({ email: email, password: password })
       .then((resul) => console.log(resul))

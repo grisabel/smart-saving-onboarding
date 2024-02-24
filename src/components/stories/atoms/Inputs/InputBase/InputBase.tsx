@@ -15,7 +15,6 @@ const InputBase: React.FC<InputBaseProps> = ({
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (typeof onChange === "function") {
-      console.log({ event });
       onChange(event);
     }
   };
