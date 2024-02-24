@@ -9,8 +9,8 @@ export class SessionHttpRepository implements SessionInterfaceRepository {
   login(requestModel: LoginRequestModel): Promise<LoginResponseModel> {
     return new Promise((resolve, reject) => {
       return this.http
-        .post<LoginRequestModel>({
-          endpoint: process.env.NEXT_PUBLIC_BACKEND_BASE_URL + "/login",
+        .post({
+          endpoint: process.env.NEXT_PUBLIC_BACKEND_BASE_URL + "/session/login",
           body: {
             email: requestModel.email,
             password: requestModel.password,
@@ -24,10 +24,12 @@ export class SessionHttpRepository implements SessionInterfaceRepository {
                 break;
 
               default:
+                reject();
                 break;
             }
           } catch (error) {
             console.log("Error in response.json()");
+            reject();
           }
         })
         .catch((error) => {
