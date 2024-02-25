@@ -3,14 +3,14 @@ import React from "react";
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
-import Success from "./components/SuccessOnboarding/Success";
+import ErrorMsg from "@/components/stories/molecules/ErrorMsg";
 
-const SuccessOnboardingDesktop: React.FC = () => {
+const ErrorOnboardingDesktop: React.FC = () => {
   return (
     <LayoutStepDesktop
       image={{
-        src: "/images/retrievePassword/retrivePasswordEmailSentPage.svg",
-        alt: "retrievePassword",
+        src: "/images/error/error.svg",
+        alt: "error",
       }}
       step={
         <LineStep
@@ -18,13 +18,13 @@ const SuccessOnboardingDesktop: React.FC = () => {
             { icon: <Icon name="user" />, isCompleted: true },
             { icon: <Icon name="email" />, isCompleted: true },
             { icon: <Icon name="lock" />, isCompleted: true },
-            { icon: <Icon name="flag" />, isCompleted: true },
+            { icon: <Icon name="flag" />, hasError: true },
           ]}
         ></LineStep>
       }
-      form={<Success />}
+      form={<ErrorMsg />}
     />
   );
 };
 
-export default SuccessOnboardingDesktop;
+export default ErrorOnboardingDesktop;

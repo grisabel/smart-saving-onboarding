@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 import Button from "../../atoms/Buttons/Button";
 import styles from "./ErrorMsg.module.scss";
-import { useTranslation } from "react-i18next";
 
 interface ErrorMsgProps {
   title?: string;
@@ -19,6 +20,11 @@ const ErrorMsg: React.FC<ErrorMsgProps> = ({ title, content, button }) => {
   const defaultContent = (
     <>
       <p className={styles.text__thin}>{t("team-working")}</p>
+      <Image
+        src="/images/error/error.svg"
+        alt="retrievePassword"
+        layout="fill"
+      ></Image>
       <p className={styles.text__thin}>{t("try-again-later")}</p>
     </>
   );

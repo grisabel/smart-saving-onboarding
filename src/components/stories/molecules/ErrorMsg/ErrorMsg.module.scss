@@ -21,4 +21,14 @@
 
     @include f--b1-light;
   }
+
+  img {
+    position: relative !important;
+    margin: auto;
+    max-width: 320px;
+
+    @media (min-width: $bpMdMin) {
+      display: none;
+    }
+  }
 }
