@@ -13,6 +13,8 @@ i18n.use(initReactI18next).init({
 
         "input-email-label" : "Email",
         "input-email-placeholder" : "Enter your email",
+        "input-repeat-email-label" : "Email",
+        "input-repeat-email-placeholder" : "Repeat your email",
         "input-password-label" : "Password",
         "input-password-placeholder" : "Enter your password",
         "input-repeat-password-label" : "Repeat Password",
@@ -58,6 +60,8 @@ i18n.use(initReactI18next).init({
 
         "input-email-label" : "Email",
         "input-email-placeholder" : "Introduzca su email",
+        "input-repeat-email-label" : "Repetir Email",
+        "input-repeat-email-placeholder" : "Repita su email",
         "input-password-label" : "Contraseña",
         "input-password-placeholder" : "Introduzca su contraseña",
         "input-repeat-password-label" : "Repetir Contraseña",

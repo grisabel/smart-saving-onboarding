@@ -4,7 +4,7 @@ import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop"
 
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
-import DataOnboardingForm from "../../components/DataOnboardingForm";
+import EmailOnboardingForm from "../../components/EmailOnboardingForm";
 
 const EmailOnboardingDesktop: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const EmailOnboardingDesktop: React.FC = () => {
           ]}
         ></LineStep>
       }
-      form={<DataOnboardingForm />}
+      form={<EmailOnboardingForm />}
     />
   );
 };

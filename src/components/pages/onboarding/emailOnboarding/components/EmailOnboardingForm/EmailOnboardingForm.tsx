@@ -27,8 +27,8 @@ const DataOnboardingForm: React.FC = () => {
             placeholder={t("input-email-placeholder")}
           />
           <InputTextEmail
-            label={t("input-repeat-password-label")}
-            placeholder={t("input-repeat-password-placeholder")}
+            label={t("input-repeat-email-label")}
+            placeholder={t("input-repeat-email-placeholder")}
           />
         </div>
         <div className={styles.form__button}>
