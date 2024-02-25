@@ -9,7 +9,15 @@
   width: 100%;
 
   @media (min-width: $bpMdMin) {
+    padding: 0 32px;
+  }
+
+  @media (min-width: $bpDtMin) {
     padding: 0 64px;
+  }
+
+  @media (min-width: $bpDtMin) {
+    padding: 0 128px;
   }
 
   .title {
