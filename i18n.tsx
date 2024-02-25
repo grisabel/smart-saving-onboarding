@@ -23,6 +23,8 @@ i18n.use(initReactI18next).init({
         "input-text-lastname-placeholder" : "Enter your last names",
         "input-text-birthday-label" : "Date of birth",
         "input-text-birthday-placeholder" : "dd/mm/aaaa",
+        "input-select-goal-label" : "Financial goal",
+        "input-select-goal-placeholder" : "Select your goal",
 
         "login now": "Log in now",
         "better financial control": "Take a step towards better financial control!",
@@ -64,6 +66,8 @@ i18n.use(initReactI18next).init({
         "input-text-lastname-placeholder" : "Introduzca sus apellidos",
         "input-text-birthday-label" : "Fecha de nacimiento",
         "input-text-birthday-placeholder" : "dd/mm/aaaa",
+        "input-select-goal-label" : "Objetivo financiero",
+        "input-select-goal-placeholder" : "Seleccione su objetivo",
 
         "login now": "Inicia sesión ahora.",
         "better financial control": "¡Da un paso hacia un mejor control financiero!",
