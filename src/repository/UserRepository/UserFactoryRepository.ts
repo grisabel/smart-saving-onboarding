@@ -1,8 +1,6 @@
 import { UserInterfaceRepository } from "./UserInterfaceRepository";
 import { UserHttpRepository } from "./UserHttpRepository";
 import { UserMockRepository } from "./UserMockRepository";
-import { HttpService } from "@/utils/Http/HttpService";
-import { HttpMockAdapter } from "@/utils/Http/HttpMockAdapter";
 import { HttpFactory } from "@/utils/Http/HttpFactory";
 import { HttpMockAdapterFactory } from "@/utils/Http/HttpMockAdapterFactory";
 
@@ -11,7 +9,7 @@ export class UserFactoryRepository {
 
   static getInstance(): UserInterfaceRepository {
     if (!UserFactoryRepository.instance) {
-      if (process.env.NODE_ENV === "production") {
+      if (process.env.NEXT_PUBLIC_APP_ENV === "production") {
         const http = HttpFactory.getInstance();
         UserFactoryRepository.instance = new UserHttpRepository(http);
       } else {
