@@ -12,9 +12,7 @@ function ErrorOnboardingMobile() {
     <LayoutMobile>
       <div className={styles.success}>
         <div className={styles.content}>
-          <ErrorMsg
-            button={{ label: t("loginButtonLabel"), color: "primary" }}
-          />
+          <ErrorMsg />
         </div>
         <div className={styles.steps}>
           <DotStep

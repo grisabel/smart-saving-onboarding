@@ -24,9 +24,7 @@ const ErrorOnboardingDesktop: React.FC = () => {
           ]}
         ></LineStep>
       }
-      form={
-        <ErrorMsg button={{ label: t("loginButtonLabel"), color: "primary" }} />
-      }
+      form={<ErrorMsg />}
     />
   );
 };
