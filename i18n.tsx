@@ -42,7 +42,9 @@ i18n.use(initReactI18next).init({
         "not-forget-password" : "And most importantly, don't forget it or you'll have to do this all over again!",
         "error-password" : "Oops, we seem to have encountered a problem during the process.",
         "team-working" : "Our team is already investigating and working to fix it.",
-        "try-again-later" : "Please try again later. We are sorry for the inconvenience and thank you for your understanding"
+        "try-again-later" : "Please try again later. We are sorry for the inconvenience and thank you for your understanding",
+        "need-email" : "We need your email address.",
+        "contact-with-you" : "So we will be in touch with you.",
 
       },
     },
@@ -85,7 +87,10 @@ i18n.use(initReactI18next).init({
         "not-forget-password" : "¡Y lo más importante, no la olvides o tendrás que hacer todo esto de nuevo!",
         "error-password" : "Ups, parece que hemos encontrado un problema durante el proceso.",
         "team-working" : "Nuestro equipo ya está investigando y trabajando para solucionarlo.",
-        "try-again-later" : "Por favor, inténtalo de nuevo más tarde. Lamentamos la molestia y agradecemos tu compresión."
+        "try-again-later" : "Por favor, inténtalo de nuevo más tarde. Lamentamos la molestia y agradecemos tu compresión.",
+        "need-email" : "Necesitamos tu correo electrónico.",
+        "contact-with-you" : "Así estaremos en contacto contigo.",
+
       },
     },
   },
