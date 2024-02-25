@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
   color?: "primary" | "secondary";
   type?: "button" | "submit";

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
@@ -6,6 +7,7 @@ import Icon from "@/components/stories/atoms/Icon";
 import ErrorMsg from "@/components/stories/molecules/ErrorMsg";
 
 const ErrorOnboardingDesktop: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <LayoutStepDesktop
       image={{
@@ -22,7 +24,9 @@ const ErrorOnboardingDesktop: React.FC = () => {
           ]}
         ></LineStep>
       }
-      form={<ErrorMsg />}
+      form={
+        <ErrorMsg button={{ label: t("loginButtonLabel"), color: "primary" }} />
+      }
     />
   );
 };
