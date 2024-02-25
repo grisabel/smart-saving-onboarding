@@ -1,7 +1,7 @@
 import Head from "next/head";
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import DataOnboardingDesktop from "@/components/pages/onboarding/dataOnboarding/layouts/desktop";
-import RetrievePasswordLayoutMobile from "@/components/pages/retrievePassword/layouts/RetrievePasswordLayoutMobile";
+import DataOnboardingMobile from "@/components/pages/onboarding/dataOnboarding/layouts/mobile/DataOnboardingMobile";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <MainLayout
         desktop={<DataOnboardingDesktop />}
-        mobile={<RetrievePasswordLayoutMobile />}
+        mobile={<DataOnboardingMobile />}
       />
     </>
   );
