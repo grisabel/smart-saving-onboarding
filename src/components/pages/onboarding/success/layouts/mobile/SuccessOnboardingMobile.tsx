@@ -1,23 +1,25 @@
 import React from "react";
-import Image from "next/image";
 
 import LayoutMobile from "@/components/stories/templates/LayoutMobile";
 
-import styles from "./ResetPasswordErrorMobile.module.scss";
-import ErrorMsg from "@/components/stories/molecules/ErrorMsg";
+import styles from "./SuccessOnboardingMobile.module.scss";
 import DotStep from "@/components/stories/atoms/Steps/DotStep";
+import Success from "../desktop/components/SuccessOnboarding";
 
-function ResetPasswordErrorMobile() {
+function SuccessOnboardingMobile() {
   return (
     <LayoutMobile>
-      <div className={styles.container}>
-        <ErrorMsg />
+      <div className={styles.success}>
+        <div className={styles.content}>
+          <Success />
+        </div>
         <div className={styles.steps}>
           <DotStep
             steps={[
               { isTransited: false },
               { isTransited: false },
-              { hasError: true },
+              { isTransited: false },
+              { isTransited: true },
             ]}
           ></DotStep>
         </div>
@@ -26,4 +28,4 @@ function ResetPasswordErrorMobile() {
   );
 }
 
-export default ResetPasswordErrorMobile;
+export default SuccessOnboardingMobile;

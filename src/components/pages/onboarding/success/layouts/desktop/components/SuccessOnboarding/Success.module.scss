@@ -2,13 +2,10 @@
 @import "@/styles/variables/breakpoints.scss";
 
 .text {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
-
-  @media (min-width: $bpMdMin) {
-    height: 100%;
-  }
 
   &__bold {
     color: var(--color-bold-text);
@@ -23,9 +20,7 @@
   }
 
   img {
-    position: relative !important;
     margin: auto;
-    max-width: 320px;
 
     @media (min-width: $bpMdMin) {
       display: none;

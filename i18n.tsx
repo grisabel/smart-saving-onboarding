@@ -13,6 +13,8 @@ i18n.use(initReactI18next).init({
 
         "input-email-label" : "Email",
         "input-email-placeholder" : "Enter your email",
+        "input-repeat-email-label" : "Email",
+        "input-repeat-email-placeholder" : "Repeat your email",
         "input-password-label" : "Password",
         "input-password-placeholder" : "Enter your password",
         "input-repeat-password-label" : "Repeat Password",
@@ -23,6 +25,8 @@ i18n.use(initReactI18next).init({
         "input-text-lastname-placeholder" : "Enter your last names",
         "input-text-birthday-label" : "Date of birth",
         "input-text-birthday-placeholder" : "dd/mm/aaaa",
+        "input-select-goal-label" : "Financial goal",
+        "input-select-goal-placeholder" : "Select your goal",
 
         "login now": "Log in now",
         "better financial control": "Take a step towards better financial control!",
@@ -40,7 +44,14 @@ i18n.use(initReactI18next).init({
         "not-forget-password" : "And most importantly, don't forget it or you'll have to do this all over again!",
         "error-password" : "Oops, we seem to have encountered a problem during the process.",
         "team-working" : "Our team is already investigating and working to fix it.",
-        "try-again-later" : "Please try again later. We are sorry for the inconvenience and thank you for your understanding"
+        "try-again-later" : "Please try again later. We are sorry for the inconvenience and thank you for your understanding",
+        "need-email" : "We need your email address.",
+        "contact-with-you" : "So we will be in touch with you.",
+        "lock-account" : "It's time to lock your account!",
+        "secure-password" : "Choose a password that only you know.",
+        "congratulation" : "Congratulations!",
+        "onboarding-completed" : "You have successfully completed the registration process.",
+        "login-now" : "Start taking control of your income and expenses today.",
 
       },
     },
@@ -54,6 +65,8 @@ i18n.use(initReactI18next).init({
 
         "input-email-label" : "Email",
         "input-email-placeholder" : "Introduzca su email",
+        "input-repeat-email-label" : "Repetir Email",
+        "input-repeat-email-placeholder" : "Repita su email",
         "input-password-label" : "Contraseña",
         "input-password-placeholder" : "Introduzca su contraseña",
         "input-repeat-password-label" : "Repetir Contraseña",
@@ -64,6 +77,8 @@ i18n.use(initReactI18next).init({
         "input-text-lastname-placeholder" : "Introduzca sus apellidos",
         "input-text-birthday-label" : "Fecha de nacimiento",
         "input-text-birthday-placeholder" : "dd/mm/aaaa",
+        "input-select-goal-label" : "Objetivo financiero",
+        "input-select-goal-placeholder" : "Seleccione su objetivo",
 
         "login now": "Inicia sesión ahora.",
         "better financial control": "¡Da un paso hacia un mejor control financiero!",
@@ -81,7 +96,14 @@ i18n.use(initReactI18next).init({
         "not-forget-password" : "¡Y lo más importante, no la olvides o tendrás que hacer todo esto de nuevo!",
         "error-password" : "Ups, parece que hemos encontrado un problema durante el proceso.",
         "team-working" : "Nuestro equipo ya está investigando y trabajando para solucionarlo.",
-        "try-again-later" : "Por favor, inténtalo de nuevo más tarde. Lamentamos la molestia y agradecemos tu compresión."
+        "try-again-later" : "Por favor, inténtalo de nuevo más tarde. Lamentamos la molestia y agradecemos tu compresión.",
+        "need-email" : "Necesitamos tu correo electrónico.",
+        "contact-with-you" : "Así estaremos en contacto contigo.",
+        "lock-account" : "¡Es hora de ponerle candado a tu cuenta!",
+        "secure-password" : "Escoge una contraseña que solo tú conozcas.",
+        "congratulation" : "¡Enhorabuena!",
+        "onboarding-completed" : "Has completado con éxito el proceso de registro.",
+        "login-now" : "Comienza a tomar el control de tus ingresos y gastos hoy mismo."
       },
     },
   },
