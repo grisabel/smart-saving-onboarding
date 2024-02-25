@@ -22,8 +22,8 @@ function ResetPasswordErrorMobile() {
         <div className={styles.steps}>
           <DotStep
             steps={[
-              { isTransited: true },
-              { isTransited: true },
+              { isTransited: false },
+              { isTransited: false },
               { hasError: true },
             ]}
           ></DotStep>

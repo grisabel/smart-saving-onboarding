@@ -22,7 +22,7 @@ function RetrievePasswordErrorMobile() {
         <div className={styles.steps}>
           <DotStep
             steps={[
-              { isTransited: true },
+              { isTransited: false },
               { hasError: true },
               { isTransited: false },
             ]}

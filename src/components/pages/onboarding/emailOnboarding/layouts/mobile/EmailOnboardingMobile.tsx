@@ -16,8 +16,8 @@ const EmailOnboardingMobile: React.FC = () => {
         <div className={styles.steps}>
           <DotStep
             steps={[
-              { isTransited: true },
               { isTransited: false },
+              { isTransited: true },
               { isTransited: false },
               { isTransited: false },
             ]}
