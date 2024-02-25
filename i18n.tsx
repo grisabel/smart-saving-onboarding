@@ -49,6 +49,9 @@ i18n.use(initReactI18next).init({
         "contact-with-you" : "So we will be in touch with you.",
         "lock-account" : "It's time to lock your account!",
         "secure-password" : "Choose a password that only you know.",
+        "congratulation" : "Congratulations!",
+        "onboarding-completed" : "You have successfully completed the registration process.",
+        "login-now" : "Start taking control of your income and expenses today.",
 
       },
     },
@@ -97,8 +100,10 @@ i18n.use(initReactI18next).init({
         "need-email" : "Necesitamos tu correo electrónico.",
         "contact-with-you" : "Así estaremos en contacto contigo.",
         "lock-account" : "¡Es hora de ponerle candado a tu cuenta!",
-        "secure-password" : "Escoge una contraseña que solo tú conozcas."
-
+        "secure-password" : "Escoge una contraseña que solo tú conozcas.",
+        "congratulation" : "¡Enhorabuena!",
+        "onboarding-completed" : "Has completado con éxito el proceso de registro.",
+        "login-now" : "Comienza a tomar el control de tus ingresos y gastos hoy mismo."
       },
     },
   },
