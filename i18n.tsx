@@ -47,6 +47,8 @@ i18n.use(initReactI18next).init({
         "try-again-later" : "Please try again later. We are sorry for the inconvenience and thank you for your understanding",
         "need-email" : "We need your email address.",
         "contact-with-you" : "So we will be in touch with you.",
+        "lock-account" : "It's time to lock your account!",
+        "secure-password" : "Choose a password that only you know.",
 
       },
     },
@@ -94,6 +96,8 @@ i18n.use(initReactI18next).init({
         "try-again-later" : "Por favor, inténtalo de nuevo más tarde. Lamentamos la molestia y agradecemos tu compresión.",
         "need-email" : "Necesitamos tu correo electrónico.",
         "contact-with-you" : "Así estaremos en contacto contigo.",
+        "lock-account" : "¡Es hora de ponerle candado a tu cuenta!",
+        "secure-password" : "Escoge una contraseña que solo tú conozcas."
 
       },
     },

@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import Button from "@/components/stories/atoms/Buttons/Button";
 
-import styles from "./EmailOnboardingForm.module.scss";
-import InputTextEmail from "@/components/stories/atoms/Inputs/InputTextEmail";
+import styles from "./PasswordOnboardingForm.module.scss";
+import InputTextPassword from "@/components/stories/atoms/Inputs/InputTextPassword";
 
 const DataOnboardingForm: React.FC = () => {
   const { t } = useTranslation();
@@ -17,17 +17,17 @@ const DataOnboardingForm: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <p className={styles.title}>{t("need-email")}</p>
-      <p className={styles.subtitle}>{t("contact-with-you")}</p>
+      <p className={styles.title}>{t("lock-account")}</p>
+      <p className={styles.subtitle}>{t("secure-password")}</p>
       <form className={styles.form}>
         <div className={styles.inputs}>
-          <InputTextEmail
-            label={t("input-email-label")}
-            placeholder={t("input-email-placeholder")}
+          <InputTextPassword
+            label={t("input-password-label")}
+            placeholder={t("input-password-placeholder")}
           />
-          <InputTextEmail
-            label={t("input-repeat-email-label")}
-            placeholder={t("input-repeat-email-placeholder")}
+          <InputTextPassword
+            label={t("input-repeat-password-label")}
+            placeholder={t("input-repeat-password-placeholder")}
           />
         </div>
         <div className={styles.form__button}>
