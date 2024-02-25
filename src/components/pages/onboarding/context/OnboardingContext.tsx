@@ -1,20 +1,34 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-const OnboardingContext = createContext(null);
+interface OnboardingContextInterface {
+  email: string;
+  setEmail: (value: string) => void;
+}
+
+const OnboardingContext = createContext<OnboardingContextInterface | null>(
+  null
+);
 
 const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const [email, setEmail] = useState<string>("example");
+
+  const context = {
+    email,
+    setEmail,
+  };
+
   return (
-    <OnboardingContext.Provider value={null}>
+    <OnboardingContext.Provider value={context}>
       {children}
     </OnboardingContext.Provider>
   );
 };
 
-export const useOnboardingCtx = () => {
+export const useOnboardingCtx = (): OnboardingContextInterface => {
   const context = useContext(OnboardingContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error(
       "useOnboardingCtx must be used within a OnboardingProvider"
     );
