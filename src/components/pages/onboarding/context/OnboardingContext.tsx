@@ -12,7 +12,7 @@ const OnboardingContext = createContext<OnboardingContextInterface | null>(
 const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [email, setEmail] = useState<string>("example");
+  const [email, setEmail] = useState<string>("");
 
   const context = {
     email,

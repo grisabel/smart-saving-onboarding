@@ -13,7 +13,7 @@ const DataOnboardingForm: React.FC = () => {
   const router = useRouter();
 
   const handleNext = () => {
-    router.push("/retrieve-password/email-sent");
+    router.push("/sign-up/email");
   };
 
   return (
