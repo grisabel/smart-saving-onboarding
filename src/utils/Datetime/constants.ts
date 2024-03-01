@@ -4,8 +4,8 @@ export const DATE_FORMATS = {
   ISO_8601: "ISO_8601",
   ISOStringDate: "yyyy-MM-dd",
   TimeShort: "HH:mm",
-  Date: "dd/MM/yyyy",
-  DateTime: "dd.MM.yyyy HH:mm",
+  Date: "dd/mm/yyyy",
+  DateTime: "dd/MM/yyyy HH:mm",
   Month: "MM/yyyy",
   Year: "yyyy",
 };
