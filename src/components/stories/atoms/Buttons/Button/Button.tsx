@@ -6,6 +6,7 @@ export interface ButtonProps {
   color?: "primary" | "secondary";
   type?: "button" | "submit";
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,12 +14,14 @@ const Button: React.FC<ButtonProps> = ({
   onClick = () => null,
   color = "primary",
   type = "button",
+  disabled,
 }) => {
   return (
     <button
       type={type}
       onClick={onClick}
       className={`${styles.button} ${styles[`button--${color}`]}`}
+      disabled={disabled}
     >
       {label}
     </button>

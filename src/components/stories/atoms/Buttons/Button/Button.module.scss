@@ -1,19 +1,24 @@
-@import  "@/styles/variables/fonts.scss";
+@import "@/styles/variables/fonts.scss";
 
 .button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    color: #FFF;
-    border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
 
-    @include f--b1-regular;
+  @include f--b1-regular;
+
+  &[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+  }
 }
 
 .button--primary {
-    background-color: var(--blue-main);
+  background-color: var(--blue-main);
 }
 
 .button--secondary {
-    background-color: var(--grey-main);
+  background-color: var(--grey-main);
 }
