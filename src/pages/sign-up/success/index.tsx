@@ -2,8 +2,9 @@ import Head from "next/head";
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import SuccessOnboardingDesktop from "@/components/pages/onboarding/success/layouts/desktop";
 import SuccessOnboardingMobile from "@/components/pages/onboarding/success/layouts/mobile";
+import OnboardingProvider from "@/components/pages/onboarding/context/OnboardingContext";
 
-export default function Home() {
+export default function Success() {
   return (
     <>
       <Head>
@@ -19,3 +20,7 @@ export default function Home() {
     </>
   );
 }
+
+Success.getContext = function getLayout(page: React.ReactElement) {
+  return <OnboardingProvider>{page}</OnboardingProvider>;
+};
