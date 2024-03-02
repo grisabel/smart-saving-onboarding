@@ -183,15 +183,22 @@ const Dropdown: React.FC<DropdownProps> = ({
             className={styles.input}
             placeholder={placeholder}
             value={inputText}
-            defaultValue={defaultOptionLabel(options, defaultValue)}
             autoComplete="off"
             ref={inputRef}
             onInput={handleFilterDropdown}
             onKeyDown={handleKeyDropdown}
           />
-          {inputText && (
-            <Icon name="close-square" onClick={() => setInputText("")} />
-          )}
+          <div className={styles.icons}>
+            <Icon
+              name={inputText ? "close-square" : ""}
+              onClick={(event) => {
+                event.preventDefault();
+                setInputText("");
+                handleCloseDropDown();
+              }}
+            />
+            <Icon name="chevron-down" onClick={handleOpenDropdown} />
+          </div>
         </div>
       </div>
       {optionsFilter.length > 0 && (
