@@ -73,24 +73,26 @@ const Dropdown: React.FC<DropdownProps> = ({
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
 
   const handleOpenDropdown = () => {
+    console.log("onFocus");
     setOpenDropdown(true);
   };
 
   const handleCloseDropDown = () => {
+    console.log("onBlur");
+
     setOpenDropdown(false);
   };
 
   useEffect(() => {
-    if (openDropdown) {
-      return;
-    }
+    if (openDropdown) return;
+
     if (!inputRef.current) {
       return;
     }
 
     inputRef.current.value = inputText;
     setOptionsFilter(options);
-  }, [openDropdown]);
+  }, [openDropdown, inputText]);
 
   const _handleKeyUpDropdownItem = () => {
     setOptionFocus((prevState) => {
@@ -114,13 +116,13 @@ const Dropdown: React.FC<DropdownProps> = ({
     if (!optionsRef.current || !inputRef.current) {
       return;
     }
+    event.preventDefault();
 
     if (event.code === "ArrowDown") {
       _handleKeyDownDropdownItem(optionsRef.current.length);
     } else if (event.code === "ArrowUp") {
       _handleKeyUpDropdownItem();
     } else if (event.code === "Enter") {
-      event.preventDefault();
       if (optionsRef.current && optionFocus !== -1) {
         optionsRef.current[optionFocus].click();
         inputRef.current.blur();
@@ -167,8 +169,8 @@ const Dropdown: React.FC<DropdownProps> = ({
       className={`${styles.DropdownWp} ${
         openDropdown ? styles["DropdownWp--open"] : ""
       }`}
-      onFocus={handleOpenDropdown}
       onBlur={handleCloseDropDown}
+      onFocus={handleOpenDropdown}
       tabIndex={0}
     >
       <div className={`${styles.inputWp} ${className}`}>
@@ -182,7 +184,7 @@ const Dropdown: React.FC<DropdownProps> = ({
             list=""
             className={styles.input}
             placeholder={placeholder}
-            value={inputText}
+            defaultValue={defaultOptionLabel(options, defaultValue)}
             autoComplete="off"
             ref={inputRef}
             onInput={handleFilterDropdown}
