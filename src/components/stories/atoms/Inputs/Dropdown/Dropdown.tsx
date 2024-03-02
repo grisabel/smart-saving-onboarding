@@ -20,7 +20,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   ];
 
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
-  const [optionFocus, setOptionFocus] = useState<number>(0);
+  const [optionFocus, setOptionFocus] = useState<number>(-1);
 
   const inputRef = useRef<HTMLInputElement | null>(null);
   const datalistRef = useRef<HTMLDataListElement | null>(null);
@@ -69,7 +69,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       _handleKeyUpDropdownItem();
     } else if (event.code === "Enter") {
       event.preventDefault();
-      if (optionsRef.current) {
+      if (optionsRef.current && optionFocus !== -1) {
         optionsRef.current[optionFocus].click();
         inputRef.current.blur();
       }
@@ -113,9 +113,9 @@ const Dropdown: React.FC<DropdownProps> = ({
       className={`${styles.DropdownWp} ${
         openDropdown ? styles["DropdownWp--open"] : ""
       }`}
-      contentEditable
       onFocus={handleOpenDropdown}
       onBlur={handleCloseDropDown}
+      tabIndex={0}
     >
       <div className={`${styles.inputWp} ${className}`}>
         <label className={styles.label}>{label}</label>
