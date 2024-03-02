@@ -15,9 +15,10 @@ function svgElementFromString(svgContent: string): SVGElement {
 interface IconProps {
   name: SmartSavingsIconName;
   color?: "success" | "error";
+  onClick?: () => void;
 }
 
-const Icon: React.FC<IconProps> = ({ name, color }) => {
+const Icon: React.FC<IconProps> = ({ name, color, onClick }) => {
   const [_, rerender] = useState<number>(0);
   const svgElRef = useRef<SVGElement | null>();
 
@@ -55,6 +56,7 @@ const Icon: React.FC<IconProps> = ({ name, color }) => {
     <span
       ref={spanElRef}
       className={`${styles.IconWp} ${color ? styles[`IconWp--${color}`] : ""}`}
+      onClick={onClick}
     />
   );
 };

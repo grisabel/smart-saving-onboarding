@@ -51,12 +51,10 @@ const Dropdown: React.FC<DropdownProps> = ({
   onChange,
   className,
 }) => {
-  const [openDropdown, setOpenDropdown] = useState<boolean>(false);
-
   const [optionFocus, setOptionFocus] = useState<number>(
     defaultOptionFocus(options, defaultValue)
   );
-  const lastOptionLabel = useRef<InputOption["value"]>(
+  const [inputText, setInputText] = useState<InputOption["value"]>(
     defaultOptionLabel(options, defaultValue)
   );
 
@@ -72,21 +70,27 @@ const Dropdown: React.FC<DropdownProps> = ({
       []) as unknown as HTMLOptionElement[];
   }, []);
 
+  const [openDropdown, setOpenDropdown] = useState<boolean>(false);
+
   const handleOpenDropdown = () => {
     setOpenDropdown(true);
   };
 
   const handleCloseDropDown = () => {
+    setOpenDropdown(false);
+  };
+
+  useEffect(() => {
+    if (openDropdown) {
+      return;
+    }
     if (!inputRef.current) {
       return;
     }
 
-    setOpenDropdown(false);
-
-    const value = lastOptionLabel.current ?? "";
-    inputRef.current.value = value;
+    inputRef.current.value = inputText;
     setOptionsFilter(options);
-  };
+  }, [openDropdown]);
 
   const _handleKeyUpDropdownItem = () => {
     setOptionFocus((prevState) => {
@@ -148,7 +152,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       return null;
     }
 
-    lastOptionLabel.current = option.label;
+    setInputText(option.label);
     handleCloseDropDown();
 
     if (typeof onChange === "function") {
@@ -178,13 +182,16 @@ const Dropdown: React.FC<DropdownProps> = ({
             list=""
             className={styles.input}
             placeholder={placeholder}
+            value={inputText}
             defaultValue={defaultOptionLabel(options, defaultValue)}
             autoComplete="off"
             ref={inputRef}
             onInput={handleFilterDropdown}
             onKeyDown={handleKeyDropdown}
           />
-          <Icon name="calendar" />
+          {inputText && (
+            <Icon name="close-square" onClick={() => setInputText("")} />
+          )}
         </div>
       </div>
       {optionsFilter.length > 0 && (
