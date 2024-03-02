@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const defaultOptionFocus = (
   options: InputOption[],
-  defaultValue?: string | null
+  defaultValue?: InputOption["value"] | null
 ): number => {
   if (!defaultValue) return -1;
 
@@ -23,10 +23,10 @@ const defaultOptionFocus = (
   return resul;
 };
 
-const defaultOptionValue = (
+const defaultOptionLabel = (
   options: InputOption[],
-  defaultValue?: string | null
-): string => {
+  defaultValue?: InputOption["value"] | null
+): InputOption["value"] => {
   if (!defaultValue) return "";
 
   let find = false;
@@ -52,9 +52,15 @@ const Dropdown: React.FC<DropdownProps> = ({
   className,
 }) => {
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
+
   const [optionFocus, setOptionFocus] = useState<number>(
     defaultOptionFocus(options, defaultValue)
   );
+  const lastOptionLabel = useRef<InputOption["value"]>(
+    defaultOptionLabel(options, defaultValue)
+  );
+
+  const [optionsFilter, setOptionsFilter] = useState<InputOption[]>(options);
 
   const inputRef = useRef<HTMLInputElement | null>(null);
   const datalistRef = useRef<HTMLDataListElement | null>(null);
@@ -71,7 +77,15 @@ const Dropdown: React.FC<DropdownProps> = ({
   };
 
   const handleCloseDropDown = () => {
+    if (!inputRef.current) {
+      return;
+    }
+
     setOpenDropdown(false);
+
+    const value = lastOptionLabel.current ?? "";
+    inputRef.current.value = value;
+    setOptionsFilter(options);
   };
 
   const _handleKeyUpDropdownItem = () => {
@@ -117,14 +131,16 @@ const Dropdown: React.FC<DropdownProps> = ({
 
     const text = (event.target.value || "").toUpperCase();
 
-    for (let option of optionsRef.current) {
+    const _optionsFilter = options.filter((option) => {
       const optionText = (option.label || "").toUpperCase();
       if (optionText.indexOf(text) > -1) {
-        option.style.display = "block";
+        return true;
       } else {
-        option.style.display = "none";
+        return false;
       }
-    }
+    });
+
+    setOptionsFilter(_optionsFilter);
   };
 
   const onClickDropdownItem = (option: any) => {
@@ -132,7 +148,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       return null;
     }
 
-    inputRef.current.value = option.label;
+    lastOptionLabel.current = option.label;
     handleCloseDropDown();
 
     if (typeof onChange === "function") {
@@ -162,7 +178,7 @@ const Dropdown: React.FC<DropdownProps> = ({
             list=""
             className={styles.input}
             placeholder={placeholder}
-            defaultValue={defaultOptionValue(options, defaultValue)}
+            defaultValue={defaultOptionLabel(options, defaultValue)}
             autoComplete="off"
             ref={inputRef}
             onInput={handleFilterDropdown}
@@ -171,25 +187,26 @@ const Dropdown: React.FC<DropdownProps> = ({
           <Icon name="calendar" />
         </div>
       </div>
-      <datalist
-        id={`list-${id}`}
-        className={styles.dropdown}
-        defaultValue="a"
-        ref={setDropdownRef}
-      >
-        {options.map((option, i) => {
-          return (
-            <option
-              key={`option-${i}`}
-              value={option.value}
-              onClick={onClickDropdownItem.bind(this, option)}
-              className={`${optionFocus === i ? styles.active : ""}`}
-            >
-              {option.label}
-            </option>
-          );
-        })}
-      </datalist>
+      {optionsFilter.length > 0 && (
+        <datalist
+          id={`list-${id}`}
+          className={styles.dropdown}
+          ref={setDropdownRef}
+        >
+          {optionsFilter.map((option, i) => {
+            return (
+              <option
+                key={`option-${i}`}
+                value={option.value}
+                onClick={onClickDropdownItem.bind(this, option)}
+                className={`${optionFocus === i ? styles.active : ""}`}
+              >
+                {option.label}
+              </option>
+            );
+          })}
+        </datalist>
+      )}
     </div>
   );
 };
