@@ -13,13 +13,14 @@ function svgElementFromString(svgContent: string): SVGElement {
 }
 
 interface IconProps {
-  name: SmartSavingsIconName;
+  name: SmartSavingsIconName | "";
   color?: "success" | "error";
+  onClick?: (event: React.MouseEvent) => void;
 }
 
-const Icon: React.FC<IconProps> = ({ name, color }) => {
+const Icon: React.FC<IconProps> = ({ name, color, onClick }) => {
   const [_, rerender] = useState<number>(0);
-  const svgElRef = useRef<SVGElement | null>();
+  const svgElRef = useRef<SVGElement | null>(null);
 
   const spanElRef = useRef<HTMLSpanElement | null>(null);
 
@@ -33,6 +34,7 @@ const Icon: React.FC<IconProps> = ({ name, color }) => {
         if (data) {
           if (svgElRef.current && spanElRef.current) {
             spanElRef.current.removeChild(svgElRef.current);
+            svgElRef.current = null;
           }
           svgElRef.current = svgElementFromString(data as unknown as string);
           rerender((prev) => prev + 1);
@@ -47,7 +49,12 @@ const Icon: React.FC<IconProps> = ({ name, color }) => {
 
   if (spanElRef.current) {
     if (svgElRef.current && spanElRef.current) {
-      spanElRef.current.appendChild(svgElRef.current);
+      if (!name) {
+        spanElRef.current.removeChild(svgElRef.current);
+        svgElRef.current = null;
+      } else {
+        spanElRef.current.appendChild(svgElRef.current);
+      }
     }
   }
 
@@ -55,6 +62,7 @@ const Icon: React.FC<IconProps> = ({ name, color }) => {
     <span
       ref={spanElRef}
       className={`${styles.IconWp} ${color ? styles[`IconWp--${color}`] : ""}`}
+      onClick={onClick}
     />
   );
 };
