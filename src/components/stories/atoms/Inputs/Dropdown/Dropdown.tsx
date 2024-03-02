@@ -32,8 +32,52 @@ const Dropdown: React.FC<DropdownProps> = ({
       []) as unknown as HTMLOptionElement[];
   }, []);
 
+  const handleOpenDropdown = () => {
+    setOpenDropdown(true);
+  };
+
+  const handleCloseDropDown = () => {
+    setOpenDropdown(false);
+  };
+
+  const _handleKeyUpDropdownItem = () => {
+    setOptionFocus((prevState) => {
+      if (prevState <= 1) {
+        return 0;
+      }
+      return prevState - 1;
+    });
+  };
+
+  const _handleKeyDownDropdownItem = (optionsLength: number) => {
+    setOptionFocus((prevState) => {
+      if (prevState === optionsLength - 1) {
+        return optionsLength - 1;
+      }
+      return prevState + 1;
+    });
+  };
+
+  const handleKeyDropdown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!optionsRef.current || !inputRef.current) {
+      return;
+    }
+
+    if (event.code === "ArrowDown") {
+      _handleKeyDownDropdownItem(optionsRef.current.length);
+    } else if (event.code === "ArrowUp") {
+      _handleKeyUpDropdownItem();
+    } else if (event.code === "Enter") {
+      event.preventDefault();
+      if (optionsRef.current) {
+        optionsRef.current[optionFocus].click();
+        inputRef.current.blur();
+      }
+    }
+  };
+
   const handleFilterDropdown = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (!inputRef.current || !datalistRef.current || !optionsRef.current) {
+    if (!optionsRef.current) {
       return;
     }
 
@@ -49,56 +93,11 @@ const Dropdown: React.FC<DropdownProps> = ({
     }
   };
 
-  const handleOpenDropdown = () => {
-    setOpenDropdown(true);
-  };
-
-  const handleCloseDropDown = () => {
-    setOpenDropdown(false);
-  };
-
-  const handleKeyUpDropdownItem = (options: HTMLOptionElement[]) => {
-    setOptionFocus((prevState) => {
-      if (prevState <= 1) {
-        return 0;
-      }
-      return prevState - 1;
-    });
-  };
-
-  const handleKeyDownDropdownItem = (options: HTMLOptionElement[]) => {
-    setOptionFocus((prevState) => {
-      if (prevState === options.length - 1) {
-        return options.length - 1;
-      }
-      return prevState + 1;
-    });
-  };
-
-  const handleKeyDropdown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (!optionsRef.current || !inputRef.current) {
-      return;
-    }
-
-    if (event.code === "ArrowDown") {
-      handleKeyDownDropdownItem(optionsRef.current);
-    } else if (event.code === "ArrowUp") {
-      handleKeyUpDropdownItem(optionsRef.current);
-    } else if (event.code === "Enter") {
-      event.preventDefault();
-      if (optionsRef.current) {
-        optionsRef.current[optionFocus].click();
-        inputRef.current.blur();
-      }
-    }
-  };
-
   const onClickDropdownItem = (option: any) => {
-    if (!inputRef.current || !datalistRef.current) {
+    if (!inputRef.current) {
       return null;
     }
-    datalistRef.current.style.display = "none";
-    inputRef.current.style.borderRadius = "5px";
+
     inputRef.current.value = option.label;
 
     if (typeof onChange === "function") {
@@ -111,7 +110,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <div
       className={`${styles.DropdownWp} ${
-        openDropdown && styles["DropdownWp--open"]
+        openDropdown ? styles["DropdownWp--open"] : ""
       }`}
     >
       <div className={`${styles.inputWp} ${className}`}>
