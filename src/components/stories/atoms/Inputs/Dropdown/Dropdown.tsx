@@ -130,24 +130,24 @@ const Dropdown: React.FC<DropdownProps> = ({
     }
   };
 
-  const handleFilterDropdown = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (!optionsRef.current) {
-      return;
-    }
+  // const handleFilterDropdown = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (!optionsRef.current) {
+  //     return;
+  //   }
 
-    const text = (event.target.value || "").toUpperCase();
+  //   const text = (event.target.value || "").toUpperCase();
 
-    const _optionsFilter = options.filter((option) => {
-      const optionText = (option.label || "").toUpperCase();
-      if (optionText.indexOf(text) > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+  //   const _optionsFilter = options.filter((option) => {
+  //     const optionText = (option.label || "").toUpperCase();
+  //     if (optionText.indexOf(text) > -1) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   });
 
-    setOptionsFilter(_optionsFilter);
-  };
+  //   setOptionsFilter(_optionsFilter);
+  // };
 
   const onClickDropdownItem = (option: any) => {
     if (!inputRef.current) {
@@ -170,7 +170,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         openDropdown ? styles["DropdownWp--open"] : ""
       }`}
       onBlur={handleCloseDropDown}
-      onFocus={handleOpenDropdown}
+      // onFocus={handleOpenDropdown}
       tabIndex={0}
     >
       <div className={`${styles.inputWp} ${className}`}>
@@ -187,8 +187,9 @@ const Dropdown: React.FC<DropdownProps> = ({
             defaultValue={defaultOptionLabel(options, defaultValue)}
             autoComplete="off"
             ref={inputRef}
-            onInput={handleFilterDropdown}
+            // onInput={handleFilterDropdown}
             onKeyDown={handleKeyDropdown}
+            disabled
           />
           <div className={styles.icons}>
             <Icon
