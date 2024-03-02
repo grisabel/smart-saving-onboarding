@@ -16,6 +16,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const DropdownExample: Story = {
+  render: (args) => {
+    return (
+      <>
+        <Dropdown {...args} />
+        <p>hola</p>
+      </>
+    );
+  },
   args: {
     id: "dropdown",
     label: "label",

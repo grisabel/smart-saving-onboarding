@@ -2,6 +2,9 @@
 @import "@/styles/variables/breakpoints.scss";
 
 .DropdownWp {
+  position: relative;
+  outline: none !important;
+
   .inputWp {
     width: 100%;
     border: 1px solid var(--color-grey-input);
@@ -62,7 +65,6 @@
     background-color: red;
     cursor: pointer;
 
-    position: absolute;
     background-color: white;
     border: 1px solid blue;
     border-radius: 0 0 5px 5px;
@@ -88,7 +90,10 @@
 
   &--open {
     .dropdown {
+      position: absolute;
       display: block;
+      width: 100%;
+      z-index: 10;
     }
   }
 }

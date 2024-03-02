@@ -28,7 +28,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   const setDropdownRef = useCallback((node: HTMLDataListElement) => {
     datalistRef.current = node;
-    optionsRef.current = (node.children ||
+    optionsRef.current = (node?.children ||
       []) as unknown as HTMLOptionElement[];
   }, []);
 
@@ -99,6 +99,7 @@ const Dropdown: React.FC<DropdownProps> = ({
     }
 
     inputRef.current.value = option.label;
+    handleCloseDropDown();
 
     if (typeof onChange === "function") {
       onChange({
@@ -112,6 +113,9 @@ const Dropdown: React.FC<DropdownProps> = ({
       className={`${styles.DropdownWp} ${
         openDropdown ? styles["DropdownWp--open"] : ""
       }`}
+      contentEditable
+      onFocus={handleOpenDropdown}
+      onBlur={handleCloseDropDown}
     >
       <div className={`${styles.inputWp} ${className}`}>
         <label className={styles.label}>{label}</label>
@@ -126,15 +130,12 @@ const Dropdown: React.FC<DropdownProps> = ({
             placeholder={placeholder}
             autoComplete="off"
             ref={inputRef}
-            onFocus={handleOpenDropdown}
-            onBlur={handleCloseDropDown}
             onInput={handleFilterDropdown}
             onKeyDown={handleKeyDropdown}
           />
           <Icon name="calendar" />
         </div>
       </div>
-      {optionFocus}
       <datalist
         id={`list-${id}`}
         className={styles.dropdown}
@@ -146,7 +147,7 @@ const Dropdown: React.FC<DropdownProps> = ({
             <option
               key={`option-${i}`}
               value={option.value}
-              onClick={() => onClickDropdownItem(option)}
+              onClick={onClickDropdownItem.bind(this, option)}
               className={`${optionFocus === i ? styles.active : ""}`}
             >
               {option.label}
