@@ -4,8 +4,13 @@ export interface DropdownProps {
   id: string;
   label?: string;
   placeholder?: string;
-  icon?: JSX.Element;
 
+  options: InputOption[];
   value?: string | null;
   onChange?: (value: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface InputOption {
+  value: string;
+  label: string;
 }

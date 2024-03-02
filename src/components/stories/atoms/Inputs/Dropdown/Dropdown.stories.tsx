@@ -28,6 +28,34 @@ export const DropdownExample: Story = {
     id: "dropdown",
     label: "label",
     placeholder: "placeholder",
+    options: [
+      { value: "a", label: "Internet Explorer" },
+      { value: "b", label: "Explorer" },
+      { value: "c", label: "Internet" },
+    ],
+    onChange: action("onChange"),
+  },
+};
+
+export const DropdownDefaultValueExample: Story = {
+  render: (args) => {
+    return (
+      <>
+        <Dropdown {...args} />
+        <p>hola</p>
+      </>
+    );
+  },
+  args: {
+    id: "dropdown",
+    label: "label",
+    placeholder: "placeholder",
+    value: "b",
+    options: [
+      { value: "a", label: "Internet Explorer" },
+      { value: "b", label: "Explorer" },
+      { value: "c", label: "Internet" },
+    ],
     onChange: action("onChange"),
   },
 };

@@ -1,26 +1,60 @@
-import { DropdownProps } from "./Dropdown.types";
+import { DropdownProps, InputOption } from "./Dropdown.types";
 
 import styles from "./Dropdown.module.scss";
 import Icon from "../../Icon";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+const defaultOptionFocus = (
+  options: InputOption[],
+  defaultValue?: string | null
+): number => {
+  if (!defaultValue) return -1;
+
+  let find = false;
+  let resul = -1;
+  for (let i = 0; i < options.length && !find; i++) {
+    const option = options[i];
+    if (option.value == defaultValue) {
+      find = true;
+      resul = i;
+    }
+  }
+
+  return resul;
+};
+
+const defaultOptionValue = (
+  options: InputOption[],
+  defaultValue?: string | null
+): string => {
+  if (!defaultValue) return "";
+
+  let find = false;
+  let resul = "";
+  for (let i = 0; i < options.length && !find; i++) {
+    const option = options[i];
+    if (option.value == defaultValue) {
+      find = true;
+      resul = option.label;
+    }
+  }
+
+  return resul;
+};
+
 const Dropdown: React.FC<DropdownProps> = ({
   id,
   label,
   placeholder,
-  icon,
+  options,
   value: defaultValue,
   onChange,
   className,
 }) => {
-  const options = [
-    { value: "a", label: "Internet Explorer" },
-    { value: "b", label: "Explorer" },
-    { value: "c", label: "Internet" },
-  ];
-
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
-  const [optionFocus, setOptionFocus] = useState<number>(-1);
+  const [optionFocus, setOptionFocus] = useState<number>(
+    defaultOptionFocus(options, defaultValue)
+  );
 
   const inputRef = useRef<HTMLInputElement | null>(null);
   const datalistRef = useRef<HTMLDataListElement | null>(null);
@@ -128,6 +162,7 @@ const Dropdown: React.FC<DropdownProps> = ({
             list=""
             className={styles.input}
             placeholder={placeholder}
+            defaultValue={defaultOptionValue(options, defaultValue)}
             autoComplete="off"
             ref={inputRef}
             onInput={handleFilterDropdown}
