@@ -56,13 +56,12 @@
   }
 
   .dropdown {
+    display: none;
     font-size: 0.8em;
     padding: 0.3em 1em;
     background-color: red;
     cursor: pointer;
-  }
 
-  datalist {
     position: absolute;
     background-color: white;
     border: 1px solid blue;
@@ -85,5 +84,11 @@
   option:hover,
   .active {
     background-color: lightblue;
+  }
+
+  &--open {
+    .dropdown {
+      display: block;
+    }
   }
 }

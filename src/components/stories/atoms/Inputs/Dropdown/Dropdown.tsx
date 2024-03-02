@@ -50,18 +50,11 @@ const Dropdown: React.FC<DropdownProps> = ({
   };
 
   const handleOpenDropdown = () => {
-    if (!inputRef.current || !datalistRef.current) {
-      return;
-    }
-    datalistRef.current.style.display = "block";
-    inputRef.current.style.borderRadius = "5px 5px 0 0";
+    setOpenDropdown(true);
   };
 
   const handleCloseDropDown = () => {
-    if (!inputRef.current || !datalistRef.current) {
-      return;
-    }
-    datalistRef.current.style.display = "none";
+    setOpenDropdown(false);
   };
 
   const handleKeyUpDropdownItem = (options: HTMLOptionElement[]) => {
@@ -116,7 +109,11 @@ const Dropdown: React.FC<DropdownProps> = ({
   };
 
   return (
-    <div className={`${styles.DropdownWp}`}>
+    <div
+      className={`${styles.DropdownWp} ${
+        openDropdown && styles["DropdownWp--open"]
+      }`}
+    >
       <div className={`${styles.inputWp} ${className}`}>
         <label className={styles.label}>{label}</label>
         <div className={styles.inputContainer}>
@@ -130,9 +127,9 @@ const Dropdown: React.FC<DropdownProps> = ({
             placeholder={placeholder}
             autoComplete="off"
             ref={inputRef}
-            onInput={handleFilterDropdown}
             onFocus={handleOpenDropdown}
             onBlur={handleCloseDropDown}
+            onInput={handleFilterDropdown}
             onKeyDown={handleKeyDropdown}
           />
           <Icon name="calendar" />
