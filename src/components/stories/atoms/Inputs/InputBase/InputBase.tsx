@@ -31,6 +31,7 @@ const InputBase: React.FC<InputBaseProps> = ({
           defaultValue={defaultValue ?? ""}
           onInput={handleChange}
           ref={inputRef}
+          autoComplete="off"
         />
         {icon && icon}
       </div>
