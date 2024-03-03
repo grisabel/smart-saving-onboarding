@@ -147,6 +147,7 @@ const Dropdown: React.FC<DropdownProps> = ({
             autoComplete="off"
             // onInput={handleFilterDropdown}
             disabled
+            role="combobox"
           />
           <div className={styles.icons}>
             <Icon
@@ -158,7 +159,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         </div>
       </div>
       {options.length > 0 && (
-        <datalist id={`list-${id}`} className={styles.dropdown}>
+        <datalist id={`list-${id}`} className={styles.dropdown} role="listbox">
           {options.map((option, i) => {
             return (
               <option
