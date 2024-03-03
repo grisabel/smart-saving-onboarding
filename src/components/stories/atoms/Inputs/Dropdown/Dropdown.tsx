@@ -62,25 +62,14 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   const dropdownRef = useRef<HTMLInputElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const datalistRef = useRef<HTMLDataListElement | null>(null);
-  const optionsRef = useRef<HTMLOptionElement[] | null>(null);
-
-  const setDropdownRef = useCallback((node: HTMLDataListElement) => {
-    datalistRef.current = node;
-    optionsRef.current = (node?.children ||
-      []) as unknown as HTMLOptionElement[];
-  }, []);
 
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
 
   const handleOpenDropdown = () => {
-    console.log("onFocus");
     setOpenDropdown(true);
   };
 
   const handleCloseDropDown = () => {
-    console.log("onBlur");
-
     setOpenDropdown(false);
   };
 
@@ -114,18 +103,18 @@ const Dropdown: React.FC<DropdownProps> = ({
   };
 
   const handleKeyDropdown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (!optionsRef.current || !inputRef.current) {
+    if (!inputRef.current) {
       return;
     }
     event.preventDefault();
 
     if (event.code === "ArrowDown") {
-      _handleKeyDownDropdownItem(optionsRef.current.length);
+      _handleKeyDownDropdownItem(optionsFilter.length);
     } else if (event.code === "ArrowUp") {
       _handleKeyUpDropdownItem();
     } else if (event.code === "Enter") {
-      if (optionsRef.current && optionFocus !== -1) {
-        optionsRef.current[optionFocus].click();
+      if (optionsFilter && optionFocus !== -1) {
+        onClickDropdownItem(optionsFilter[optionFocus]);
         inputRef.current.blur();
       }
     }
@@ -151,8 +140,6 @@ const Dropdown: React.FC<DropdownProps> = ({
   // };
 
   const onClickDropdownItem = (option: any) => {
-    console.log("onClickDropdownItem");
-
     setInputText(option.label);
     dropdownRef.current?.blur();
 
@@ -170,6 +157,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       }`}
       onBlur={handleCloseDropDown}
       onFocusCapture={handleOpenDropdown}
+      onKeyDown={handleKeyDropdown}
       tabIndex={0}
       ref={dropdownRef}
     >
@@ -188,7 +176,6 @@ const Dropdown: React.FC<DropdownProps> = ({
             autoComplete="off"
             ref={inputRef}
             // onInput={handleFilterDropdown}
-            onKeyDown={handleKeyDropdown}
             disabled
           />
           <div className={styles.icons}>
@@ -205,11 +192,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         </div>
       </div>
       {optionsFilter.length > 0 && (
-        <datalist
-          id={`list-${id}`}
-          className={styles.dropdown}
-          ref={setDropdownRef}
-        >
+        <datalist id={`list-${id}`} className={styles.dropdown}>
           {optionsFilter.map((option, i) => {
             return (
               <option
