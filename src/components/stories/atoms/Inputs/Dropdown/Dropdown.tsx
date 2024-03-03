@@ -51,7 +51,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   onChange,
   className,
 }) => {
-  const [openDropdown, setOpenDropdown] = useState<boolean>(true);
+  const [openDropdown, setOpenDropdown] = useState<boolean>(false);
 
   const [inputText, setInputText] = useState<InputOption["value"]>(
     defaultOptionLabel(options, defaultValue)
