@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Alert from "./Alert";
+import Alert, { AlertProps } from "./Alert";
+import { useState } from "react";
 
 const meta = {
   title: "SmartSavings/atoms/Alert",
@@ -12,9 +13,17 @@ const meta = {
 } satisfies Meta<typeof Alert>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<AlertProps>;
+
+const AlertImp = (props: any) => {
+  const [open, setOpen] = useState(true);
+  return <Alert {...props} open={open} setOpen={setOpen} />;
+};
 
 export const AlertDarger: Story = {
+  render: (args) => {
+    return <AlertImp {...args} />;
+  },
   args: {
     title: "Title Darger",
     description: "Description Danger",
@@ -23,6 +32,9 @@ export const AlertDarger: Story = {
 };
 
 export const AlertWarning: Story = {
+  render: (args) => {
+    return <AlertImp {...args} />;
+  },
   args: {
     title: "Title Warning",
     description: "Description Warning",
