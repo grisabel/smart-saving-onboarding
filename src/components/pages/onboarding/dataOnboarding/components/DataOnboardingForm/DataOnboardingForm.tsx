@@ -70,6 +70,7 @@ const DataOnboardingForm: React.FC = () => {
             label={t("input-select-goal-label")}
             placeholder={t("input-select-goal-placeholder")}
             onChange={handleInputObjetive}
+            value={onboardingCtx.objetive}
             options={[
               {
                 value: "Ahorro Educativo",
@@ -95,16 +96,19 @@ const DataOnboardingForm: React.FC = () => {
           <InputText
             label={t("input-text-name-label")}
             placeholder={t("input-text-name-placeholder")}
+            value={onboardingCtx.firstName}
             onChange={handleInputName}
           />
           <InputText
             label={t("input-text-lastname-label")}
             placeholder={t("input-text-lastname-placeholder")}
+            value={onboardingCtx.lastName}
             onChange={handleInputLastName}
           />
           <InputTextDate
             label={t("input-text-birthday-label")}
             placeholder={t("input-text-birthday-placeholder")}
+            value={onboardingCtx.dateBirth}
             onChange={handleInputBirtday}
           ></InputTextDate>
         </div>

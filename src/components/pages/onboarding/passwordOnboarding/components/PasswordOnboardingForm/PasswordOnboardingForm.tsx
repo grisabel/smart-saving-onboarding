@@ -84,8 +84,8 @@ const PasswordOnboardingForm: React.FC = () => {
   const router = useRouter();
   const onboardingCtx = useOnboardingCtx();
 
-  const [password, setPassword] = useState("");
-  const [passwordRepeat, setPasswordRepeat] = useState("");
+  const [password, setPassword] = useState(onboardingCtx.password);
+  const [passwordRepeat, setPasswordRepeat] = useState(onboardingCtx.password);
 
   const [validation, setValidation] = useState<PasswordValidatorProps>({
     lenght: null,
@@ -165,11 +165,13 @@ const PasswordOnboardingForm: React.FC = () => {
           <InputTextPassword
             label={t("input-password-label")}
             placeholder={t("input-password-placeholder")}
+            value={password}
             onChange={handlePassword}
           />
           <InputTextPassword
             label={t("input-repeat-password-label")}
             placeholder={t("input-repeat-password-placeholder")}
+            value={passwordRepeat}
             onChange={handleRepeatPassword}
           />
         </div>

@@ -35,8 +35,8 @@ const DataOnboardingForm: React.FC = () => {
   const router = useRouter();
   const onboardingCtx = useOnboardingCtx();
 
-  const [email, setEmail] = useState<string>("");
-  const [emailRepeat, setEmailRepeat] = useState<string>("");
+  const [email, setEmail] = useState<string>(onboardingCtx.email);
+  const [emailRepeat, setEmailRepeat] = useState<string>(onboardingCtx.email);
 
   const [emailValidation, setEmailValidation] = useState<boolean | null>(null);
   const [emailRepeatValidation, setEmailRepeatValidation] = useState<
@@ -85,11 +85,13 @@ const DataOnboardingForm: React.FC = () => {
           <InputTextEmail
             label={t("input-email-label")}
             placeholder={t("input-email-placeholder")}
+            value={email}
             onChange={handleEmail}
           />
           <InputTextEmail
             label={t("input-repeat-email-label")}
             placeholder={t("input-repeat-email-placeholder")}
+            value={emailRepeat}
             onChange={handleRepeatEmail}
           />
         </div>
