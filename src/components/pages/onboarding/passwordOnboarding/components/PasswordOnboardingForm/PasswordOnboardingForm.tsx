@@ -7,7 +7,7 @@ import Button from "@/components/stories/atoms/Buttons/Button";
 import styles from "./PasswordOnboardingForm.module.scss";
 import InputTextPassword from "@/components/stories/atoms/Inputs/InputTextPassword";
 import { UserFactoryRepository } from "@/repository/UserRepository/UserFactoryRepository";
-import PasswordValidator from "@/components/stories/atoms/PasswordValidator";
+import PasswordValidator from "@/components/stories/atoms/Validators/PasswordValidator";
 
 const userRepository = UserFactoryRepository.getInstance();
 
