@@ -10,6 +10,7 @@ const PasswordValidator: React.FC<PasswordValidatorProps> = ({
   number,
   specialChar,
   uppercase,
+  equals,
   className,
 }) => {
   const { t } = useTranslation();
@@ -31,6 +32,10 @@ const PasswordValidator: React.FC<PasswordValidatorProps> = ({
           status: specialChar,
           description: t("password-validator-special-char-rule"),
         },
+        {
+          status: equals,
+          description: t("password-validator-equals-rule")
+        }
       ]}
       className={className}
     />

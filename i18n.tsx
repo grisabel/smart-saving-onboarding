@@ -58,6 +58,10 @@ i18n.use(initReactI18next).init({
         "password-validator-lowercase-rule": "Password must have at least one lower case letter",
         "password-validator-number-rule": "Password must have at least one number", 
         "password-validator-special-char-rule": "Password must have at least one special character from the following list '_ @ # !'' ",
+        "password-validator-equals-rule": "Both passwords must match.",
+
+        "email-validator-domain-rule": "Email format is not correct",
+        "email-validator-equals-rule": "Both emails must match."
       },
     },
     es: {
@@ -115,6 +119,10 @@ i18n.use(initReactI18next).init({
         "password-validator-lowercase-rule": "La contraseña debe tener al menos una letra minúscula",
         "password-validator-number-rule": "La contraseña debe tener al menos una número",
         "password-validator-special-char-rule": "La contraseña debe tener al menos carácter especial de la siguiente lista “_  @ # !” ",
+        "password-validator-equals-rule": "Ambas contraseñas deben coincidir.",
+
+        "email-validator-domain-rule": "El formato de email no es correcto.",
+        "email-validator-equals-rule": "Ambos emails deben coincidir."
       },
     },
   },

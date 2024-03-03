@@ -14,10 +14,10 @@ const EmailValidator: React.FC<EmailValidatorProps> = ({
   return (
     <Validator
       rules={[
-        { status: email, description: t("password-validator-lenght-rule") },
+        { status: email, description: t("email-validator-domain-rule") },
         {
           status: emailRepeat,
-          description: t("password-validator-uppercase-rule"),
+          description: t("email-validator-equals-rule"),
         },
       ]}
       className={className}
