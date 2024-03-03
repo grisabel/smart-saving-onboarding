@@ -22,8 +22,8 @@ const RetrievePasswordForm: React.FC = () => {
 
     passwordRepository
       .retrieve({ email: email, dateBirth: dateBirth })
-      .then(() => router.push("/retrieve-password/email-sent"))
-      .catch(() => router.push("/retrieve-password/error"));
+      .then(() => router.push("/forgot-password/email-sent"))
+      .catch(() => router.push("/forgot-password/error"));
   };
 
   const handleBack = () => {

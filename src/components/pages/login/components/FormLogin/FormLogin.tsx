@@ -52,7 +52,7 @@ const FormLogin: React.FC = () => {
             placeholder={t("input-password-placeholder")}
             onChange={handleInputPassword}
           />
-          <Link href="/retrieve-password" className={styles.forgotPassword}>
+          <Link href="/forgot-password" className={styles.forgotPassword}>
             {t("forgotPassword")}
           </Link>
         </div>
