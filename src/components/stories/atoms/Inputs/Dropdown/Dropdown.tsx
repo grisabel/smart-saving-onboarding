@@ -60,6 +60,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   const [optionsFilter, setOptionsFilter] = useState<InputOption[]>(options);
 
+  const dropdownRef = useRef<HTMLInputElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const datalistRef = useRef<HTMLDataListElement | null>(null);
   const optionsRef = useRef<HTMLOptionElement[] | null>(null);
@@ -150,12 +151,10 @@ const Dropdown: React.FC<DropdownProps> = ({
   // };
 
   const onClickDropdownItem = (option: any) => {
-    if (!inputRef.current) {
-      return null;
-    }
+    console.log("onClickDropdownItem");
 
     setInputText(option.label);
-    handleCloseDropDown();
+    dropdownRef.current?.blur();
 
     if (typeof onChange === "function") {
       onChange({
@@ -170,8 +169,9 @@ const Dropdown: React.FC<DropdownProps> = ({
         openDropdown ? styles["DropdownWp--open"] : ""
       }`}
       onBlur={handleCloseDropDown}
-      // onFocus={handleOpenDropdown}
+      onFocusCapture={handleOpenDropdown}
       tabIndex={0}
+      ref={dropdownRef}
     >
       <div className={`${styles.inputWp} ${className}`}>
         <label className={styles.label}>{label}</label>
@@ -193,11 +193,11 @@ const Dropdown: React.FC<DropdownProps> = ({
           />
           <div className={styles.icons}>
             <Icon
-              name={inputText ? "close-square" : ""}
+              name={inputText && openDropdown ? "close-square" : ""}
               onClick={(event) => {
-                event.preventDefault();
+                event.stopPropagation();
                 setInputText("");
-                handleCloseDropDown();
+                dropdownRef.current?.blur();
               }}
             />
             <Icon name="chevron-down" onClick={handleOpenDropdown} />
