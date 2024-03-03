@@ -15,4 +15,17 @@ mockHttp.onPost(
   }
 );
 
+mockHttp.onPost(
+  process.env.NEXT_PUBLIC_BACKEND_BASE_URL +
+    "/user/reset-password/:operationId/confirm",
+  () => {
+    return Promise.resolve({
+      response: {
+        message: "Contraseña actualizada satisfactoriamente",
+      },
+      status: 200,
+    });
+  }
+);
+
 export class PasswordMockRepository extends PasswordHttpRepository {}

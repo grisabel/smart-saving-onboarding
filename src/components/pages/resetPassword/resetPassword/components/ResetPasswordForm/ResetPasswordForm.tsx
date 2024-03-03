@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import { useSearchParams } from "next/navigation";
@@ -9,6 +9,7 @@ import InputTextPassword from "@/components/stories/atoms/Inputs/InputTextPasswo
 import styles from "./ResetPasswordForm.module.scss";
 import { PasswordValidatorProps } from "@/components/stories/atoms/Validators/PasswordValidator/PasswordValidator.types";
 import PasswordValidator from "@/components/stories/atoms/Validators/PasswordValidator";
+import { PasswordFactoryRepository } from "@/repository/PasswordRepository/PasswordFactoryRepository";
 
 const getRulePasswordLenght = (() => {
   return {
@@ -78,7 +79,7 @@ const getRulePasswordRepeatEqual = (() => {
 
 const ResetPasswordForm: React.FC = () => {
   const { t } = useTranslation();
-
+  const passwordRepository = PasswordFactoryRepository.getInstance();
   const router = useRouter();
 
   const searchParams = useSearchParams();
@@ -132,29 +133,26 @@ const ResetPasswordForm: React.FC = () => {
     }
   }, [password, passwordRepeat]);
 
-  const handleNext = () => {
-    console.log({
-      operationId,
-      password,
-      passwordRepeat,
-    });
+  const handleSumbit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-    //TODO endpoint
+    if (!operationId) return;
 
-    Promise.resolve()
-      .then(() => {
-        router.push("/reset-password/success");
+    passwordRepository
+      .reset({
+        password: password,
+        repeatPassword: passwordRepeat,
+        operationId: operationId,
       })
-      .catch(() => {
-        router.push("/reset-password/error");
-      });
+      .then(() => router.push("/reset-password/success"))
+      .catch(() => router.push("/reset-password/error"));
   };
 
   return (
     <div className={styles.container}>
       <p className={styles.title}>{t("choose-password")}</p>
       <p className={styles.subtitle}>{t("not-forget-password")}</p>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSumbit}>
         <div className={styles.inputs}>
           <InputTextPassword
             label={t("input-password-label")}
@@ -169,12 +167,7 @@ const ResetPasswordForm: React.FC = () => {
         </div>
         <PasswordValidator {...validation} className={styles.validation} />
         <div className={styles.form__button}>
-          <Button
-            label={t("btn-next")}
-            type="button"
-            onClick={handleNext}
-            disabled={disableBtn}
-          />
+          <Button label={t("btn-next")} type="submit" disabled={disableBtn} />
         </div>
       </form>
     </div>

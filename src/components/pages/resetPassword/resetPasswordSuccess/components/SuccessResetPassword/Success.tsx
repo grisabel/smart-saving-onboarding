@@ -24,7 +24,7 @@ const Success: React.FC = () => {
         width={320}
         height={320}
       ></Image>
-      <p className={styles.text__bold}>{t("login-now")}</p>
+
       <Button label={t("loginButtonLabel")} onClick={handleLogin}></Button>
     </div>
   );

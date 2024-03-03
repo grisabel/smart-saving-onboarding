@@ -61,7 +61,7 @@ i18n.use(initReactI18next).init({
         "password-validator-special-char-rule": "Password must have at least one special character from the following list “_  @ # !” .",
         "password-validator-equals-rule": "Both passwords must match.",
 
-        "email-validator-domain-rule": "Email format is not correct",
+        "email-validator-domain-rule": "Email format is not correct.",
         "email-validator-equals-rule": "Both emails must match."
       },
     },
@@ -113,7 +113,7 @@ i18n.use(initReactI18next).init({
         "secure-password" : "Escoge una contraseña que solo tú conozcas.",
         "congratulation" : "¡Enhorabuena!",
         "onboarding-completed" : "Has completado con éxito el proceso de registro.",
-        "reset-password-completed" : "Has completado con éxito el proceso de cambio de contraseña",
+        "reset-password-completed" : "Has completado con éxito el proceso de cambio de contraseña.",
         "login-now" : "Comienza a tomar el control de tus ingresos y gastos hoy mismo.",
 
         "password-validator-lenght-rule": "La contraseña debe tener un mínimo de 6 caracteres.",
