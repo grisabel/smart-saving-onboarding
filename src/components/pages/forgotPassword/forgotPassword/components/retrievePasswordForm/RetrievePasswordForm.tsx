@@ -6,6 +6,7 @@ import Button from "@/components/stories/atoms/Buttons/Button";
 import InputTextEmail from "@/components/stories/atoms/Inputs/InputTextEmail";
 import InputTextDate from "@/components/stories/atoms/Inputs/InputTextDate";
 import { PasswordFactoryRepository } from "@/repository/PasswordRepository/PasswordFactoryRepository";
+import { useForgotPasswordCtx } from "../../../context/ForgotPasswordContext";
 
 import styles from "./RetrievePasswordForm.module.scss";
 
@@ -13,12 +14,14 @@ const RetrievePasswordForm: React.FC = () => {
   const { t } = useTranslation();
   const router = useRouter();
   const passwordRepository = PasswordFactoryRepository.getInstance();
+  const forgotPasswordCtx = useForgotPasswordCtx();
 
   const [email, setEmail] = useState<string>("");
   const [dateBirth, setDateBirth] = useState<string>("");
 
   const handleSumbit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    forgotPasswordCtx.setEmail(email);
 
     passwordRepository
       .retrieve({ email: email, dateBirth: dateBirth })
