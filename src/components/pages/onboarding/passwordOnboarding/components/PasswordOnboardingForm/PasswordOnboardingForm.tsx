@@ -135,20 +135,20 @@ const PasswordOnboardingForm: React.FC = () => {
     ev.preventDefault();
     userRepository
       .register({
-        dateBirth: "14/10/1997",
-        email: "delgado@gmail.com",
-        repeatEmail: "delgado@gmail.com",
-        firstName: "jose manuel",
-        lastName: "delhado trueba",
-        objetive: "objet 1",
-        password: "12345_aA!",
-        repeatPassword: "12345_aA!",
+        dateBirth: onboardingCtx.dateBirth,
+        email: onboardingCtx.email,
+        repeatEmail: onboardingCtx.email,
+        firstName: onboardingCtx.firstName,
+        lastName: onboardingCtx.lastName,
+        objetive: onboardingCtx.objetive,
+        password: onboardingCtx.password,
+        repeatPassword: onboardingCtx.password,
       })
       .then(() => {
         router.push("/sign-up/success");
       })
       .catch(() => {
-        router.push("/retrieve-password/error");
+        router.push("/sign-up/error");
       });
   };
 
