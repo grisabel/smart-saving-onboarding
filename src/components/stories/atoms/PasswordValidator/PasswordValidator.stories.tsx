@@ -16,8 +16,10 @@ type Story = StoryObj<typeof meta>;
 
 export const PasswordValidatorExample: Story = {
   args: {
-    title: "title",
-    content: <p>content</p>,
-    button: { label: "label button", onClick: () => null },
+    lenght: false,
+    lowercase: false,
+    number: false,
+    specialChar: false,
+    uppercase: true,
   },
 };
