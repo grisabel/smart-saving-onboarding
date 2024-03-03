@@ -1,8 +1,8 @@
 import Head from "next/head";
 
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
-import ResetPasswordErrorDesktop from "@/components/pages/resetPasswordError/layouts/desktop";
-import ResetPasswordErrorMobile from "@/components/pages/resetPasswordError/layouts/mobile";
+import ResetPasswordErrorDesktop from "@/components/pages/resetPassword2/resetPasswordError/layouts/desktop";
+import ResetPasswordErrorMobile from "@/components/pages/resetPassword2/resetPasswordError/layouts/mobile";
 
 export default function Home() {
   return (
