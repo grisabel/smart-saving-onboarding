@@ -4,7 +4,7 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import ResetPasswordDesktop from "@/components/pages/resetPassword/resetPassword/layouts/ResetPasswordDesktop";
 import ResetPasswordMobile from "@/components/pages/resetPassword/resetPassword/layouts/ResetPasswordMobile";
 
-export default function Home() {
+export default function ResetPassword() {
   return (
     <>
       <Head>

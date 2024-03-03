@@ -4,7 +4,7 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import RetrievePasswordEmailSentDesktop from "@/components/pages/forgotPassword/forgotPasswordEmailSent/layouts/desktop";
 import RetrievePasswordEmailSentMobile from "@/components/pages/forgotPassword/forgotPasswordEmailSent/layouts/mobile/RetrievePasswordEmailSentMobile";
 
-export default function Home() {
+export default function ForgotPasswordEmailSent() {
   return (
     <>
       <Head>
