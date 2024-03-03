@@ -4,7 +4,7 @@ import LayoutMobile from "@/components/stories/templates/LayoutMobile";
 
 import styles from "./SuccessOnboardingMobile.module.scss";
 import DotStep from "@/components/stories/atoms/Steps/DotStep";
-import Success from "../desktop/components/SuccessOnboarding";
+import Success from "../../components/SuccessOnboarding/Success";
 
 function SuccessOnboardingMobile() {
   return (

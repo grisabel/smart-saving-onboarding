@@ -3,7 +3,7 @@ import React from "react";
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
-import Success from "./components/SuccessOnboarding/Success";
+import Success from "../../components/SuccessOnboarding/Success";
 
 const SuccessOnboardingDesktop: React.FC = () => {
   return (
