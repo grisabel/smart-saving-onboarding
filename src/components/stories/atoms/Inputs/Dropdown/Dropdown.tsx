@@ -61,7 +61,6 @@ const Dropdown: React.FC<DropdownProps> = ({
   const [optionsFilter, setOptionsFilter] = useState<InputOption[]>(options);
 
   const dropdownRef = useRef<HTMLInputElement | null>(null);
-  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
 
@@ -72,17 +71,6 @@ const Dropdown: React.FC<DropdownProps> = ({
   const handleCloseDropDown = () => {
     setOpenDropdown(false);
   };
-
-  useEffect(() => {
-    if (openDropdown) return;
-
-    if (!inputRef.current) {
-      return;
-    }
-
-    inputRef.current.value = inputText;
-    setOptionsFilter(options);
-  }, [openDropdown, inputText]);
 
   const _handleKeyUpDropdownItem = () => {
     setOptionFocus((prevState) => {
@@ -103,9 +91,6 @@ const Dropdown: React.FC<DropdownProps> = ({
   };
 
   const handleKeyDropdown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (!inputRef.current) {
-      return;
-    }
     event.preventDefault();
 
     if (event.code === "ArrowDown") {
@@ -115,7 +100,7 @@ const Dropdown: React.FC<DropdownProps> = ({
     } else if (event.code === "Enter") {
       if (optionsFilter && optionFocus !== -1) {
         onClickDropdownItem(optionsFilter[optionFocus]);
-        inputRef.current.blur();
+        dropdownRef.current?.blur();
       }
     }
   };
@@ -172,9 +157,8 @@ const Dropdown: React.FC<DropdownProps> = ({
             list=""
             className={styles.input}
             placeholder={placeholder}
-            defaultValue={defaultOptionLabel(options, defaultValue)}
+            value={inputText}
             autoComplete="off"
-            ref={inputRef}
             // onInput={handleFilterDropdown}
             disabled
           />
