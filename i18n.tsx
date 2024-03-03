@@ -53,6 +53,11 @@ i18n.use(initReactI18next).init({
         "onboarding-completed" : "You have successfully completed the registration process.",
         "login-now" : "Start taking control of your income and expenses today.",
 
+        "password-validator-lenght-rule": "Password must be at least 6 characters long",
+        "password-validator-uppercase-rule": "Password must have at least one uppercase letter",
+        "password-validator-lowercase-rule": "Password must have at least one lower case letter",
+        "password-validator-number-rule": "Password must have at least one number", 
+        "password-validator-special-char-rule": "Password must have at least one special character from the following list '_ @ # !'' ",
       },
     },
     es: {
@@ -103,7 +108,13 @@ i18n.use(initReactI18next).init({
         "secure-password" : "Escoge una contraseña que solo tú conozcas.",
         "congratulation" : "¡Enhorabuena!",
         "onboarding-completed" : "Has completado con éxito el proceso de registro.",
-        "login-now" : "Comienza a tomar el control de tus ingresos y gastos hoy mismo."
+        "login-now" : "Comienza a tomar el control de tus ingresos y gastos hoy mismo.",
+
+        "password-validator-lenght-rule": "La contraseña debe tener un mínimo de 6 caracteres",
+        "password-validator-uppercase-rule": "La contraseña debe tener al menos una letra mayúscula",
+        "password-validator-lowercase-rule": "La contraseña debe tener al menos una letra minúscula",
+        "password-validator-number-rule": "La contraseña debe tener al menos una número",
+        "password-validator-special-char-rule": "La contraseña debe tener al menos carácter especial de la siguiente lista “_  @ # !” ",
       },
     },
   },
