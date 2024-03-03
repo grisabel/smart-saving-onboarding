@@ -17,8 +17,8 @@ const ResetPasswordMobile: React.FC = () => {
           <DotStep
             steps={[
               { isTransited: false },
-              { isTransited: false },
               { isTransited: true },
+              { isTransited: false },
             ]}
           ></DotStep>
         </div>

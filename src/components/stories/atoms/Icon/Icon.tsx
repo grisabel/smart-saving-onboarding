@@ -16,9 +16,10 @@ interface IconProps {
   name: SmartSavingsIconName | "";
   color?: "success" | "error";
   onClick?: (event: React.MouseEvent) => void;
+  className?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ name, color, onClick }) => {
+const Icon: React.FC<IconProps> = ({ name, color, onClick, className }) => {
   const [_, rerender] = useState<number>(0);
   const svgElRef = useRef<SVGElement | null>(null);
 
@@ -61,7 +62,9 @@ const Icon: React.FC<IconProps> = ({ name, color, onClick }) => {
   return (
     <span
       ref={spanElRef}
-      className={`${styles.IconWp} ${color ? styles[`IconWp--${color}`] : ""}`}
+      className={`${styles.IconWp} ${
+        color ? styles[`IconWp--${color}`] : ""
+      } ${className}`}
       onClick={onClick}
     />
   );
