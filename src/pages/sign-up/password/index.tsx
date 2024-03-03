@@ -6,7 +6,7 @@ import OnboardingProvider, {
   useOnboardingCtx,
 } from "@/components/pages/onboarding/context/OnboardingContext";
 
-export default function Home() {
+export default function Password() {
   const { email } = useOnboardingCtx();
 
   return (
@@ -26,6 +26,6 @@ export default function Home() {
   );
 }
 
-Home.getContext = function getLayout(page: React.ReactElement) {
+Password.getContext = function getLayout(page: React.ReactElement) {
   return <OnboardingProvider>{page}</OnboardingProvider>;
 };

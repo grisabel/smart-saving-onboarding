@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run build-icon && next dev",
-    "build": "npm run build-icon && next build",
+    "build": "next build",
     "start": "npm run build-icon && next start",
     "lint": "next lint",
     "storybook": "npm run build-icon && storybook dev -p 6006",
