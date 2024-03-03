@@ -1,10 +1,10 @@
 import Head from "next/head";
 
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
-import RetrievePasswordErrorDesktop from "@/components/pages/retrievePasswordError/layouts/desktop";
-import RetrievePasswordErrorMobile from "@/components/pages/retrievePasswordError/layouts/mobile";
+import RetrievePasswordErrorDesktop from "@/components/pages/forgotPassword/forgotPasswordError/layouts/desktop";
+import RetrievePasswordErrorMobile from "@/components/pages/forgotPassword/forgotPasswordError/layouts/mobile";
 
-export default function Home() {
+export default function ForgotPasswordError() {
   return (
     <>
       <Head>

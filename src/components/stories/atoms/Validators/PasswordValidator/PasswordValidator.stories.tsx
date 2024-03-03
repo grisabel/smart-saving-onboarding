@@ -21,5 +21,6 @@ export const PasswordValidatorExample: Story = {
     number: false,
     specialChar: false,
     uppercase: true,
+    equals: false,
   },
 };

@@ -51,6 +51,7 @@ i18n.use(initReactI18next).init({
         "secure-password" : "Choose a password that only you know.",
         "congratulation" : "Congratulations!",
         "onboarding-completed" : "You have successfully completed the registration process.",
+        "reset-password-completed" : "You have successfully completed the reset password process.",
         "login-now" : "Start taking control of your income and expenses today.",
 
         "password-validator-lenght-rule": "Password must be at least 6 characters long.",
@@ -112,6 +113,7 @@ i18n.use(initReactI18next).init({
         "secure-password" : "Escoge una contraseña que solo tú conozcas.",
         "congratulation" : "¡Enhorabuena!",
         "onboarding-completed" : "Has completado con éxito el proceso de registro.",
+        "reset-password-completed" : "Has completado con éxito el proceso de cambio de contraseña",
         "login-now" : "Comienza a tomar el control de tus ingresos y gastos hoy mismo.",
 
         "password-validator-lenght-rule": "La contraseña debe tener un mínimo de 6 caracteres.",

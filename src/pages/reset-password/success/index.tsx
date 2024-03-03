@@ -1,9 +1,9 @@
 import Head from "next/head";
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
-import RetrievePasswordLayoutDesktop from "@/components/pages/retrievePassword/layouts/RetrievePasswordLayoutDesktop";
-import RetrievePasswordLayoutMobile from "@/components/pages/retrievePassword/layouts/RetrievePasswordLayoutMobile";
+import SuccessResetPasswordDesktop from "@/components/pages/resetPassword/resetPasswordSuccess/layouts/desktop";
+import SuccessResetPasswordMobile from "@/components/pages/resetPassword/resetPasswordSuccess/layouts/mobile";
 
-export default function Home() {
+export default function Success() {
   return (
     <>
       <Head>
@@ -13,8 +13,8 @@ export default function Home() {
         <link rel="icon" href="/logo.ico" />
       </Head>
       <MainLayout
-        desktop={<RetrievePasswordLayoutDesktop />}
-        mobile={<RetrievePasswordLayoutMobile />}
+        desktop={<SuccessResetPasswordDesktop />}
+        mobile={<SuccessResetPasswordMobile />}
       />
     </>
   );

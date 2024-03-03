@@ -3,13 +3,9 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import DataOnboardingDesktop from "@/components/pages/onboarding/dataOnboarding/layouts/desktop";
 import DataOnboardingMobile from "@/components/pages/onboarding/dataOnboarding/layouts/mobile/DataOnboardingMobile";
 import { ReactElement } from "react";
-import OnboardingProvider, {
-  useOnboardingCtx,
-} from "@/components/pages/onboarding/context/OnboardingContext";
+import OnboardingProvider from "@/components/pages/onboarding/context/OnboardingContext";
 
 export default function SignUp() {
-  const { email } = useOnboardingCtx();
-
   return (
     <>
       <Head>
@@ -18,7 +14,6 @@ export default function SignUp() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" />
       </Head>
-      {email}
       <MainLayout
         desktop={<DataOnboardingDesktop />}
         mobile={<DataOnboardingMobile />}

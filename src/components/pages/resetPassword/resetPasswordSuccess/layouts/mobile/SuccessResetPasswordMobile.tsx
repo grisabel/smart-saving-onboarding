@@ -2,11 +2,11 @@ import React from "react";
 
 import LayoutMobile from "@/components/stories/templates/LayoutMobile";
 
-import styles from "./SuccessOnboardingMobile.module.scss";
+import styles from "./SuccessResetPasswordMobile.module.scss";
 import DotStep from "@/components/stories/atoms/Steps/DotStep";
-import Success from "../../components/SuccessOnboarding/Success";
+import Success from "../../components/SuccessResetPassword";
 
-function SuccessOnboardingMobile() {
+function SuccessResetPasswordMobile() {
   return (
     <LayoutMobile>
       <div className={styles.success}>
@@ -19,7 +19,6 @@ function SuccessOnboardingMobile() {
               { isTransited: false },
               { isTransited: false },
               { isTransited: false },
-              { isTransited: true },
             ]}
           ></DotStep>
         </div>
@@ -28,4 +27,4 @@ function SuccessOnboardingMobile() {
   );
 }
 
-export default SuccessOnboardingMobile;
+export default SuccessResetPasswordMobile;

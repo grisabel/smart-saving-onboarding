@@ -3,9 +3,9 @@ import React from "react";
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
-import Success from "../../components/SuccessOnboarding/Success";
+import Success from "../../components/SuccessResetPassword/Success";
 
-const SuccessOnboardingDesktop: React.FC = () => {
+const SuccessResetPasswordDesktop: React.FC = () => {
   return (
     <LayoutStepDesktop
       image={{
@@ -15,10 +15,9 @@ const SuccessOnboardingDesktop: React.FC = () => {
       step={
         <LineStep
           steps={[
-            { icon: <Icon name="user" />, isCompleted: true },
-            { icon: <Icon name="email" />, isCompleted: true },
+            { icon: <Icon name="question" />, isCompleted: true },
+            { icon: <Icon name="email-send" />, isCompleted: true },
             { icon: <Icon name="lock" />, isCompleted: true },
-            { icon: <Icon name="flag" />, isCompleted: true },
           ]}
         ></LineStep>
       }
@@ -27,4 +26,4 @@ const SuccessOnboardingDesktop: React.FC = () => {
   );
 };
 
-export default SuccessOnboardingDesktop;
+export default SuccessResetPasswordDesktop;
