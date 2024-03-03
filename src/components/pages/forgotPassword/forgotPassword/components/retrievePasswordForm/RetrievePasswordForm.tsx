@@ -19,6 +19,10 @@ const RetrievePasswordForm: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [dateBirth, setDateBirth] = useState<string>("");
 
+  const isDiableBtn = (): boolean => {
+    return !email || !dateBirth;
+  };
+
   const handleSumbit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     forgotPasswordCtx.setEmail(email);
@@ -65,7 +69,11 @@ const RetrievePasswordForm: React.FC = () => {
             color="secondary"
             onClick={handleBack}
           />
-          <Button label={t("btn-next")} type="submit" />
+          <Button
+            label={t("btn-next")}
+            type="submit"
+            disabled={isDiableBtn()}
+          />
         </div>
       </form>
     </div>
