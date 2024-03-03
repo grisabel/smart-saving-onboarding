@@ -28,11 +28,15 @@ const PasswordOnboardingForm: React.FC = () => {
         repeatPassword: "12345_aA!",
       })
       .then(() => {
-        router.push("/retrieve-password/email-sent");
+        router.push("/sign-up/success");
       })
       .catch(() => {
         router.push("/retrieve-password/error");
       });
+  };
+
+  const handleBack = () => {
+    router.push("/sign-up/email");
   };
 
   return (
@@ -51,7 +55,12 @@ const PasswordOnboardingForm: React.FC = () => {
           />
         </div>
         <div className={styles.form__button}>
-          <Button label={t("btn-back")} type="button" color="secondary" />
+          <Button
+            label={t("btn-back")}
+            type="button"
+            color="secondary"
+            onClick={handleBack}
+          />
           <Button label={t("btn-next")} type="submit" />
         </div>
       </form>

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import router from "next/router";
 
 import Button from "../../atoms/Buttons/Button";
 import styles from "./ErrorMsg.module.scss";
@@ -14,6 +15,10 @@ interface ErrorMsgProps {
 
 const ErrorMsg: React.FC<ErrorMsgProps> = ({ title, content, button }) => {
   const { t } = useTranslation();
+
+  const handleBack = () => {
+    router.push("/");
+  };
 
   const defaultContent = (
     <>
@@ -34,6 +39,7 @@ const ErrorMsg: React.FC<ErrorMsgProps> = ({ title, content, button }) => {
         label={t("btn-return")}
         type="button"
         color="secondary"
+        onClick={handleBack}
         {...button}
       />
     </div>

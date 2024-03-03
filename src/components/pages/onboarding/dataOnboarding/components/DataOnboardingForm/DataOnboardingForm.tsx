@@ -21,6 +21,10 @@ const DataOnboardingForm: React.FC = () => {
     router.push("/sign-up/email");
   };
 
+  const handleBack = () => {
+    router.push("/");
+  };
+
   const handleInputName = (event: React.ChangeEvent<HTMLInputElement>) => {
     onboardingCtx.setFirstName(event.target.value);
   };
@@ -82,7 +86,12 @@ const DataOnboardingForm: React.FC = () => {
           />
         </div>
         <div className={styles.form__button}>
-          <Button label={t("btn-back")} type="button" color="secondary" />
+          <Button
+            label={t("btn-back")}
+            type="button"
+            color="secondary"
+            onClick={handleBack}
+          />
           <Button
             label={t("btn-next")}
             type="button"
