@@ -51,6 +51,7 @@
         background-color: transparent;
 
         @include f--b1-light;
+        text-wrap: wrap;
 
         &:focus {
           outline: none;
@@ -83,21 +84,28 @@
       border-radius: 0 0 5px 5px;
       border-top: none;
 
-      option {
-        padding: 8px 16px;
+      .option {
+        display: flex;
+        flex-direction: row;
+
         color: var(--color-grey-input);
         @include f--b1-light;
+        text-wrap: wrap;
+
         cursor: pointer;
+        padding: 8px 16px;
+
         &:hover {
           background-color: #f2f2f2;
         }
+
         &:last-child {
           border-radius: 0 0 5px 5px;
         }
-      }
 
-      .active {
-        background-color: #f2f2f2;
+        &--active {
+          background-color: #f2f2f2;
+        }
       }
     }
   }

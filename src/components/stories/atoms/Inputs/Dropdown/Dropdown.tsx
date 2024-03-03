@@ -166,7 +166,9 @@ const Dropdown: React.FC<DropdownProps> = ({
                 key={`option-${i}`}
                 value={option.value}
                 onClick={onClickDropdownItem.bind(this, option)}
-                className={`${optionFocus === i ? styles.active : ""}`}
+                className={`${styles.option} ${
+                  optionFocus === i ? styles["option--active"] : ""
+                }`}
               >
                 {option.label}
               </option>

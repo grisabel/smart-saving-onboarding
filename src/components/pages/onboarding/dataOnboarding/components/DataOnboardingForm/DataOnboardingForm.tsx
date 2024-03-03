@@ -11,6 +11,7 @@ import { useOnboardingCtx } from "../../../context/OnboardingContext";
 import DateTimeService from "@/utils/Datetime/DatetimeService";
 import { DateTimeModel } from "@/utils/Datetime/DatetimeInterfaceService";
 import { DATE_FORMATS } from "@/utils/Datetime/constants";
+import Dropdown from "@/components/stories/atoms/Inputs/Dropdown";
 
 const DataOnboardingForm: React.FC = () => {
   const { t } = useTranslation();
@@ -64,26 +65,52 @@ const DataOnboardingForm: React.FC = () => {
       <p className={styles.subtitle}>{t("about-yourself")}</p>
       <form className={styles.form}>
         <div className={styles.inputs}>
+          <Dropdown
+            id={"input-select-goal-label"}
+            label={t("input-select-goal-label")}
+            placeholder={t("input-select-goal-placeholder")}
+            onChange={handleInputObjetive}
+            value={onboardingCtx.objetive}
+            options={[
+              {
+                value: "Ahorro Educativo",
+                label:
+                  "Ahorro Educativo: Inicia hoy para el futuro académico de tus hijos.",
+              },
+              {
+                value: "Fondo de Emergencia",
+                label:
+                  "Fondo de Emergencia: Tu red de seguridad ante imprevistos.",
+              },
+              {
+                value: "Jubilación",
+                label: "Jubilación: Planifica hoy para un retiro tranquilo.",
+              },
+              {
+                value: "Inversión Inteligente",
+                label:
+                  "Inversión Inteligente: Haz crecer tu patrimonio paso a paso.",
+              },
+            ]}
+          />
           <InputText
             label={t("input-text-name-label")}
             placeholder={t("input-text-name-placeholder")}
+            value={onboardingCtx.firstName}
             onChange={handleInputName}
           />
           <InputText
             label={t("input-text-lastname-label")}
             placeholder={t("input-text-lastname-placeholder")}
+            value={onboardingCtx.lastName}
             onChange={handleInputLastName}
           />
           <InputTextDate
             label={t("input-text-birthday-label")}
             placeholder={t("input-text-birthday-placeholder")}
+            value={onboardingCtx.dateBirth}
             onChange={handleInputBirtday}
           ></InputTextDate>
-          <InputText
-            label={t("input-select-goal-label")}
-            placeholder={t("input-select-goal-placeholder")}
-            onChange={handleInputObjetive}
-          />
         </div>
         <div className={styles.form__button}>
           <Button

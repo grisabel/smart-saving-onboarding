@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import PasswordValidator from "./PasswordValidator";
 
 const meta = {
-  title: "SmartSavings/atoms/PasswordValidator",
+  title: "SmartSavings/atoms/Validator/PasswordValidator",
   component: PasswordValidator,
   parameters: {
     layout: "centered",

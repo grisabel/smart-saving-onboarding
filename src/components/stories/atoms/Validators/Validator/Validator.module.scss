@@ -1,10 +1,10 @@
 @import "@/styles/variables/fonts.scss";
 @import "@/styles/variables/breakpoints.scss";
 
-.password-validator {
+.validatorGroup {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 
   .rule {
     color: var(--color-thin-text);
