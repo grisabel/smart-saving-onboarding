@@ -51,26 +51,17 @@ const Dropdown: React.FC<DropdownProps> = ({
   onChange,
   className,
 }) => {
-  const [optionFocus, setOptionFocus] = useState<number>(
-    defaultOptionFocus(options, defaultValue)
-  );
+  const [openDropdown, setOpenDropdown] = useState<boolean>(false);
+
   const [inputText, setInputText] = useState<InputOption["value"]>(
     defaultOptionLabel(options, defaultValue)
   );
 
-  const [optionsFilter, setOptionsFilter] = useState<InputOption[]>(options);
+  const [optionFocus, setOptionFocus] = useState<number>(
+    defaultOptionFocus(options, defaultValue)
+  );
 
   const dropdownRef = useRef<HTMLInputElement | null>(null);
-
-  const [openDropdown, setOpenDropdown] = useState<boolean>(false);
-
-  const handleOpenDropdown = () => {
-    setOpenDropdown(true);
-  };
-
-  const handleCloseDropDown = () => {
-    setOpenDropdown(false);
-  };
 
   const _handleKeyUpDropdownItem = () => {
     setOptionFocus((prevState) => {
@@ -94,35 +85,16 @@ const Dropdown: React.FC<DropdownProps> = ({
     event.preventDefault();
 
     if (event.code === "ArrowDown") {
-      _handleKeyDownDropdownItem(optionsFilter.length);
+      _handleKeyDownDropdownItem(options.length);
     } else if (event.code === "ArrowUp") {
       _handleKeyUpDropdownItem();
     } else if (event.code === "Enter") {
-      if (optionsFilter && optionFocus !== -1) {
-        onClickDropdownItem(optionsFilter[optionFocus]);
+      if (options && optionFocus !== -1) {
+        onClickDropdownItem(options[optionFocus]);
         dropdownRef.current?.blur();
       }
     }
   };
-
-  // const handleFilterDropdown = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   if (!optionsRef.current) {
-  //     return;
-  //   }
-
-  //   const text = (event.target.value || "").toUpperCase();
-
-  //   const _optionsFilter = options.filter((option) => {
-  //     const optionText = (option.label || "").toUpperCase();
-  //     if (optionText.indexOf(text) > -1) {
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
-  //   });
-
-  //   setOptionsFilter(_optionsFilter);
-  // };
 
   const onClickDropdownItem = (option: any) => {
     setInputText(option.label);
@@ -135,13 +107,27 @@ const Dropdown: React.FC<DropdownProps> = ({
     }
   };
 
+  const onResetDropdown = (event: React.MouseEvent) => {
+    event.stopPropagation();
+
+    setInputText("");
+    setOptionFocus(-1);
+    dropdownRef.current?.blur();
+
+    if (typeof onChange === "function") {
+      onChange({
+        target: { value: "" },
+      } as React.ChangeEvent<HTMLInputElement>);
+    }
+  };
+
   return (
     <div
       className={`${styles.DropdownWp} ${
         openDropdown ? styles["DropdownWp--open"] : ""
       }`}
-      onBlur={handleCloseDropDown}
-      onFocusCapture={handleOpenDropdown}
+      onBlur={() => setOpenDropdown(false)}
+      onFocusCapture={() => setOpenDropdown(true)}
       onKeyDown={handleKeyDropdown}
       tabIndex={0}
       ref={dropdownRef}
@@ -165,19 +151,15 @@ const Dropdown: React.FC<DropdownProps> = ({
           <div className={styles.icons}>
             <Icon
               name={inputText && openDropdown ? "close-square" : ""}
-              onClick={(event) => {
-                event.stopPropagation();
-                setInputText("");
-                dropdownRef.current?.blur();
-              }}
+              onClick={onResetDropdown}
             />
-            <Icon name="chevron-down" onClick={handleOpenDropdown} />
+            <Icon name="chevron-down" />
           </div>
         </div>
       </div>
-      {optionsFilter.length > 0 && (
+      {options.length > 0 && (
         <datalist id={`list-${id}`} className={styles.dropdown}>
-          {optionsFilter.map((option, i) => {
+          {options.map((option, i) => {
             return (
               <option
                 key={`option-${i}`}

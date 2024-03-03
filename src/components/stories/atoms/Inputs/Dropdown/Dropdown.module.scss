@@ -60,7 +60,8 @@
 
     .icons {
       display: flex;
-      gap: 4px;
+      min-width: 48px;
+      justify-content: flex-end;
       span {
         cursor: pointer;
       }
