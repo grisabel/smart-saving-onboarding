@@ -1,7 +1,9 @@
 export interface PasswordValidatorProps {
-  lenght?: boolean;
-  uppercase?: boolean;
-  lowercase?: boolean;
-  number?: boolean;
-  specialChar?: boolean;
+  lenght: null | boolean;
+  uppercase: null | boolean;
+  lowercase: null | boolean;
+  number: null | boolean;
+  specialChar: null | boolean;
+
+  className?: string;
 }

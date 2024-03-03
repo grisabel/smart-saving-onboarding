@@ -7,6 +7,7 @@ import Button from "@/components/stories/atoms/Buttons/Button";
 import styles from "./PasswordOnboardingForm.module.scss";
 import InputTextPassword from "@/components/stories/atoms/Inputs/InputTextPassword";
 import { UserFactoryRepository } from "@/repository/UserRepository/UserFactoryRepository";
+import PasswordValidator from "@/components/stories/atoms/PasswordValidator";
 
 const userRepository = UserFactoryRepository.getInstance();
 
@@ -54,6 +55,14 @@ const PasswordOnboardingForm: React.FC = () => {
             placeholder={t("input-repeat-password-placeholder")}
           />
         </div>
+        <PasswordValidator
+          lenght={null}
+          lowercase={null}
+          number={null}
+          specialChar={null}
+          uppercase={null}
+          className={styles.validation}
+        />
         <div className={styles.form__button}>
           <Button
             label={t("btn-back")}
