@@ -1,11 +1,16 @@
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import router from "next/router";
 
 import Button from "@/components/stories/atoms/Buttons/Button";
 import styles from "./Success.module.scss";
 
 const Success: React.FC = () => {
   const { t } = useTranslation();
+
+  const handleLogin = () => {
+    router.push("/");
+  };
 
   return (
     <div className={styles.text}>
@@ -20,7 +25,7 @@ const Success: React.FC = () => {
         height={320}
       ></Image>
       <p className={styles.text__bold}>{t("login-now")}</p>
-      <Button label={t("loginButtonLabel")}></Button>
+      <Button label={t("loginButtonLabel")} onClick={handleLogin}></Button>
     </div>
   );
 };

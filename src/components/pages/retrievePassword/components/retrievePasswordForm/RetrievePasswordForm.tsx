@@ -16,6 +16,10 @@ const RetrievePasswordForm: React.FC = () => {
     router.push("/retrieve-password/email-sent");
   };
 
+  const handleBack = () => {
+    router.push("/");
+  };
+
   return (
     <div className={styles.container}>
       <p className={styles.title}>{t("forgot-your-password")}</p>
@@ -32,7 +36,12 @@ const RetrievePasswordForm: React.FC = () => {
           ></InputTextDate>
         </div>
         <div className={styles.form__button}>
-          <Button label={t("btn-back")} type="button" color="secondary" />
+          <Button
+            label={t("btn-back")}
+            type="button"
+            color="secondary"
+            onClick={handleBack}
+          />
           <Button label={t("btn-next")} type="button" onClick={handleNext} />
         </div>
       </form>
