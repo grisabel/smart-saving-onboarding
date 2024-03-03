@@ -51,7 +51,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   onChange,
   className,
 }) => {
-  const [openDropdown, setOpenDropdown] = useState<boolean>(false);
+  const [openDropdown, setOpenDropdown] = useState<boolean>(true);
 
   const [inputText, setInputText] = useState<InputOption["value"]>(
     defaultOptionLabel(options, defaultValue)
@@ -166,7 +166,9 @@ const Dropdown: React.FC<DropdownProps> = ({
                 key={`option-${i}`}
                 value={option.value}
                 onClick={onClickDropdownItem.bind(this, option)}
-                className={`${optionFocus === i ? styles.active : ""}`}
+                className={`${styles.option} ${
+                  optionFocus === i ? styles["option--active"] : ""
+                }`}
               >
                 {option.label}
               </option>
