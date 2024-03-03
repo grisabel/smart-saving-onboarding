@@ -18,7 +18,7 @@ const ResetPasswordDesktop: React.FC = () => {
           steps={[
             { icon: <Icon name="question" />, isCompleted: true },
             { icon: <Icon name="email-send" />, isCompleted: true },
-            { icon: <Icon name="lock" />, isCompleted: true },
+            { icon: <Icon name="lock" />, isCompleted: false },
           ]}
         ></LineStep>
       }

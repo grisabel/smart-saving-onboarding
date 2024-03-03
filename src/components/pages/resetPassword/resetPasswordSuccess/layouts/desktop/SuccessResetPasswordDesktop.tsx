@@ -9,7 +9,7 @@ const SuccessResetPasswordDesktop: React.FC = () => {
   return (
     <LayoutStepDesktop
       image={{
-        src: "/images/retrievePassword/retrivePasswordEmailSentPage.svg",
+        src: "/images/retrievePassword/reset.svg",
         alt: "retrievePassword",
       }}
       step={

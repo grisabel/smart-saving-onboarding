@@ -18,7 +18,7 @@ function SuccessResetPasswordMobile() {
             steps={[
               { isTransited: false },
               { isTransited: false },
-              { isTransited: false },
+              { isTransited: true },
             ]}
           ></DotStep>
         </div>
