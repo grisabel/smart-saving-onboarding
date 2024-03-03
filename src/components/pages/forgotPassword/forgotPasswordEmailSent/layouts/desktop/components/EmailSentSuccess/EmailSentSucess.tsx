@@ -1,11 +1,17 @@
+import { useTranslation } from "react-i18next";
 import styles from "./EmailSentSucess.module.scss";
-import { t } from "i18next";
+import { useForgotPasswordCtx } from "../../../../../context/ForgotPasswordContext";
 
 const EmailSentSuccess: React.FC = () => {
+  const { t } = useTranslation();
+  const forgotPasswordCtx = useForgotPasswordCtx();
+  console.log(forgotPasswordCtx.email);
   return (
     <div className={styles.text}>
       <div>
-        <p className={styles.text__bold}>{`${t("sent-email")} XXXXXX`}</p>
+        <p className={styles.text__bold}>{`${t("sent-email")} ${
+          forgotPasswordCtx.email
+        }`}</p>
         <p className={styles.text__thin}>{t("sent-email-success")}</p>
       </div>
       <p className={styles.text__bold}>{t("take-control")}</p>

@@ -1,7 +1,10 @@
+import { ReactElement } from "react";
 import Head from "next/head";
+
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import RetrievePasswordLayoutDesktop from "@/components/pages/forgotPassword/forgotPassword/layouts/RetrievePasswordLayoutDesktop";
 import RetrievePasswordLayoutMobile from "@/components/pages/forgotPassword/forgotPassword/layouts/RetrievePasswordLayoutMobile";
+import ForgotPasswordProvider from "@/components/pages/forgotPassword/context/ForgotPasswordContext";
 
 export default function ForgotPassword() {
   return (
@@ -19,3 +22,7 @@ export default function ForgotPassword() {
     </>
   );
 }
+
+ForgotPassword.getContext = function getLayout(page: ReactElement) {
+  return <ForgotPasswordProvider>{page}</ForgotPasswordProvider>;
+};
