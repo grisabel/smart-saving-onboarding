@@ -35,7 +35,12 @@ const FormLogin: React.FC = () => {
           LOCAL_STORAGE_KEYS.accessToken,
           resul.accessToken
         );
-        document.location.href = process.env.NEXT_PUBLIC_APP_URL ?? "";
+
+        const urlToGo = (process.env.NEXT_PUBLIC_APP_URL ?? "")
+          .replace(":accessToken", resul.accessToken)
+          .replace(":refreshToken", resul.refreshToken);
+
+        document.location.href = urlToGo;
       })
       .catch((error) => console.log(error));
   };
