@@ -10,6 +10,10 @@ import styles from "./FormLogin.module.scss";
 import { SessionFactoryRepository } from "@/repository/SessionRepository/SessionFactoryRepository";
 
 const sessionRepository = SessionFactoryRepository.getInstance();
+const LOCAL_STORAGE_KEYS = {
+  accessToken: "accessToken",
+  refreshToken: "refreshToken",
+};
 
 const FormLogin: React.FC = () => {
   const { t } = useTranslation();
@@ -20,10 +24,24 @@ const FormLogin: React.FC = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    //TODO add metadata
     sessionRepository
       .login({ email: email, password: password })
-      .then((resul) => console.log(resul))
+      .then((resul) => {
+        window.localStorage.setItem(
+          LOCAL_STORAGE_KEYS.refreshToken,
+          resul.refreshToken
+        );
+        window.localStorage.setItem(
+          LOCAL_STORAGE_KEYS.accessToken,
+          resul.accessToken
+        );
+
+        const urlToGo = (process.env.NEXT_PUBLIC_APP_URL ?? "")
+          .replace(":accessToken", resul.accessToken)
+          .replace(":refreshToken", resul.refreshToken);
+
+        document.location.href = urlToGo;
+      })
       .catch((error) => console.log(error));
   };
 
