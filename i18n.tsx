@@ -62,7 +62,17 @@ i18n.use(initReactI18next).init({
         "password-validator-equals-rule": "Both passwords must match.",
 
         "email-validator-domain-rule": "Email format is not correct.",
-        "email-validator-equals-rule": "Both emails must match."
+        "email-validator-equals-rule": "Both emails must match.",
+
+        "objective-education-savings": "Education Savings",
+        "objective-emergency": "Emergency Fund",
+        "objective-retirement": "Retirement",
+        "objective-smart-investment": "Smart Investment",
+
+        "objective-education-savings-explain": "Education Savings: Start today for your children's academic future",
+        "objective-emergency-explain": "Emergency Fund: Your safety net against unforeseen events.",
+        "objective-retirement-explain": "Retirement: Plan today for a peaceful retirement.", 
+        "objective-smart-investment-explain": "Retirement: Plan today for a peaceful retirement.",
       },
     },
     es: {
@@ -124,7 +134,17 @@ i18n.use(initReactI18next).init({
         "password-validator-equals-rule": "Ambas contraseñas deben coincidir.",
 
         "email-validator-domain-rule": "El formato de email no es correcto.",
-        "email-validator-equals-rule": "Ambos emails deben coincidir."
+        "email-validator-equals-rule": "Ambos emails deben coincidir.",
+
+        "objective-education-savings": "Ahorro Educativo",
+        "objective-emergency": "Fondo de Emergencia",
+        "objective-retirement": "Jubilación",
+        "objective-smart-investment": "Inversión Inteligente",
+
+        "objective-education-savings-explain": "Ahorro Educativo: Inicia hoy para el futuro académico de tus hijos.",
+        "objective-emergency-explain": "Fondo de Emergencia: Tu red de seguridad ante imprevistos.",
+        "objective-retirement-explain":  "Jubilación: Planifica hoy para un retiro tranquilo.",
+        "objective-smart-investment-explain": "Inversión Inteligente: Haz crecer tu patrimonio paso a paso."
       },
     },
   },

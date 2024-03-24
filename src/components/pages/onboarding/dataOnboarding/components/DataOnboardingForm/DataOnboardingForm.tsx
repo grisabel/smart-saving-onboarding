@@ -73,23 +73,20 @@ const DataOnboardingForm: React.FC = () => {
             value={onboardingCtx.objetive}
             options={[
               {
-                value: "Ahorro Educativo",
-                label:
-                  "Ahorro Educativo: Inicia hoy para el futuro académico de tus hijos.",
+                value: "objective-education-savings",
+                label: t("objective-education-savings-explain"),
               },
               {
-                value: "Fondo de Emergencia",
-                label:
-                  "Fondo de Emergencia: Tu red de seguridad ante imprevistos.",
+                value: "objective-emergency",
+                label: t("objective-emergency-explain"),
               },
               {
-                value: "Jubilación",
-                label: "Jubilación: Planifica hoy para un retiro tranquilo.",
+                value: "objective-retirement",
+                label: t("objective-retirement-explain"),
               },
               {
-                value: "Inversión Inteligente",
-                label:
-                  "Inversión Inteligente: Haz crecer tu patrimonio paso a paso.",
+                value: "objective-smart-investment",
+                label: t("objective-smart-investment-explain"),
               },
             ]}
           />
