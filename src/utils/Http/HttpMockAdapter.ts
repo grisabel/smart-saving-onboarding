@@ -77,7 +77,7 @@ export class HttpMockAdapter implements HttpInterfaceMockAdapter {
           json: () => Promise.resolve(response),
           status: status,
           headers: headers,
-        }) as unknown as Response;
+        }) as unknown as HttpResponse<T>;
       })
       .catch((error) => {
         const { status, response } = error;
@@ -86,7 +86,7 @@ export class HttpMockAdapter implements HttpInterfaceMockAdapter {
           ok: status >= 200 && status <= 299,
           status: status,
           headers: headers,
-        }) as unknown as Response;
+        }) as unknown as HttpResponse<T>;
       });
   }
 
