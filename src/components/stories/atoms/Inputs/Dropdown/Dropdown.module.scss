@@ -66,6 +66,12 @@
       span {
         cursor: pointer;
       }
+
+      &--disabled{
+        span {
+          cursor: default;
+        }
+      }
     }
   }
 

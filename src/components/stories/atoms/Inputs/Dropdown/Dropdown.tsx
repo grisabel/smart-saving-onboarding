@@ -46,6 +46,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   id,
   label,
   placeholder,
+  disabled,
   options,
   value: defaultValue,
   onChange,
@@ -149,7 +150,7 @@ const Dropdown: React.FC<DropdownProps> = ({
             disabled
             role="combobox"
           />
-          <div className={styles.icons}>
+          <div className={`${styles.icons} ${disabled ? styles['icons--disabled'] : ''}`}>
             <Icon
               name={inputText && openDropdown ? "close-square" : ""}
               onClick={onResetDropdown}
