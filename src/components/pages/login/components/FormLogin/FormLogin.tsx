@@ -8,6 +8,7 @@ import Button from "@/components/stories/atoms/Buttons/Button";
 
 import styles from "./FormLogin.module.scss";
 import { SessionFactoryRepository } from "@/repository/SessionRepository/SessionFactoryRepository";
+import Alert from "@/components/stories/atoms/Alert";
 
 const sessionRepository = SessionFactoryRepository.getInstance();
 const LOCAL_STORAGE_KEYS = {
@@ -20,6 +21,10 @@ const FormLogin: React.FC = () => {
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [title, setTitle] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
+  const [type, setType] = useState<"warning" | "danger" | null>(null);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -42,7 +47,19 @@ const FormLogin: React.FC = () => {
 
         document.location.href = urlToGo;
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        if (error?.isInvalidLogin) {
+          setTitle("error-login-password-title");
+          setDescription("error-login-password-description");
+          setType("danger");
+          setAlertOpen(true);
+        } else {
+          setTitle("error-login-server-title");
+          setDescription("error-login-server-description");
+          setType("warning");
+          setAlertOpen(true);
+        }
+      });
   };
 
   const handleInputEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,6 +74,13 @@ const FormLogin: React.FC = () => {
     <div className={styles.container}>
       <p className={styles.title}>{t("login now")}</p>
       <p className={styles.subtitle}>{t("better financial control")}</p>
+      <Alert
+        title={t(title)}
+        description={t(description)}
+        type={type as "warning" | "danger"}
+        open={alertOpen}
+        setOpen={setAlertOpen}
+      />
       <form className={styles.emailForm} onSubmit={handleSubmit}>
         <div className={styles.inputs}>
           <InputTextEmail

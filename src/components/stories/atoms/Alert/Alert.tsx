@@ -41,7 +41,6 @@ const Alert: React.FC<AlertProps> = ({
           name="cross-big"
           className={styles.close}
           onClick={() => {
-            console.log("hoal");
             setOpen(false);
           }}
         />
