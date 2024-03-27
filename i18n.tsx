@@ -84,15 +84,6 @@ i18n.use(initReactI18next).init({
         "objective-retirement": "Retirement",
         "objective-smart-investment": "Smart Investment",
 
-        "objective-education-savings-explain":
-          "Education Savings: Start today for your children's academic future",
-        "objective-emergency-explain":
-          "Emergency Fund: Your safety net against unforeseen events.",
-        "objective-retirement-explain":
-          "Retirement: Plan today for a peaceful retirement.",
-        "objective-smart-investment-explain":
-          "Retirement: Plan today for a peaceful retirement.",
-
         "error-login-password-title": "Oops! Incorrect Username or Password",
         "error-login-password-description":
           "Please check your username and password and try again. We all have those crazy keyboard days! 😉",
@@ -100,6 +91,31 @@ i18n.use(initReactI18next).init({
           "Oops! It looks like the server took a little break without notice",
         "error-login-server-description":
           "Our tech team is giving it a serious talk. Please try again in a little while.",
+
+        "objective-education-savings-explain": "Education Savings: Start today for your children's academic future",
+        "objective-emergency-explain": "Emergency Fund: Your safety net against unforeseen events.",
+        "objective-retirement-explain": "Retirement: Plan today for a peaceful retirement.", 
+        "objective-smart-investment-explain": "Retirement: Plan today for a peaceful retirement.",
+
+        "interest-calculator-title": "Compound interest calculator",
+        "interest-calculator-input-step1": "Step 1: Initial Investment",
+        "interest-calculator-input-step1-label": "Initial Investment",
+        "interest-calculator-input-step1-description": "Amount of money that you have available to invest initially.",
+
+        "interest-calculator-input-step2": "Step 2: Contribute",
+        "interest-calculator-input-step21-label": "Monthly Contribution",
+        "interest-calculator-input-step21-description": "Amount that you plan to add to the principal every month, or a negative number for the amount that you plan to withdraw every month.",
+        "interest-calculator-input-step22-label": "Length of Time in Years",
+        "interest-calculator-input-step22-description": "Length of time, in years, that you plan to save.",
+
+        "interest-calculator-input-step3": "Step 3: Interest rate",
+        "interest-calculator-input-step3-label": "Estimated Interest Rate",
+        "interest-calculator-input-step3-description": "Your estimated annual interest rate.",
+
+        "interest-calculator-input-step4": "Step 4: Capitalisation of interest",
+        "interest-calculator-input-step4-label": "Compound Frequency",
+        "interest-calculator-input-step4-description": "Times per year that interest will be compounded.",
+        "interest-calculator-input-step4-value": "Anually",
       },
     },
     es: {
@@ -184,22 +200,39 @@ i18n.use(initReactI18next).init({
         "objective-retirement": "Jubilación",
         "objective-smart-investment": "Inversión Inteligente",
 
-        "objective-education-savings-explain":
-          "Ahorro Educativo: Inicia hoy para el futuro académico de tus hijos.",
-        "objective-emergency-explain":
-          "Fondo de Emergencia: Tu red de seguridad ante imprevistos.",
-        "objective-retirement-explain":
-          "Jubilación: Planifica hoy para un retiro tranquilo.",
-        "objective-smart-investment-explain":
-          "Inversión Inteligente: Haz crecer tu patrimonio paso a paso.",
-
-        "error-login-password-title": "¡Ups! Usuario o Contraseña Incorrecto",
         "error-login-password-description":
           "Verifica tu usuario y contraseña e inténtalo de nuevo. ¡Todos tenemos días locos con el teclado! 😉",
         "error-login-server-title":
           "¡Ups! Parece que el servidor se tomó un pequeño descanso sin previo aviso",
         "error-login-server-description":
           "Nuestro equipo de tecnología le está dando una charla seria. Por favor, inténtalo de nuevo en un rato.",
+
+        "objective-education-savings-explain": "Ahorro Educativo: Inicia hoy para el futuro académico de tus hijos.",
+        "objective-emergency-explain": "Fondo de Emergencia: Tu red de seguridad ante imprevistos.",
+        "objective-retirement-explain":  "Jubilación: Planifica hoy para un retiro tranquilo.",
+        "objective-smart-investment-explain": "Inversión Inteligente: Haz crecer tu patrimonio paso a paso.",
+
+        "interest-calculator-title": "Calculadora de interés compuesto",
+        "interest-calculator-input-step1": "Paso 1: Inversión inicial",
+        "interest-calculator-input-step1-label": "Inversión inicial",
+        "interest-calculator-input-step1-description": "Cantidad de dinero de que dispone para invertir inicialmente.",
+
+
+        "interest-calculator-input-step2": "Paso 2: Aportación",
+        "interest-calculator-input-step21-label": "Contribución mensual",
+        "interest-calculator-input-step21-description": "Cantidad que tiene previsto añadir al capital cada mes, o un número negativo para la cantidad que tiene previsto retirar cada mes",
+        "interest-calculator-input-step22-label": "Duración en años",
+        "interest-calculator-input-step22-description": "Duración del tiempo, en años, que tiene previsto ahorrar.",
+
+        "interest-calculator-input-step3": "Paso 3: Tipo de interés",
+        "interest-calculator-input-step3-label": "Tipo de interés estimado",
+        "interest-calculator-input-step3-description": "Tu tipo de interés anual estimado",
+
+        "interest-calculator-input-step4": "Paso 4: Capitalicación de intereses",
+        "interest-calculator-input-step4-label": "Frecuencia compuesta",
+        "interest-calculator-input-step4-description": "Veces al año que se capitalizarán los intereses",
+        "interest-calculator-input-step4-value": "Anualmente",
+
       },
     },
   },

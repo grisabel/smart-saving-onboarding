@@ -4,6 +4,7 @@ export interface DropdownProps {
   id: string;
   label?: string;
   placeholder?: string;
+  disabled?: boolean;
 
   options: InputOption[];
   value?: string | null;

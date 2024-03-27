@@ -15,8 +15,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LogoExample: Story = {
-  args: {
-    width: 150,
-    height: 80,
-  },
+  args: {  },
 };
