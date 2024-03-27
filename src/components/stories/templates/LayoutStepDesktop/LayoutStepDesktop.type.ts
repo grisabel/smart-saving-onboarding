@@ -1,5 +1,5 @@
 export interface LayoutStepDesktopProps {
-  image: {
+  image?: {
     src: string;
     alt: string;
   };

@@ -4,7 +4,7 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import DataCalculatorDesktop from "@/components/pages/financial-tools/compound-interest-calculator/layouts/DataCalculatorDesktop";
 import DataCalculatorMobile from "@/components/pages/financial-tools/compound-interest-calculator/layouts/DataCalculatorMobile";
 
-export default function SignUp() {
+export default function CompoundInterestForm() {
   return (
     <>
       <Head>

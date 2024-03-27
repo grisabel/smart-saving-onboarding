@@ -2,13 +2,13 @@ import styles from "./LineStep.module.scss";
 
 import { LineStepProps } from "./LineStep.types";
 
-const LineStep: React.FC<LineStepProps> = ({ steps }) => {
+const LineStep: React.FC<LineStepProps> = ({ steps, className }) => {
   return (
     steps && (
       <div
         className={`${styles.LineStepWp} ${
           styles[`LineStepWp--${steps.length}`]
-        }`}
+        } ${className}`}
       >
         {steps.map((step, i) => {
           return (

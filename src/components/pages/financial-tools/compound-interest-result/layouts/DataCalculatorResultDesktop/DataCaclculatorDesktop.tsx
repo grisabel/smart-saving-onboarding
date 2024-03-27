@@ -4,33 +4,29 @@ import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop"
 
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
 import Icon from "@/components/stories/atoms/Icon";
-import DataCalculatorForm from "../../components/DataCalculatorForm/DataCalculatorForm";
+import DataCalculatorResult from "../../components/DataCalculatorResult/DataCalculatorResult";
 
 import styles from "./DataCaclculatorDesktop.module.scss"
 
-const DataCalculatorDesktop: React.FC = () => {
+const DataCalculatorResultDesktop: React.FC = () => {
   return (
     <LayoutStepDesktop
-      image={{
-        src: "/images/financial-tools/compound-interest-calculator/chart-ilustration.svg",
-        alt: "user-onboarding",
-      }}
       step={
         <LineStep
-        className={styles.LineStepCalculator}
+        className={styles.LineStepCalculatorResul}
           steps={[
             {
               isTransited: true,
               icon: <Icon name="form" />,
               isCompleted: true,
             },
-            { isTransited: false, icon: <Icon name="chart" /> },
+            { isTransited: true, icon: <Icon name="chart" />, isCompleted: true },
           ]}
         ></LineStep>
       }
-      form={<DataCalculatorForm />}
+      form={<DataCalculatorResult />}
     />
   );
 };
 
-export default DataCalculatorDesktop;
+export default DataCalculatorResultDesktop;

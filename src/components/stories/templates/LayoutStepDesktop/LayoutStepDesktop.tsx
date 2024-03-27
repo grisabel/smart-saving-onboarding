@@ -19,14 +19,14 @@ const LayoutStepDesktop: React.FC<LayoutStepDesktopProps> = (props) => {
       <Logo onClick={goLogin} />
       <div className={styles.retrievePassword}>
         <div className={styles.stepts}>{props.step}</div>
-        <div className={styles.forms}>{props.form}</div>
-        <div className={styles.image}>
-          <Image
+        <div className={`${styles.forms} ${!props.image && styles["forms--only"]}`}>{props.form}</div>
+        { props.image && <div className={styles.image}>
+           <Image
             src={props.image.src}
             alt={props.image.alt}
             layout="fill"
           ></Image>
-        </div>
+        </div>}
       </div>
     </div>
   );
