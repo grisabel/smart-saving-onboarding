@@ -28,20 +28,21 @@ const DataCalculatorForm = () => {
   } = useCompountInterestCtx();
 
   const isDisabled = () => {
-    return !annualContribution || !initialCapital || !period || !rateInterest;
+    return (!annualContribution && annualContribution !==0)  || (!initialCapital && initialCapital !==0) || !period || !rateInterest;
   };
 
   const handleAnnualContribution = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    if (!event?.target?.value) {
+    if (!event?.target?.value && parseFloat(event.target.value) !== 0) {
       setRateInterest(null);
     }
+    
     setAnnualContribution(parseFloat(event.target.value));
   };
 
   const handleInitialCapital = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (!event?.target?.value) {
+    if (!event?.target?.value && parseFloat(event.target.value) !== 0) {
       setRateInterest(null);
     }
     setInitialCapital(parseFloat(event.target.value));
@@ -81,7 +82,7 @@ const DataCalculatorForm = () => {
       <p className={styles.title}>{t("interest-calculator-input-step1")}</p>
       <InputAmount
         label={t("interest-calculator-input-step1-label")}
-        placeholder="0,00"
+        placeholder={t("interest-calculator-input-step1-label")}
         onChange={handleInitialCapital}
         value={initialCapital ? `${initialCapital}` : null}
       />
@@ -92,7 +93,7 @@ const DataCalculatorForm = () => {
       <p className={styles.title}>{t("interest-calculator-input-step2")}</p>
       <InputAmount
         label={t("interest-calculator-input-step21-label")}
-        placeholder="0,00"
+        placeholder={t("interest-calculator-input-step21-label")}
         onChange={handleAnnualContribution}
         value={annualContribution ? `${annualContribution}` : null}
       />
@@ -101,7 +102,7 @@ const DataCalculatorForm = () => {
       </p>
       <InputNumber
         label={t("interest-calculator-input-step22-label")}
-        placeholder="0,00"
+        placeholder={t("interest-calculator-input-step22-label")}
         type="integer"
         onChange={handlePeriod}
         value={period ? `${period}` : null}
@@ -113,7 +114,7 @@ const DataCalculatorForm = () => {
       <p className={styles.title}>{t("interest-calculator-input-step3")}</p>
       <InputPercentage
         label={t("interest-calculator-input-step3-label")}
-        placeholder="0,00"
+        placeholder={t("interest-calculator-input-step3-label")}
         onChange={handleSetRateInterest}
         value={rateInterest ? `${rateInterest}` : null}
       />

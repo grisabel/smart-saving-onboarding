@@ -13,11 +13,12 @@ const calculatorRepository = CalculatorFactoryRepository.getInstance();
 
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { params } = context;
-  const initialCapital = params?.["initialCapital"] as string;
-  const annualContribution = params?.["annualContribution "] as string;
-  const rateInterest = params?.["rateInterest"] as string;
-  const period = params?.["period "] as string;
+  const { query } = context;
+
+  const initialCapital = query?.["initialCapital"] as string;
+  const annualContribution = query?.["annualContribution"] as string;
+  const rateInterest = query?.["rateInterest"] as string;
+  const period = query?.["period"] as string;
 
  try {
   const data = await calculatorRepository
