@@ -1,6 +1,8 @@
 import { useMediaQuery } from "react-responsive";
+import { isMobile as isMobileUserAgent} from 'react-device-detect';
 
 import styles from "./LayoutMain.module.scss";
+import { useState, useEffect } from "react";
 
 interface LayoutMainProps {
   desktop: React.ReactNode;
@@ -8,7 +10,13 @@ interface LayoutMainProps {
 }
 
 const LayoutMain: React.FC<LayoutMainProps> = ({ desktop, mobile }) => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState<boolean>(isMobileUserAgent)
+  
+  const isMobileLayout = useMediaQuery({ maxWidth: 768 });
+
+  useEffect(()=>{
+    setIsMobile(isMobileLayout)
+  }, [isMobileLayout])
 
   return (
     <main className={styles.LayoutMain}>{isMobile ? mobile : desktop}</main>
