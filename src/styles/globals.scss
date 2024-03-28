@@ -47,3 +47,62 @@ h4 {
 p {
   text-wrap: pretty;
 }
+
+.recharts-tooltip-item{
+  .recharts-tooltip-item-name {
+    color: #000000
+  }
+  
+  .recharts-tooltip-item-value {
+    color: #666666
+  }
+  &:nth-child(1){
+    .recharts-tooltip-item-value {
+      color: #FCAE38
+    }
+  }
+  &:nth-child(2){
+    .recharts-tooltip-item-value {
+      color: #0AA347
+    }
+  }
+  &:nth-child(3){
+    .recharts-tooltip-item-value {
+      color: #11ADEF
+    }
+  }
+}
+
+li.recharts-legend-item.legend-item-0 {
+  span{
+    color: #FCAE38 !important
+  }
+  svg{
+    path{
+      stroke: #FCAE38 !important
+    }
+  }
+}
+li.recharts-legend-item.legend-item-1 {
+  span{
+    color: #0AA347 !important
+  }
+  svg{
+    path{
+      stroke: #0AA347 !important
+    }
+  }
+}
+li.recharts-legend-item.legend-item-2 {
+  span{
+    color: #11ADEF !important
+  }
+  svg{
+    path{
+      stroke: #11ADEF !important
+    }
+  }
+}
+li.recharts-legend-item.legend-item-3{
+    display: none !important
+}
