@@ -34,7 +34,7 @@ const RetrievePasswordForm: React.FC = () => {
   };
 
   const handleBack = () => {
-    router.push("/");
+    router.push("/login");
   };
 
   const handleInputEmail = (event: React.ChangeEvent<HTMLInputElement>) => {

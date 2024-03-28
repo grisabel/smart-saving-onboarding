@@ -8,7 +8,7 @@ const LayoutMobile: React.FC<LayoutMobileProps> = ({ children }) => {
   const router = useRouter();
 
   const goLogin = () => {
-    router.push("/");
+    router.push("/login");
   };
 
   return (

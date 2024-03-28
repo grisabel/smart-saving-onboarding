@@ -17,7 +17,7 @@ const ErrorMsg: React.FC<ErrorMsgProps> = ({ title, content, button }) => {
   const { t } = useTranslation();
 
   const handleBack = () => {
-    router.push("/");
+    router.push("/login");
   };
 
   const defaultContent = (
