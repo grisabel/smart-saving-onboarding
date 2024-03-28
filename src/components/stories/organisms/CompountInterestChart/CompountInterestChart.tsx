@@ -204,14 +204,14 @@ const CompountInterestChart: React.FC = () => {
         data={pageData}
         margin={{
           top: 20,
-          right: 30,
-          left: 20,
+          right: 25,
+          left: 0,
           bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
-        <YAxis />
+        <YAxis orientation="right" />
         <Tooltip />
         <Legend />
         <Area

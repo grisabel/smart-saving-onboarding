@@ -6,5 +6,20 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
-  width: 100%;
+  width: calc( 100% - 32px);
+
+  .title {
+    color: var(--color-bold-text);
+    @include f--b1-bold;
+  }
+
+  .subtitle {
+    margin-top: 16px;
+    color: var(--color-thin-text);
+    @include f--b1-regular;
+  }
+
+  .chart{
+    min-height: 350px;
+  }
 }
