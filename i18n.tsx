@@ -116,6 +116,21 @@ i18n.use(initReactI18next).init({
         "interest-calculator-input-step4-label": "Compound Frequency",
         "interest-calculator-input-step4-description": "Times per year that interest will be compounded.",
         "interest-calculator-input-step4-value": "Anually",
+
+        "interest-calculator-btn": "Calculate",
+
+        "interest-calculator-resul-title": "Compount Interest Calculator",
+        "interest-calculator-resul-info-1": "This table shows you an estimate of how your initial savings could grow over time, based on the interest rate and the compounding schedule you choose.",
+        "interest-calculator-resul-info-21a": "It's important to note that slight adjustments in these variables can significantly impact the outcomes. " ,
+        "interest-calculator-resul-info-21b": "We encourage you to " ,
+        "interest-calculator-resul-info-22": "restart the calculator " ,
+        "interest-calculator-resul-info-23": "and input different figures to explore various possible scenarios." ,
+
+        "year": "Year",
+        "totalCapital": "Total Capital",
+        "interest": "interest",
+        "contribution": "Annual Contribution",
+        "initialCapital": "Initial Capital",
       },
     },
     es: {
@@ -233,6 +248,20 @@ i18n.use(initReactI18next).init({
         "interest-calculator-input-step4-description": "Veces al año que se capitalizarán los intereses",
         "interest-calculator-input-step4-value": "Anualmente",
 
+        "interest-calculator-btn": "Calcular",
+
+        "interest-calculator-resul-title": "Calculadora de interés compuesto",
+        "interest-calculator-resul-info-1": "Esta tabla te presenta una proyección de cómo podrían crecer tus ahorros iniciales con el tiempo, basándose en la tasa de interés y el método de capitalización que elijas.",
+        "interest-calculator-resul-info-21a": "Es importante tener en cuenta que pequeños ajustes en estas variables pueden influir significativamente en los resultados. ",
+        "interest-calculator-resul-info-21b": "Te animamos a ",
+        "interest-calculator-resul-info-22": "reiniciar la calculadora " ,
+        "interest-calculator-resul-info-23": "e introducir diferentes cifras para explorar varios escenarios posibles.",
+        
+        "year": "Año",
+        "totalCapital": "Capital Total",
+        "interest": "Intereses",
+        "contribution": "Aportación Anual",
+        "initialCapital": "Capital Inicial",
       },
     },
   },

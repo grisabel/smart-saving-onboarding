@@ -7,4 +7,5 @@ interface StepProps {
 
 export interface LineStepProps {
   steps: StepProps[];
+  className?: string;
 }

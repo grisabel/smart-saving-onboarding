@@ -3,8 +3,10 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 
 import DataCalculatorDesktop from "@/components/pages/financial-tools/compound-interest-calculator/layouts/DataCalculatorDesktop";
 import DataCalculatorMobile from "@/components/pages/financial-tools/compound-interest-calculator/layouts/DataCalculatorMobile";
+import { ReactElement } from "react";
+import CompountInterestProvider from "@/components/pages/financial-tools/context/OnboardingContext";
 
-export default function SignUp() {
+export default function CompoundInterestForm() {
   return (
     <>
       <Head>
@@ -20,3 +22,8 @@ export default function SignUp() {
     </>
   );
 }
+
+
+CompoundInterestForm.getContext = function getLayout(page: ReactElement) {
+  return <CompountInterestProvider>{page}</CompountInterestProvider>; 
+};
