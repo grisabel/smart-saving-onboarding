@@ -27,7 +27,7 @@ export class CalculatorHttpRepository implements CalculatorInterfaceRepository {
         .then((response) => {
           try {
             switch (response.status) {
-              case 204:
+              case 200:
                 resolve(response.json());
                 break;
 
