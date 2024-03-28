@@ -19,8 +19,19 @@
   }
   
   .chart{
-    min-height: 350px;
+    height: 320px;
+    width: 320px;
+ 
+    transform: translate(32px);
+
     margin-bottom: 16px;
+
+    @media (min-width: $bpMdMin) {
+      min-height: 350px;
+      height: auto;
+      width: auto;
+      transform: none;
+    }
   }
 
   .Link {
