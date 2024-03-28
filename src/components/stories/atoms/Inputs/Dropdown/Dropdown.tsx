@@ -62,6 +62,11 @@ const Dropdown: React.FC<DropdownProps> = ({
     defaultOptionFocus(options, defaultValue)
   );
 
+  useEffect(() => {
+    setInputText(defaultOptionLabel(options, defaultValue));
+    setOptionFocus(defaultOptionFocus(options, defaultValue));
+  }, [defaultValue]);
+
   const dropdownRef = useRef<HTMLInputElement | null>(null);
 
   const _handleKeyUpDropdownItem = () => {
@@ -150,7 +155,11 @@ const Dropdown: React.FC<DropdownProps> = ({
             disabled
             role="combobox"
           />
-          <div className={`${styles.icons} ${disabled ? styles['icons--disabled'] : ''}`}>
+          <div
+            className={`${styles.icons} ${
+              disabled ? styles["icons--disabled"] : ""
+            }`}
+          >
             <Icon
               name={inputText && openDropdown ? "close-square" : ""}
               onClick={onResetDropdown}

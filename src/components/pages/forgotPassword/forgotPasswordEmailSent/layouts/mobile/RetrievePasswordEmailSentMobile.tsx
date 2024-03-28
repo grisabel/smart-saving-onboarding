@@ -1,11 +1,14 @@
-import { t } from "i18next";
 import Image from "next/image";
 
 import LayoutMobile from "@/components/stories/templates/LayoutMobile";
 
 import styles from "./RetrievePasswordEmailSentMobile.module.scss";
+import { useTranslation } from "react-i18next";
 
 function RetrievePasswordEmailSentMobile() {
+
+  const {t} = useTranslation();
+
   return (
     <LayoutMobile>
       <div className={styles.text}>
