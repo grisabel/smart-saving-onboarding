@@ -16,7 +16,7 @@
     padding: 0 64px;
   }
 
-  @media (min-width: $bpDtMin) {
+  @media (min-width: $bpDtLMin) {
     padding: 0 128px;
   }
 
@@ -28,6 +28,7 @@
   .subtitle {
     color: var(--color-thin-text);
     @include f--b1-regular;
+    margin-bottom: 8px;
   }
 
   .emailInput {

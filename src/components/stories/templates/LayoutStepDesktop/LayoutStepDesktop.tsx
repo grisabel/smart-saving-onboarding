@@ -11,7 +11,7 @@ const LayoutStepDesktop: React.FC<LayoutStepDesktopProps> = (props) => {
   const router = useRouter();
 
   const goLogin = () => {
-    router.push("/");
+    router.push("/login");
   };
 
   return (

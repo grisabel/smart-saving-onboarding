@@ -9,7 +9,7 @@ const Success: React.FC = () => {
   const { t } = useTranslation();
 
   const handleLogin = () => {
-    router.push("/");
+    router.push("/login");
   };
 
   return (

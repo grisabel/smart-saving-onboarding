@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import FormLogin from "../../components/FormLogin";
 import Button from "@/components/stories/atoms/Buttons/Button";
 import LayoutMobile from "@/components/stories/templates/LayoutMobile/LayoutMobile";
+import LanguageSwitch from "../../components/LanguageSwitch/LanguageSwitch";
 
 const LoginLayoutMobile: React.FC = () => {
   const { t } = useTranslation();
@@ -15,6 +16,7 @@ const LoginLayoutMobile: React.FC = () => {
         <FormLogin />
         <hr />
         <Button label={t("registerButtonLabel")} color="secondary" />
+        <LanguageSwitch/>
       </div>
     </LayoutMobile>
   );

@@ -131,6 +131,11 @@ i18n.use(initReactI18next).init({
         "interest": "interest",
         "contribution": "Annual Contribution",
         "initialCapital": "Initial Capital",
+
+        "input-language-label": "Language",
+        "input-language-placeholder": "Select a language",
+        "spanish": "Spanish",
+        "english": "English",
       },
     },
     es: {
@@ -262,6 +267,11 @@ i18n.use(initReactI18next).init({
         "interest": "Intereses",
         "contribution": "Aportación Anual",
         "initialCapital": "Capital Inicial",
+
+        "input-language-label": "Idioma",
+        "input-language-placeholder": "Selecciona un idioma",
+        "spanish": "Español",
+        "english": "Ingles",
       },
     },
   },

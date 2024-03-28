@@ -2,6 +2,8 @@ import "@/styles/globals.scss";
 import "../../i18n";
 import type { AppProps } from "next/app";
 import { NextPage } from "next/types";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getContext?: (page: React.ReactElement) => React.ReactNode;
@@ -12,6 +14,13 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const {i18n} = useTranslation();
+
+  useEffect(()=> {
+    const lng = window.localStorage.getItem('language') ?? 'es';
+    i18n.changeLanguage(lng);
+  }, [])
+  
   const getContext = Component.getContext ?? ((page) => page);
 
   return getContext(<Component {...pageProps} />);
