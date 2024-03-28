@@ -7,17 +7,25 @@ import Dropdown from "@/components/stories/atoms/Inputs/Dropdown";
 import { FormEvent, useState } from "react";
 import Button from "@/components/stories/atoms/Buttons/Button";
 import { useRouter } from "next/router";
+import { useCompountInterestCtx } from "../../../context/OnboardingContext";
 
 const DataCalculatorForm = () => {
   const { t } = useTranslation();
   const router = useRouter();
 
-  const [annualContribution, setAnnualContribution] = useState<number | null>(
-    null
-  );
-  const [initialCapital, setInitialCapital] = useState<number | null>(null);
-  const [period, setPeriod] = useState<number | null>(null);
-  const [rateInterest, setRateInterest] = useState<number | null>(null);
+  const {
+    annualContribution,
+    setAnnualContribution,
+
+    initialCapital,
+    setInitialCapital,
+
+    period,
+    setPeriod,
+
+    rateInterest,
+    setRateInterest,
+  } = useCompountInterestCtx();
 
   const isDisabled = () => {
     return !annualContribution || !initialCapital || !period || !rateInterest;
@@ -75,6 +83,7 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step1-label")}
         placeholder="0,00"
         onChange={handleInitialCapital}
+        value={`${initialCapital}`}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step1-description")}
@@ -85,6 +94,7 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step21-label")}
         placeholder="0,00"
         onChange={handleAnnualContribution}
+        value={`${annualContribution}`}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step21-description")}
@@ -94,6 +104,7 @@ const DataCalculatorForm = () => {
         placeholder="0,00"
         type="integer"
         onChange={handlePeriod}
+        value={`${period}`}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step22-description")}
@@ -104,6 +115,7 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step3-label")}
         placeholder="0,00"
         onChange={handleSetRateInterest}
+        value={`${rateInterest}`}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step3-description")}
