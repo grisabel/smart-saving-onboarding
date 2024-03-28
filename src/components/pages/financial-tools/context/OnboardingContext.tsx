@@ -1,3 +1,4 @@
+import { CompountInterestResponseModel } from "@/repository/CaclculatorRepository/model/response/CompountInterestResponseModel";
 import React, { createContext, useContext, useState } from "react";
 
 interface CompountInterestContextInterface {
@@ -12,6 +13,9 @@ interface CompountInterestContextInterface {
 
   rateInterest: number |null,
   setRateInterest:(value: number |null) => void,
+
+  data: CompountInterestResponseModel[] | null
+  setData: (value: CompountInterestResponseModel[] |null) => void
 }
 
 const CompountInterestContext = createContext<CompountInterestContextInterface | null>(
@@ -28,6 +32,9 @@ const CompountInterestProvider: React.FC<{ children: React.ReactNode }> = ({
   const [period, setPeriod] = useState<number | null>(null);
   const [rateInterest, setRateInterest] = useState<number | null>(null);
 
+  const [data, setData] = useState<CompountInterestResponseModel[] | null>(null);
+
+
   const context = {
     annualContribution,
     setAnnualContribution,
@@ -40,6 +47,9 @@ const CompountInterestProvider: React.FC<{ children: React.ReactNode }> = ({
 
     rateInterest,
     setRateInterest,
+
+    data,
+    setData
   };
 
   return (

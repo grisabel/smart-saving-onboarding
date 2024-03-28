@@ -2,32 +2,12 @@ import { useTranslation } from "react-i18next";
 import styles from "./DataCalculatorResult.module.scss";
 import CompountInterestChart from "@/components/stories/organisms/CompountInterestChart/CompountInterestChart";
 import Link from "next/link";
-import { CalculatorFactoryRepository } from "@/repository/CaclculatorRepository/UserFactoryRepository";
-import { useEffect, useState } from "react";
-import { error } from "console";
-import { CompountInterestResponseModel } from "@/repository/CaclculatorRepository/model/response/CompountInterestResponseModel";
-
-const calculatorRepository = CalculatorFactoryRepository.getInstance();
+import { useCompountInterestCtx } from "../../../context/OnboardingContext";
 
 const DataCalculatorResult = () => {
-  const [data, setData] = useState<CompountInterestResponseModel[] | null>(null);
   const { t } = useTranslation();
 
-  useEffect(() => {
-    calculatorRepository
-      .compountInterest({
-        annualContribution: 1200,
-        initialCapital: 10000,
-        period: 30,
-        rateInterest: 2.5,
-      })
-      .then((resul) => {
-        setData(resul);
-      })
-      .catch((error) => {
-        console.log({ error });
-      });
-  }, []);
+  const {data} = useCompountInterestCtx()
 
   return (
     <div className={styles.container}>

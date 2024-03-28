@@ -83,7 +83,7 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step1-label")}
         placeholder="0,00"
         onChange={handleInitialCapital}
-        value={`${initialCapital}`}
+        value={initialCapital ? `${initialCapital}` : null}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step1-description")}
@@ -94,7 +94,7 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step21-label")}
         placeholder="0,00"
         onChange={handleAnnualContribution}
-        value={`${annualContribution}`}
+        value={annualContribution ? `${annualContribution}` : null}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step21-description")}
@@ -104,7 +104,7 @@ const DataCalculatorForm = () => {
         placeholder="0,00"
         type="integer"
         onChange={handlePeriod}
-        value={`${period}`}
+        value={period ? `${period}` : null}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step22-description")}
@@ -115,7 +115,7 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step3-label")}
         placeholder="0,00"
         onChange={handleSetRateInterest}
-        value={`${rateInterest}`}
+        value={rateInterest ? `${rateInterest}` : null}
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step3-description")}

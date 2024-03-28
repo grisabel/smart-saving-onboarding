@@ -4,8 +4,13 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import DataCalculatorResultMobile from "@/components/pages/financial-tools/compound-interest-result/layouts/DataCalculatorResultMobile";
 import DataCalculatorResultDesktop from "@/components/pages/financial-tools/compound-interest-result/layouts/DataCalculatorResultDesktop";
 import { GetServerSideProps } from "next";
-import CompountInterestProvider from "@/components/pages/financial-tools/context/OnboardingContext";
-import { ReactElement } from "react";
+import CompountInterestProvider, { useCompountInterestCtx } from "@/components/pages/financial-tools/context/OnboardingContext";
+import { ReactElement, useEffect } from "react";
+import { CompountInterestResponseModel } from "@/repository/CaclculatorRepository/model/response/CompountInterestResponseModel";
+import { CalculatorFactoryRepository } from "@/repository/CaclculatorRepository/UserFactoryRepository";
+
+const calculatorRepository = CalculatorFactoryRepository.getInstance();
+
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { params } = context;
@@ -14,25 +19,33 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const rateInterest = params?.["rateInterest"] as string;
   const period = params?.["period "] as string;
 
+  const data = await calculatorRepository
+  .compountInterest({
+    initialCapital:  parseFloat(initialCapital),
+    annualContribution:  parseFloat(annualContribution),
+    rateInterest:  parseFloat(rateInterest),
+    period:  parseFloat(period),
+  })
+
   return {
     props: {
-      initialCapital: initialCapital ?  parseFloat(initialCapital) : null,
-      annualContribution: annualContribution ?  parseFloat(annualContribution) : null,
-      rateInterest: rateInterest ?  parseFloat(rateInterest) : null,
-      period: period ?  parseFloat(period) : null,
-    },
+      data 
+    }
   };
 };
 
 interface CompoundInterestResultProps {
-  initialCapital: number |null;
-  annualContribution: number |null;
-  rateInterest: number |null;
-  period: number |null;
+ data:  CompountInterestResponseModel[] | null
 }
 
-export default function CompoundInterestResult(props: CompoundInterestResultProps) {
-  console.log({props})
+export default function CompoundInterestResult({data}: CompoundInterestResultProps) {
+
+  const { setData } = useCompountInterestCtx();
+
+  useEffect(() => {
+    setData(data)
+  })
+  
   return (
     <>
       <Head>

@@ -35,7 +35,12 @@ const CompountInterestChart: React.FC<CompountInterestChartProps> = ({data}) => 
       <AreaChart
         width={500}
         height={300}
-        data={data}
+        data={data.map((d, i) => {
+          return {
+            ...d,
+            name: i + 1
+          }
+        })}
         margin={{
           top: 20,
           right: 50,
