@@ -1,5 +1,6 @@
 import { CompountInterestResponseModel } from "@/repository/CaclculatorRepository/model/response/CompountInterestResponseModel";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   AreaChart,
   ResponsiveContainer,
@@ -23,13 +24,16 @@ const formatCurrency = (value: string) => {
   return `${f.format(parseFloat(value))}`;
 };
 
-const formatYear = (value: string) => `Año: ${value}`
 
 interface CompountInterestChartProps{
   data: CompountInterestResponseModel[]
 }
 
 const CompountInterestChart: React.FC<CompountInterestChartProps> = ({data}) => {
+  const {t} = useTranslation();
+
+  const formatYear = (value: string) => `${t("year")}: ${value}`
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
@@ -58,28 +62,28 @@ const CompountInterestChart: React.FC<CompountInterestChartProps> = ({data}) => 
           dataKey="initialCapital"
           stackId="a"
           fill="#FCAE38"
-          name="Aportación Inicial"
+          name={t("initialCapital")}
         />
         <Area
           type="monotone"
           dataKey="contribution"
           stackId="a"
           fill="#0AA347"
-          name="Aportación Anual"
+          name={t("contribution")}
         />
         <Area
           type="monotone"
           dataKey="interest"
           stackId="a"
           fill="#11ADEF"
-          name="Interés"
+          name={t("interest")}
         />
         <Area
           type="monotone"
           dataKey="totalCapital"
           stackId="b"
           fill="transparent"
-          name="Capital Total"
+          name={t("totalCapital")}
         />
       </AreaChart>
     </ResponsiveContainer>

@@ -124,8 +124,13 @@ i18n.use(initReactI18next).init({
         "interest-calculator-resul-info-21a": "It's important to note that slight adjustments in these variables can significantly impact the outcomes. " ,
         "interest-calculator-resul-info-21b": "We encourage you to " ,
         "interest-calculator-resul-info-22": "restart the calculator " ,
-        "interest-calculator-resul-info-23": "and input different figures to explore various possible scenarios." 
+        "interest-calculator-resul-info-23": "and input different figures to explore various possible scenarios." ,
 
+        "year": "Year",
+        "totalCapital": "Total Capital",
+        "interest": "interest",
+        "contribution": "Annual Contribution",
+        "initialCapital": "Initial Capital",
       },
     },
     es: {
@@ -251,7 +256,12 @@ i18n.use(initReactI18next).init({
         "interest-calculator-resul-info-21b": "Te animamos a ",
         "interest-calculator-resul-info-22": "reiniciar la calculadora " ,
         "interest-calculator-resul-info-23": "e introducir diferentes cifras para explorar varios escenarios posibles.",
-
+        
+        "year": "Año",
+        "totalCapital": "Capital Total",
+        "interest": "Intereses",
+        "contribution": "Aportación Anual",
+        "initialCapital": "Capital Inicial",
       },
     },
   },

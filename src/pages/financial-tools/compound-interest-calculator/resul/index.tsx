@@ -19,6 +19,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const rateInterest = params?.["rateInterest"] as string;
   const period = params?.["period "] as string;
 
+ try {
   const data = await calculatorRepository
   .compountInterest({
     initialCapital:  parseFloat(initialCapital),
@@ -32,6 +33,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       data 
     }
   };
+ } catch (error) {
+  return {
+    props: {
+      data: null
+    }
+  }; 
+ }
 };
 
 interface CompoundInterestResultProps {
