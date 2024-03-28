@@ -28,7 +28,12 @@ const DataCalculatorForm = () => {
   } = useCompountInterestCtx();
 
   const isDisabled = () => {
-    return (!annualContribution && annualContribution !==0)  || (!initialCapital && initialCapital !==0) || !period || !rateInterest;
+    return (
+      (!annualContribution && annualContribution !== 0) ||
+      (!initialCapital && initialCapital !== 0) ||
+      !period ||
+      !rateInterest
+    );
   };
 
   const handleAnnualContribution = (
@@ -37,7 +42,7 @@ const DataCalculatorForm = () => {
     if (!event?.target?.value && parseFloat(event.target.value) !== 0) {
       setRateInterest(null);
     }
-    
+
     setAnnualContribution(parseFloat(event.target.value));
   };
 
@@ -84,7 +89,11 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step1-label")}
         placeholder={t("interest-calculator-input-step1-label")}
         onChange={handleInitialCapital}
-        value={initialCapital ? `${initialCapital}` : null}
+        value={
+          initialCapital || (!annualContribution && initialCapital === 0)
+            ? `${initialCapital}`
+            : null
+        }
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step1-description")}
@@ -95,7 +104,12 @@ const DataCalculatorForm = () => {
         label={t("interest-calculator-input-step21-label")}
         placeholder={t("interest-calculator-input-step21-label")}
         onChange={handleAnnualContribution}
-        value={annualContribution ? `${annualContribution}` : null}
+        value={
+          annualContribution ||
+          (!annualContribution && annualContribution === 0)
+            ? `${annualContribution}`
+            : null
+        }
       />
       <p className={styles.subtitle}>
         {t("interest-calculator-input-step21-description")}
