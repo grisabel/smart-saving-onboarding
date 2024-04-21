@@ -12,17 +12,17 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-function App({ Component, pageProps }: AppPropsWithLayout) {  
+function App({ Component, pageProps }: AppPropsWithLayout) {
+  useEffect(() => {
+    window.localStorage.setItem(
+      "language",
+      pageProps._nextI18Next.initialLocale ?? "es"
+    );
+  }, [pageProps._nextI18Next.initialLocale]);
 
-  useEffect(()=> {
-    const lng = window.localStorage.getItem('language') ?? 'es';
-    console.log({lng})
-  }, [])
-  
   const getContext = Component.getContext ?? ((page) => page);
 
   return getContext(<Component {...pageProps} />);
 }
 
-
-export default appWithTranslation(App)
+export default appWithTranslation(App);
