@@ -1,4 +1,5 @@
 import "@/styles/globals.scss";
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import { NextPage } from "next/types";
 import { useEffect } from "react";
@@ -11,7 +12,7 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export default function App({ Component, pageProps }: AppPropsWithLayout) {  
+function App({ Component, pageProps }: AppPropsWithLayout) {  
 
   useEffect(()=> {
     const lng = window.localStorage.getItem('language') ?? 'es';
@@ -22,3 +23,6 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   return getContext(<Component {...pageProps} />);
 }
+
+
+export default appWithTranslation(App)
