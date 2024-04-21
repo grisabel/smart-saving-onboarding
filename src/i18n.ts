@@ -285,7 +285,7 @@ const i18n = {
   },
 };
 
-export default {
+export const useTranslation = () => ({
   t: (label: string): string => {
     const path: string[] = label.split(".");
     let result = i18n.es as any;
@@ -297,4 +297,4 @@ export default {
     }
     return result;
   },
-};
+})
