@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --port=4201",
     "build": "npm run build-icon && next build",
-    "start": "next start -- --port=4201",
+    "start": "next start -- --port=3000",
     "lint": "next lint",
     "storybook": "npm run build-icon && storybook dev -p 6006",
     "build-storybook": "npm run build-icon && storybook build",
