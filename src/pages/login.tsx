@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import LoginLayoutDesktop from "@/components/pages/login/layouts/LoginLayoutDesktop";
 import LoginLayoutMobile from "@/components/pages/login/layouts/LoginLayoutMobile";
@@ -21,3 +23,11 @@ export default function Home() {
   );
 }
 
+
+export const getServerSideProps: GetServerSideProps = async ({ locale = 'es' }) => {
+  return {
+    props: {
+      ...await serverSideTranslations(locale, ['common'])
+    },
+  };
+}

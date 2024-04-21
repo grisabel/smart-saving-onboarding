@@ -1,6 +1,6 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 import { useSearchParams } from "next/navigation";
 
 import Button from "@/components/stories/atoms/Buttons/Button";
@@ -78,7 +78,7 @@ const getRulePasswordRepeatEqual = (() => {
 })();
 
 const ResetPasswordForm: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const passwordRepository = PasswordFactoryRepository.getInstance();
   const router = useRouter();
 

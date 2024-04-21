@@ -1,9 +1,9 @@
 import Dropdown from "@/components/stories/atoms/Inputs/Dropdown";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 const LanguageSwitch: React.FC<{ className?: string }> = ({ className }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation('common');
   const [language, setLanguage] = useState('es')
 
   useEffect(()=> {
@@ -15,8 +15,8 @@ const LanguageSwitch: React.FC<{ className?: string }> = ({ className }) => {
     let lng = event.target?.value;
     setLanguage(lng)
 
-    window?.localStorage?.setItem("language", lng);
-    i18n.changeLanguage(lng);
+    window.location.href = `/${lng}/login`
+    
   };
 
   return (

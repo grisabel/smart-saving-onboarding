@@ -5,11 +5,11 @@ import Button from "@/components/stories/atoms/Buttons/Button";
 import styles from "./SignupContainer.module.scss";
 import { useRouter } from "next/router";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 const SignupContainer: React.FC = () => {
 
-  const {t} = useTranslation();
+  const {t} = useTranslation('common');
 
   const random = useMemo(() => Math.floor(Math.random() * 4) + 1, [])
   const router = useRouter();

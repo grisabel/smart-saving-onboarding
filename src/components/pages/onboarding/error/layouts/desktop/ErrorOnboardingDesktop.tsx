@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 import LayoutStepDesktop from "@/components/stories/templates/LayoutStepDesktop";
 import LineStep from "@/components/stories/atoms/Steps/LineStep";
@@ -7,7 +7,7 @@ import Icon from "@/components/stories/atoms/Icon";
 import ErrorMsg from "@/components/stories/molecules/ErrorMsg";
 
 const ErrorOnboardingDesktop: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   return (
     <LayoutStepDesktop
       image={{

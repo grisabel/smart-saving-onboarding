@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 import styles from "./DataCalculatorForm.module.scss";
 import InputNumber from "@/components/stories/atoms/Inputs/InputNumber";
 import InputAmount from "@/components/stories/atoms/Inputs/InputAmount";
@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { useCompountInterestCtx } from "../../../context/OnboardingContext";
 
 const DataCalculatorForm = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const router = useRouter();
 
   const {

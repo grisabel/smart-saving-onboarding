@@ -5,6 +5,8 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import RetrievePasswordLayoutDesktop from "@/components/pages/forgotPassword/forgotPassword/layouts/RetrievePasswordLayoutDesktop";
 import RetrievePasswordLayoutMobile from "@/components/pages/forgotPassword/forgotPassword/layouts/RetrievePasswordLayoutMobile";
 import ForgotPasswordProvider from "@/components/pages/forgotPassword/context/ForgotPasswordContext";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function ForgotPassword() {
   return (
@@ -26,3 +28,11 @@ export default function ForgotPassword() {
 ForgotPassword.getContext = function getLayout(page: ReactElement) {
   return <ForgotPasswordProvider>{page}</ForgotPasswordProvider>;
 };
+
+export const getServerSideProps: GetServerSideProps = async ({ locale = 'es' }) => {
+  return {
+    props: {
+      ...await serverSideTranslations(locale, ['common'])
+    },
+  };
+}

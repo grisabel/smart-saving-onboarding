@@ -3,6 +3,8 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import ErrorOnboardingDesktop from "@/components/pages/onboarding/error/layouts/desktop";
 import ErrorOnboardingMobile from "@/components/pages/onboarding/error/layouts/mobile";
 import OnboardingProvider from "@/components/pages/onboarding/context/OnboardingContext";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Error() {
   return (
@@ -24,3 +26,11 @@ export default function Error() {
 Error.getContext = function getLayout(page: React.ReactElement) {
   return <OnboardingProvider>{page}</OnboardingProvider>;
 };
+
+export const getServerSideProps: GetServerSideProps = async ({ locale = 'es' }) => {
+  return {
+    props: {
+      ...await serverSideTranslations(locale, ['common'])
+    },
+  };
+}

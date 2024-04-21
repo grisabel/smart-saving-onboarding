@@ -4,6 +4,8 @@ import EmailOnboardingDesktop from "@/components/pages/onboarding/emailOnboardin
 import EmailOnboardingMobile from "@/components/pages/onboarding/emailOnboarding/layouts/mobile";
 import OnboardingProvider from "@/components/pages/onboarding/context/OnboardingContext";
 import { ReactElement } from "react";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Email() {
   return (
@@ -25,3 +27,11 @@ export default function Email() {
 Email.getContext = function getLayout(page: ReactElement) {
   return <OnboardingProvider>{page}</OnboardingProvider>;
 };
+
+export const getServerSideProps: GetServerSideProps = async ({ locale = 'es' }) => {
+  return {
+    props: {
+      ...await serverSideTranslations(locale, ['common'])
+    },
+  };
+}

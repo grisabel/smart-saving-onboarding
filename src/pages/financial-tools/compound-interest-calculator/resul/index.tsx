@@ -8,12 +8,13 @@ import CompountInterestProvider, { useCompountInterestCtx } from "@/components/p
 import { ReactElement, useEffect } from "react";
 import { CompountInterestResponseModel } from "@/repository/CaclculatorRepository/model/response/CompountInterestResponseModel";
 import { CalculatorFactoryRepository } from "@/repository/CaclculatorRepository/UserFactoryRepository";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const calculatorRepository = CalculatorFactoryRepository.getInstance();
 
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { query } = context;
+  const { query, locale = 'es' } = context;
 
   const initialCapital = query?.["initialCapital"] as string;
   const annualContribution = query?.["annualContribution"] as string;
@@ -31,12 +32,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   return {
     props: {
-      data 
+      data,
+      ...await serverSideTranslations(locale, ['common'])
     }
   };
  } catch (error) {
   return {
     props: {
+      ...await serverSideTranslations(locale, ['common']),
       data: null
     }
   }; 

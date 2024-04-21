@@ -1,6 +1,6 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 import Button from "@/components/stories/atoms/Buttons/Button";
 
@@ -80,7 +80,7 @@ const getRulePasswordRepeatEqual = (() => {
 const userRepository = UserFactoryRepository.getInstance();
 
 const PasswordOnboardingForm: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const router = useRouter();
   const onboardingCtx = useOnboardingCtx();
 
