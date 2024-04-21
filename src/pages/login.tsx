@@ -25,10 +25,10 @@ export default function Home() {
 
 
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale = 'es' }) => {
   return {
     props: {
-      ...await serverSideTranslations('en', ['common'])
+      ...await serverSideTranslations(locale, ['common'])
     },
   };
 }
