@@ -1,7 +1,7 @@
 import styles from "./LoginLayoutMobile.module.scss";
 
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/i18n";
 
 import FormLogin from "../../components/FormLogin";
 import Button from "@/components/stories/atoms/Buttons/Button";

@@ -5,7 +5,7 @@ import Button from "@/components/stories/atoms/Buttons/Button";
 import styles from "./SignupContainer.module.scss";
 import { useRouter } from "next/router";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/i18n";
 
 const SignupContainer: React.FC = () => {
 

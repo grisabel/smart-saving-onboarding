@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/i18n";
 
 import LayoutMobile from "@/components/stories/templates/LayoutMobile";
 import styles from "./ErrorOnboardingMobile.module.scss";

@@ -1,6 +1,6 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/i18n";
 
 import Button from "@/components/stories/atoms/Buttons/Button";
 

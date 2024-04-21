@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/i18n";
 
 import { EmailValidatorProps } from "./EmailValidator.types";
 import Validator from "../Validator";

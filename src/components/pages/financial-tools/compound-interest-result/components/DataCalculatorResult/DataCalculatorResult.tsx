@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/i18n";
 import styles from "./DataCalculatorResult.module.scss";
 import CompountInterestChart from "@/components/stories/organisms/CompountInterestChart/CompountInterestChart";
 import Link from "next/link";
