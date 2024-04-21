@@ -1,9 +1,9 @@
 import Dropdown from "@/components/stories/atoms/Inputs/Dropdown";
 import { useEffect, useState } from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 const LanguageSwitch: React.FC<{ className?: string }> = ({ className }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [language, setLanguage] = useState('es')
 
   useEffect(()=> {

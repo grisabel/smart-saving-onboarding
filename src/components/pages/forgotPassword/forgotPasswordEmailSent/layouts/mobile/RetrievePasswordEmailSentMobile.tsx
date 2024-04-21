@@ -3,11 +3,11 @@ import Image from "next/image";
 import LayoutMobile from "@/components/stories/templates/LayoutMobile";
 
 import styles from "./RetrievePasswordEmailSentMobile.module.scss";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 function RetrievePasswordEmailSentMobile() {
 
-  const {t} = useTranslation();
+  const {t} = useTranslation('common');
 
   return (
     <LayoutMobile>

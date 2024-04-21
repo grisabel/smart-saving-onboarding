@@ -1,9 +1,9 @@
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 import styles from "./EmailSentSucess.module.scss";
 import { useForgotPasswordCtx } from "../../../../../context/ForgotPasswordContext";
 
 const EmailSentSuccess: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const forgotPasswordCtx = useForgotPasswordCtx();
   console.log(forgotPasswordCtx.email);
   return (

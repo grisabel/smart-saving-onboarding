@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 import router from "next/router";
 
 import Button from "../../atoms/Buttons/Button";
@@ -14,7 +14,7 @@ interface ErrorMsgProps {
 }
 
 const ErrorMsg: React.FC<ErrorMsgProps> = ({ title, content, button }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   const handleBack = () => {
     router.push("/login");

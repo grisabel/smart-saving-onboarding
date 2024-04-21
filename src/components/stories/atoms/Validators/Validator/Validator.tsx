@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 import styles from "./Validator.module.scss";
 import { ValidatorProps } from "./Validator.types";

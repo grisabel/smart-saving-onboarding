@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 import { PasswordValidatorProps } from "./PasswordValidator.types";
 import Validator from "../Validator";
@@ -13,7 +13,7 @@ const PasswordValidator: React.FC<PasswordValidatorProps> = ({
   equals,
   className,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <Validator

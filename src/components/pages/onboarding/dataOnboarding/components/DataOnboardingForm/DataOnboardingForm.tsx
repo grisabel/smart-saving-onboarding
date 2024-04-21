@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 import Button from "@/components/stories/atoms/Buttons/Button";
 import InputTextDate from "@/components/stories/atoms/Inputs/InputTextDate";
@@ -14,7 +14,7 @@ import { DATE_FORMATS } from "@/utils/Datetime/constants";
 import Dropdown from "@/components/stories/atoms/Inputs/Dropdown";
 
 const DataOnboardingForm: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const router = useRouter();
   const onboardingCtx = useOnboardingCtx();
 

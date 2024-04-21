@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 import { EmailValidatorProps } from "./EmailValidator.types";
 import Validator from "../Validator";
@@ -9,7 +9,7 @@ const EmailValidator: React.FC<EmailValidatorProps> = ({
   emailRepeat,
   className,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <Validator

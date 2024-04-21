@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 import Link from "next/link";
 
 import InputTextEmail from "@/components/stories/atoms/Inputs/InputTextEmail";
@@ -17,7 +17,7 @@ const LOCAL_STORAGE_KEYS = {
 };
 
 const FormLogin: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");

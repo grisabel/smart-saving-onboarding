@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 import Button from "@/components/stories/atoms/Buttons/Button";
 import InputTextEmail from "@/components/stories/atoms/Inputs/InputTextEmail";
@@ -11,7 +11,7 @@ import { useForgotPasswordCtx } from "../../../context/ForgotPasswordContext";
 import styles from "./RetrievePasswordForm.module.scss";
 
 const RetrievePasswordForm: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const router = useRouter();
   const passwordRepository = PasswordFactoryRepository.getInstance();
   const forgotPasswordCtx = useForgotPasswordCtx();

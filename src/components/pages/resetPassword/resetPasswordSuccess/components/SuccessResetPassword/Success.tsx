@@ -1,4 +1,4 @@
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 import Image from "next/image";
 import router from "next/router";
 
@@ -6,7 +6,7 @@ import Button from "@/components/stories/atoms/Buttons/Button";
 import styles from "./Success.module.scss";
 
 const Success: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   const handleLogin = () => {
     router.push("/login");

@@ -1,11 +1,11 @@
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 import styles from "./DataCalculatorResult.module.scss";
 import CompountInterestChart from "@/components/stories/organisms/CompountInterestChart/CompountInterestChart";
 import Link from "next/link";
 import { useCompountInterestCtx } from "../../../context/OnboardingContext";
 
 const DataCalculatorResult = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   const {data} = useCompountInterestCtx()
 

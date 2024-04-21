@@ -1,6 +1,6 @@
 import { CompountInterestResponseModel } from "@/repository/CaclculatorRepository/model/response/CompountInterestResponseModel";
 import React, { useState } from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 import {
   AreaChart,
   ResponsiveContainer,
@@ -30,7 +30,7 @@ interface CompountInterestChartProps{
 }
 
 const CompountInterestChart: React.FC<CompountInterestChartProps> = ({data}) => {
-  const {t} = useTranslation();
+  const {t} = useTranslation('common');
 
   const formatYear = (value: string) => `${t("year")}: ${value}`
 

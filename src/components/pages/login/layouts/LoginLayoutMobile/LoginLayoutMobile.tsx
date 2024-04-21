@@ -1,7 +1,7 @@
 import styles from "./LoginLayoutMobile.module.scss";
 
 import React from "react";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 import FormLogin from "../../components/FormLogin";
 import Button from "@/components/stories/atoms/Buttons/Button";
@@ -9,7 +9,7 @@ import LayoutMobile from "@/components/stories/templates/LayoutMobile/LayoutMobi
 import LanguageSwitch from "../../components/LanguageSwitch/LanguageSwitch";
 
 const LoginLayoutMobile: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   return (
     <LayoutMobile>
       <div className={styles.loginLayoutMobile}>

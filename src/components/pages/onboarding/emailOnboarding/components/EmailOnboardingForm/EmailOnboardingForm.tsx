@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "@/i18n";
+import { useTranslation } from 'next-i18next';
 
 import Button from "@/components/stories/atoms/Buttons/Button";
 
@@ -31,7 +31,7 @@ const getRuleEmailIgualesEmailRepeat = (() => {
 })();
 
 const DataOnboardingForm: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const router = useRouter();
   const onboardingCtx = useOnboardingCtx();
 
