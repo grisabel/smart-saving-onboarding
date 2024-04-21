@@ -1,10 +1,10 @@
 import Head from "next/head";
+import { GetServerSideProps } from "next";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import LoginLayoutDesktop from "@/components/pages/login/layouts/LoginLayoutDesktop";
 import LoginLayoutMobile from "@/components/pages/login/layouts/LoginLayoutMobile";
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
-import { GetStaticProps } from "next";
 
 export default function Home() {
   return (
@@ -24,8 +24,7 @@ export default function Home() {
 }
 
 
-
-export const getStaticProps: GetStaticProps = async ({ locale = 'es' }) => {
+export const getServerSideProps: GetServerSideProps = async ({ locale = 'es' }) => {
   return {
     props: {
       ...await serverSideTranslations(locale, ['common'])

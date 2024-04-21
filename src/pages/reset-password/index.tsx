@@ -3,6 +3,8 @@ import Head from "next/head";
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import ResetPasswordDesktop from "@/components/pages/resetPassword/resetPassword/layouts/ResetPasswordDesktop";
 import ResetPasswordMobile from "@/components/pages/resetPassword/resetPassword/layouts/ResetPasswordMobile";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function ResetPassword() {
   return (
@@ -19,4 +21,12 @@ export default function ResetPassword() {
       />
     </>
   );
+}
+
+export const getServerSideProps: GetServerSideProps = async ({ locale = 'es' }) => {
+  return {
+    props: {
+      ...await serverSideTranslations(locale, ['common'])
+    },
+  };
 }

@@ -3,6 +3,8 @@ import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
 import PasswordOnboardingDesktop from "@/components/pages/onboarding/passwordOnboarding/layouts/desktop";
 import PasswordOnboardingMobile from "@/components/pages/onboarding/passwordOnboarding/layouts/mobile";
 import OnboardingProvider from "@/components/pages/onboarding/context/OnboardingContext";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Password() {
   return (
@@ -24,3 +26,12 @@ export default function Password() {
 Password.getContext = function getLayout(page: React.ReactElement) {
   return <OnboardingProvider>{page}</OnboardingProvider>;
 };
+
+
+export const getServerSideProps: GetServerSideProps = async ({ locale = 'es' }) => {
+  return {
+    props: {
+      ...await serverSideTranslations(locale, ['common'])
+    },
+  };
+}
