@@ -17,7 +17,7 @@ function RetrievePasswordEmailSentMobile() {
           <p className={styles.text__thin}>{t("sent-email-success")}</p>
         </div>
         <Image
-          src="/images/retrievePassword/retrivePasswordEmailSentPage.svg"
+          src="/login/images/retrievePassword/retrivePasswordEmailSentPage.svg"
           alt="retrievePassword"
           width={320}
           height={320}
