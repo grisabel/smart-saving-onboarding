@@ -15,7 +15,7 @@ const LanguageSwitch: React.FC<{ className?: string }> = ({ className }) => {
     let lng = event.target?.value;
     setLanguage(lng)
 
-    window.location.href = `/login/${lng}/login`
+    window.location.href = `/login/${lng}`
     
   };
 
