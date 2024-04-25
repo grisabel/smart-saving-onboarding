@@ -16,7 +16,7 @@ const LanguageSwitch: React.FC<{ className?: string }> = ({ className }) => {
     setLanguage(lng)
 
     window.location.href = `/login/${lng}`
-    
+    window.location.reload();
   };
 
   return (
