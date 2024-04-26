@@ -13,8 +13,8 @@ function RetrievePasswordEmailSentMobile() {
     <LayoutMobile>
       <div className={styles.text}>
         <div>
-          <p className={styles.text__bold}>{`${t("sent-email")} XXXXXX`}</p>
-          <p className={styles.text__thin}>{t("sent-email-success")}</p>
+          <p className={styles.text__bold}>{`${t("sent-email")}`}</p>
+          <p className={styles.text__thin}>{t("sent-email-change-pwd")}</p>
         </div>
         <Image
           src="/login/images/retrievePassword/retrivePasswordEmailSentPage.svg"

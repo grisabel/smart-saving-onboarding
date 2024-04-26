@@ -5,8 +5,28 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import LoginLayoutDesktop from "@/components/pages/login/layouts/LoginLayoutDesktop";
 import LoginLayoutMobile from "@/components/pages/login/layouts/LoginLayoutMobile";
 import MainLayout from "@/components/stories/templates/LayoutMain/LayoutMain";
+import { LOCAL_STORAGE_KEYS } from "@/components/pages/login/components/FormLogin/FormLogin";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+    const refreshToken = window.localStorage.getItem(
+      LOCAL_STORAGE_KEYS.refreshToken
+    );
+    const accessToken = window.localStorage.getItem(
+      LOCAL_STORAGE_KEYS.accessToken
+    );
+
+    if (accessToken && refreshToken) {
+      const urlToGo = (process.env.NEXT_PUBLIC_APP_URL ?? "")
+        .replace(":accessToken", accessToken)
+        .replace(":refreshToken", refreshToken);
+
+      document.location.href = urlToGo;
+    }
+  }, []);
+  
   return (
     <>
       <Head>
