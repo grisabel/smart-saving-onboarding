@@ -11,7 +11,7 @@ import { SessionFactoryRepository } from "@/repository/SessionRepository/Session
 import Alert from "@/components/stories/atoms/Alert";
 
 const sessionRepository = SessionFactoryRepository.getInstance();
-const LOCAL_STORAGE_KEYS = {
+export const LOCAL_STORAGE_KEYS = {
   accessToken: "accessToken",
   refreshToken: "refreshToken",
 };

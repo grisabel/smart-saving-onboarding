@@ -1,3 +1,4 @@
+import { LOCAL_STORAGE_KEYS } from "@/components/pages/login/components/FormLogin/FormLogin";
 import "@/styles/globals.scss";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
@@ -13,6 +14,23 @@ type AppPropsWithLayout = AppProps & {
 };
 
 function App({ Component, pageProps }: AppPropsWithLayout) {
+  useEffect(() => {
+    const refreshToken = window.localStorage.getItem(
+      LOCAL_STORAGE_KEYS.refreshToken
+    );
+    const accessToken = window.localStorage.getItem(
+      LOCAL_STORAGE_KEYS.accessToken
+    );
+
+    if (accessToken && refreshToken) {
+      const urlToGo = (process.env.NEXT_PUBLIC_APP_URL ?? "")
+        .replace(":accessToken", accessToken)
+        .replace(":refreshToken", refreshToken);
+
+      document.location.href = urlToGo;
+    }
+  }, []);
+
   useEffect(() => {
     window.localStorage.setItem(
       "language",

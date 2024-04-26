@@ -169,22 +169,22 @@ const Dropdown: React.FC<DropdownProps> = ({
         </div>
       </div>
       {options.length > 0 && (
-        <datalist id={`list-${id}`} className={styles.dropdown} role="listbox">
+        <div id={`list-${id}`} className={styles.dropdown} role="listbox">
           {options.map((option, i) => {
             return (
-              <option
+              <div
                 key={`option-${i}`}
-                value={option.value}
+                // value={option.value}
                 onClick={onClickDropdownItem.bind(this, option)}
                 className={`${styles.option} ${
                   optionFocus === i ? styles["option--active"] : ""
                 }`}
               >
                 {option.label}
-              </option>
+              </div>
             );
           })}
-        </datalist>
+        </div>
       )}
     </div>
   );
