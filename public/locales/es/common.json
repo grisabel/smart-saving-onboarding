@@ -63,6 +63,7 @@
   "objective-retirement": "Jubilación",
   "objective-smart-investment": "Inversión Inteligente",
 
+  "error-login-password-title": "Oops! Usuario o Contraseña inválidos",
   "error-login-password-description": "Verifica tu usuario y contraseña e inténtalo de nuevo. ¡Todos tenemos días locos con el teclado! 😉",
   "error-login-server-title": "¡Ups! Parece que el servidor se tomó un pequeño descanso sin previo aviso",
   "error-login-server-description": "Nuestro equipo de tecnología le está dando una charla seria. Por favor, inténtalo de nuevo en un rato.",
