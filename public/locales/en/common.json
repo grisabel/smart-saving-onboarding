@@ -80,8 +80,8 @@
   "interest-calculator-input-step1-description": "Amount of money that you have available to invest initially.",
 
   "interest-calculator-input-step2": "Step 2: Contribute",
-  "interest-calculator-input-step21-label": "Monthly Contribution",
-  "interest-calculator-input-step21-description": "Amount that you plan to add to the principal every month, or a negative number for the amount that you plan to withdraw every month.",
+  "interest-calculator-input-step21-label": "Year Contribution",
+  "interest-calculator-input-step21-description": "Amount that you plan to add to the principal every year, or a negative number for the amount that you plan to withdraw every year.",
   "interest-calculator-input-step22-label": "Length of Time in Years",
   "interest-calculator-input-step22-description": "Length of time, in years, that you plan to save.",
 

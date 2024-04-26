@@ -80,8 +80,8 @@
   "interest-calculator-input-step1-description": "Cantidad de dinero de que dispone para invertir inicialmente.",
 
   "interest-calculator-input-step2": "Paso 2: Aportación",
-  "interest-calculator-input-step21-label": "Contribución mensual",
-  "interest-calculator-input-step21-description": "Cantidad que tiene previsto añadir al capital cada mes, o un número negativo para la cantidad que tiene previsto retirar cada mes",
+  "interest-calculator-input-step21-label": "Contribución anual",
+  "interest-calculator-input-step21-description": "Cantidad que tiene previsto añadir al capital cada año, o un número negativo para la cantidad que tiene previsto retirar cada año",
   "interest-calculator-input-step22-label": "Duración en años",
   "interest-calculator-input-step22-description": "Duración del tiempo, en años, que tiene previsto ahorrar.",
 
