@@ -29,6 +29,11 @@
     color: var(--color-thin-text);
     @include f--b1-regular;
     margin-bottom: 8px;
+
+    a {
+      color: inherit;  
+      background-color: transparent;
+    }
   }
 
   .emailInput {

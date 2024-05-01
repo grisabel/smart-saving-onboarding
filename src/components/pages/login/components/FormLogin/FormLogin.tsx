@@ -73,7 +73,7 @@ const FormLogin: React.FC = () => {
   return (
     <div className={styles.container}>
       <p className={styles.title}>{t("login now")}</p>
-      <p className={styles.subtitle}>{t("better financial control")}</p>
+      <p className={styles.subtitle}>{t("better financial control")} <a href={process.env.NEXT_PUBLIC_MARKETING_URL}>{t("link-marketing")}</a></p>
       <Alert
         title={t(title)}
         description={t(description)}
