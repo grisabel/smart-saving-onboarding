@@ -7,8 +7,10 @@ const LanguageSwitch: React.FC<{ className?: string }> = ({ className }) => {
   const [language, setLanguage] = useState('es')
 
   useEffect(()=> {
-    const lng = window.localStorage.getItem('language') ?? 'es';
-    setLanguage(lng)
+    const lng = window.localStorage.getItem('language');
+    if(lng){
+      setLanguage(lng)
+    }
   }, [])
    
   const handleChangeLanguage = (event: any) => {
