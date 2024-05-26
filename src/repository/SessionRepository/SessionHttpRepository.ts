@@ -23,7 +23,8 @@ export class SessionHttpRepository implements SessionInterfaceRepository {
                 resolve(response.json());
                 break;
 
-              case 400:
+              case 401:
+              case 422:
                 reject({ isInvalidLogin: true });
                 break;
               default:

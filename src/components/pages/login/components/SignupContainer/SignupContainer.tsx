@@ -20,7 +20,7 @@ const SignupContainer: React.FC = () => {
   return (
     <div className={styles.container}>
       <Image
-        src={`/images/login/login_${random}.svg`}
+        src={`/login/images/login/login_${random}.svg`}
         alt="login"
         width={100}
         height={357}

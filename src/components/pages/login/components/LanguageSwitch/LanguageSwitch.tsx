@@ -7,16 +7,21 @@ const LanguageSwitch: React.FC<{ className?: string }> = ({ className }) => {
   const [language, setLanguage] = useState('es')
 
   useEffect(()=> {
-    const lng = window.localStorage.getItem('language') ?? 'es';
-    setLanguage(lng)
+    const lng = window.localStorage.getItem('language');
+    if(lng){
+      setLanguage(lng)
+    }
   }, [])
    
   const handleChangeLanguage = (event: any) => {
     let lng = event.target?.value;
     setLanguage(lng)
 
-    window.location.href = `/${lng}/login`
-    
+    window.localStorage.setItem(
+      "language",
+      lng
+    );
+    window.location.href = `/login/${lng}`
   };
 
   return (

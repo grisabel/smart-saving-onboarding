@@ -9,7 +9,7 @@ const Success: React.FC = () => {
   const { t } = useTranslation('common');
 
   const handleLogin = () => {
-    router.push("/login");
+    router.push("/");
   };
 
   return (
@@ -19,7 +19,7 @@ const Success: React.FC = () => {
         <p className={styles.text__thin}>{t("onboarding-completed")}</p>
       </div>
       <Image
-        src="/images/retrievePassword/retrivePasswordEmailSentPage.svg"
+        src="/login/images/retrievePassword/retrivePasswordEmailSentPage.svg"
         alt="retrievePassword"
         width={320}
         height={320}

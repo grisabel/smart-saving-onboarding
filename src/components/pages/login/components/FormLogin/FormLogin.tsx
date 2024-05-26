@@ -11,7 +11,7 @@ import { SessionFactoryRepository } from "@/repository/SessionRepository/Session
 import Alert from "@/components/stories/atoms/Alert";
 
 const sessionRepository = SessionFactoryRepository.getInstance();
-const LOCAL_STORAGE_KEYS = {
+export const LOCAL_STORAGE_KEYS = {
   accessToken: "accessToken",
   refreshToken: "refreshToken",
 };
@@ -73,7 +73,7 @@ const FormLogin: React.FC = () => {
   return (
     <div className={styles.container}>
       <p className={styles.title}>{t("login now")}</p>
-      <p className={styles.subtitle}>{t("better financial control")}</p>
+      <p className={styles.subtitle}>{t("better financial control")} <a href={process.env.NEXT_PUBLIC_MARKETING_URL}>{t("link-marketing")}</a></p>
       <Alert
         title={t(title)}
         description={t(description)}

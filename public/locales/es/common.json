@@ -4,6 +4,7 @@
   "btn-back": "Atrás",
   "btn-next": "Continuar",
   "btn-return": "Volver",
+  "link-marketing": "Descubre cómo podemos ayudarte.",
 
   "input-email-label": "Email",
   "input-email-placeholder": "Introduzca su email",
@@ -31,8 +32,9 @@
   "about-yourself": "Cuéntanos un poco sobre ti.",
   "forgot-your-password": "¿Olvidaste tu contraseña?",
   "give-your-data": "Facilítanos los siguientes datos y te enviaremos un enlace para restablecer tu contraseña.",
-  "sent-email": "Se ha enviado un email a",
+  "sent-email": "Se ha enviado un email a tu correo",
   "sent-email-success": "Has completado con éxito el proceso de registro.",
+  "sent-email-change-pwd": "Has completado con éxito el proceso de cambio de contraseña",
   "take-control": "Comienza a tomar el control de tus ingresos y gastos hoy mismo.",
   "choose-password": "Elige una contraseña segura.",
   "not-forget-password": "¡Y lo más importante, no la olvides o tendrás que hacer todo esto de nuevo!",
@@ -63,6 +65,7 @@
   "objective-retirement": "Jubilación",
   "objective-smart-investment": "Inversión Inteligente",
 
+  "error-login-password-title": "Oops! Usuario o Contraseña inválidos",
   "error-login-password-description": "Verifica tu usuario y contraseña e inténtalo de nuevo. ¡Todos tenemos días locos con el teclado! 😉",
   "error-login-server-title": "¡Ups! Parece que el servidor se tomó un pequeño descanso sin previo aviso",
   "error-login-server-description": "Nuestro equipo de tecnología le está dando una charla seria. Por favor, inténtalo de nuevo en un rato.",
@@ -78,8 +81,8 @@
   "interest-calculator-input-step1-description": "Cantidad de dinero de que dispone para invertir inicialmente.",
 
   "interest-calculator-input-step2": "Paso 2: Aportación",
-  "interest-calculator-input-step21-label": "Contribución mensual",
-  "interest-calculator-input-step21-description": "Cantidad que tiene previsto añadir al capital cada mes, o un número negativo para la cantidad que tiene previsto retirar cada mes",
+  "interest-calculator-input-step21-label": "Contribución anual",
+  "interest-calculator-input-step21-description": "Cantidad que tiene previsto añadir al capital cada año, o un número negativo para la cantidad que tiene previsto retirar cada año",
   "interest-calculator-input-step22-label": "Duración en años",
   "interest-calculator-input-step22-description": "Duración del tiempo, en años, que tiene previsto ahorrar.",
 
@@ -110,5 +113,5 @@
   "input-language-label": "Idioma",
   "input-language-placeholder": "Selecciona un idioma",
   "spanish": "Español",
-  "english": "Ingles"
+  "english": "Inglés"
 }

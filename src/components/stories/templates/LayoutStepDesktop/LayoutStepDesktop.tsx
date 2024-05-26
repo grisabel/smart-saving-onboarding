@@ -11,7 +11,7 @@ const LayoutStepDesktop: React.FC<LayoutStepDesktopProps> = (props) => {
   const router = useRouter();
 
   const goLogin = () => {
-    router.push("/login");
+    router.push("/");
   };
 
   return (
@@ -22,7 +22,7 @@ const LayoutStepDesktop: React.FC<LayoutStepDesktopProps> = (props) => {
         <div className={`${styles.forms} ${!props.image && styles["forms--only"]}`}>{props.form}</div>
         { props.image && <div className={styles.image}>
            <Image
-            src={props.image.src}
+            src={'/login'+props.image.src}
             alt={props.image.alt}
             layout="fill"
           ></Image>

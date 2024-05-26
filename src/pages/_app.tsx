@@ -16,9 +16,9 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   useEffect(() => {
     window.localStorage.setItem(
       "language",
-      pageProps._nextI18Next.initialLocale ?? "es"
+      pageProps?._nextI18Next?.initialLocale ?? "es"
     );
-  }, [pageProps._nextI18Next.initialLocale]);
+  }, [pageProps?._nextI18Next?.initialLocale]);
 
   const getContext = Component.getContext ?? ((page) => page);
 

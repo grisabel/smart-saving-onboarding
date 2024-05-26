@@ -17,14 +17,14 @@ const ErrorMsg: React.FC<ErrorMsgProps> = ({ title, content, button }) => {
   const { t } = useTranslation('common');
 
   const handleBack = () => {
-    router.push("/login");
+    router.push("/");
   };
 
   const defaultContent = (
     <>
       <p className={styles.text__thin}>{t("team-working")}</p>
       <Image
-        src="/images/error/error.svg"
+        src="/login/images/error/error.svg"
         alt="retrievePassword"
         layout="fill"
       ></Image>

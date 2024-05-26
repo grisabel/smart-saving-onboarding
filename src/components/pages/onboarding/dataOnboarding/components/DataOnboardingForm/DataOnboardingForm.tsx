@@ -23,7 +23,7 @@ const DataOnboardingForm: React.FC = () => {
   };
 
   const handleBack = () => {
-    router.push("/login");
+    router.push("/");
   };
 
   const handleInputName = (event: React.ChangeEvent<HTMLInputElement>) => {
