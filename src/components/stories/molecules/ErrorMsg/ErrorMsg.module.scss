@@ -1,0 +1,34 @@
+@import "@/styles/variables/fonts.scss";
+@import "@/styles/variables/breakpoints.scss";
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (min-width: $bpMdMin) {
+    height: 100%;
+  }
+
+  &__bold {
+    color: var(--color-bold-text);
+
+    @include f--b1-bold;
+  }
+
+  &__thin {
+    color: var(--color-thin-text);
+
+    @include f--b1-light;
+  }
+
+  img {
+    position: relative !important;
+    margin: auto;
+    max-width: 320px;
+
+    @media (min-width: $bpMdMin) {
+      display: none;
+    }
+  }
+}

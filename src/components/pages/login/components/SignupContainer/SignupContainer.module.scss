@@ -1,0 +1,41 @@
+@import "@/styles/variables/fonts.scss";
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+
+  img {
+    height: 367px !important;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  
+  p {
+    width: 80%;
+    text-align: center;
+    color: var(--grey-main);
+  
+    @include f--b1-regular;
+  }
+  
+  button {
+    width: 80%;
+    max-width: 310px;
+    margin-top: 16px;
+  }
+
+  .dropdown{
+    width: 80%;
+    margin-top: 16px;
+    max-width: 310px;
+  }
+}

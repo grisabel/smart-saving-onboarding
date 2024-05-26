@@ -1,0 +1,129 @@
+.LineStepWp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-right: 16px;
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      flex-basis: 0%;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 48px;
+      width: 48px;
+
+      border-radius: 16px;
+      padding: 10px;
+      border: 2px solid var(--grey-main);
+      background-color: var(--grey-container);
+      svg {
+        color: var(--grey-main);
+      }
+    }
+    .col {
+      background-repeat: repeat-y;
+      background-position: bottom;
+      width: 2px;
+      height: 100%;
+
+      background-image: linear-gradient(
+        to right,
+        var(--grey-main) 100%,
+        var(--grey-main) 100%
+      );
+      background-size: 2px 92px;
+
+      &--dash {
+        background-image: linear-gradient(
+          to bottom,
+          var(--grey-main) 60%,
+          rgba(255, 255, 255, 0) 0%
+        );
+        background-size: 2px 8px;
+      }
+    }
+
+    &--error {
+      .icon {
+        background-color: var(--red-container);
+        border-color: var(--red-main);
+        svg {
+          color: var(--red-main);
+        }
+      }
+
+      .col {
+        background-image: linear-gradient(
+          to right,
+          var(--red-main) 100%,
+          var(--red-main) 100%
+        );
+
+        &--dash {
+          background-image: linear-gradient(
+            to bottom,
+            var(--red-main) 60%,
+            rgba(255, 255, 255, 0) 0%
+          );
+        }
+      }
+    }
+
+    &--completed {
+      .icon {
+        background-color: var(--blue-container);
+        border-color: var(--blue-main);
+        svg {
+          color: var(--blue-main);
+        }
+      }
+
+      .col {
+        background-image: linear-gradient(
+          to right,
+          var(--blue-main) 100%,
+          var(--blue-main) 100%
+        );
+
+        &--dash {
+          background-image: linear-gradient(
+            to bottom,
+            var(--blue-main) 60%,
+            rgba(255, 255, 255, 0) 0%
+          );
+        }
+      }
+    }
+  }
+
+  &--2 {
+    .step {
+      flex-basis: 100%;
+    }
+  }
+  &--3 {
+    .step {
+      flex-basis: 50%;
+    }
+  }
+  &--4 {
+    .step {
+      flex-basis: 25%;
+    }
+  }
+  &--5 {
+    .step {
+      flex-basis: 12.25%;
+    }
+  }
+}

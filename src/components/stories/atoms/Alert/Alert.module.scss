@@ -1,0 +1,59 @@
+@import "@/styles/variables/fonts.scss";
+@import "@/styles/variables/breakpoints.scss";
+
+.container {
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px;
+  min-width: 288px;
+
+  @media (min-width: $bpSmMin) {
+    gap: 16px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    &__title {
+      @include f--b2-bold;
+    }
+
+    &__description {
+      color: var(--color-thin-text);
+
+      @include f--b2-regular;
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    min-width: 24px;
+  }
+
+  &--warning {
+    background-color: var(--alert-warning);
+
+    .icon {
+      background-color: var(--icon-warging);
+    }
+  }
+
+  &--danger {
+    background-color: var(--alert-danger);
+
+    .icon {
+      background-color: var(--icon-danger);
+    }
+  }
+}

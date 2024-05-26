@@ -3,22 +3,49 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev --port=4201",
+    "build": "npm run build-icon && next build",
+    "start": "next start -- --port=3000",
+    "lint": "next lint",
+    "storybook": "npm run build-icon && storybook dev -p 6006",
+    "build-storybook": "npm run build-icon && storybook build",
+    "build-icon": "npx -p svg-to-ts svg-to-ts-files --config ./.svg-to-tsrc.json"
   },
   "dependencies": {
+    "@maskito/core": "^2.0.2",
+    "@maskito/kit": "^2.0.2",
+    "@maskito/react": "^2.0.2",
+    "i18next": "^23.11.2",
+    "luxon": "^3.4.4",
+    "next": "14.1.0",
+    "next-i18next": "^15.3.0",
     "react": "^18",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "react-i18next": "^14.1.0",
+    "react-responsive": "^9.0.2",
+    "recharts": "^2.12.3"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@storybook/addon-essentials": "^7.6.14",
+    "@storybook/addon-interactions": "^7.6.14",
+    "@storybook/addon-links": "^7.6.14",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.14",
+    "@storybook/nextjs": "^7.6.14",
+    "@storybook/react": "^7.6.14",
+    "@storybook/test": "^7.6.14",
+    "@types/luxon": "^3.4.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "path-to-regexp": "^6.2.1",
+    "sass": "^1.70.0",
+    "storybook": "^7.6.14",
+    "svg-to-ts": "^11.0.1",
+    "typescript": "^5"
   }
 }

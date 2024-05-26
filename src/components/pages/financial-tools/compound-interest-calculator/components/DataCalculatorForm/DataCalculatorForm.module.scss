@@ -1,0 +1,24 @@
+@import "@/styles/variables/fonts.scss";
+@import "@/styles/variables/breakpoints.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+
+  .title {
+    color: var(--color-bold-text);
+    @include f--b1-bold;
+  }
+
+  .subtitle {
+    color: var(--color-thin-text);
+    @include f--b1-regular;
+  }
+
+  .btn{
+    margin-top: 16px;
+  }
+}

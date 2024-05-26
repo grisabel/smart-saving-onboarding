@@ -1,0 +1,22 @@
+@import "@/styles/variables/fonts.scss";
+@import "@/styles/variables/breakpoints.scss";
+
+.validatorGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .rule {
+    color: var(--color-thin-text);
+
+    @include f--b1-light;
+
+    &--error {
+      color: var(--red-main);
+    }
+
+    &--success {
+      color: var(--success-main);
+    }
+  }
+}
